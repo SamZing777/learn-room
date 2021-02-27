@@ -1,0 +1,11 @@
+.theColor {
+	background-color:rgb(10, 100, 10);
+}
+
+.textColor{
+	color: rgb(10, 100, 10);
+}
+
+.button{
+	outline-color: rgb(10, 100, 10);
+}
