@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 
     # local apps
     'users.apps.UsersConfig',
+    'courses.apps.CoursesConfig',
 
     # third party app
     'allauth',
