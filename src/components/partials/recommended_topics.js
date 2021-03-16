@@ -8,6 +8,9 @@ const RecommendedTopics = () => {
       <a href="#void">Category 3</a>
       <a href="#void">Category 4</a>
       <a href="#void">Category 5</a>
+      <a href="#void">Category 3</a>
+      <a href="#void">Category 4</a>
+      <a href="#void">Category 5</a>
     </div>
   );
 };

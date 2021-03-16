@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBell, FaSearch } from "react-icons/fa";
 
 const Navigation = () => {
   return (
@@ -8,7 +9,17 @@ const Navigation = () => {
         <span />
         <span />
       </span>
-      <a href="#somewhere">Learnroom</a>
+      <a href="#somewhere" className="brand">
+        Learnroom
+      </a>
+      <div className="mobile-menu">
+        <a href="#search">
+          <FaBell />
+        </a>
+        <a href="#search">
+          <FaSearch />
+        </a>
+      </div>
     </nav>
   );
 };

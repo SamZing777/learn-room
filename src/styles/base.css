@@ -11,6 +11,7 @@
 body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  color: #333;
 }
 
 a {
@@ -19,5 +20,114 @@ a {
 
 li {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav.navigation {
+  height: 60px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+nav.navigation a.brand {
+  color: #333;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+nav.navigation div.mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+nav.navigation div.mobile-menu a {
+  color: #333;
+}
+
+nav.navigation div.mobile-menu svg {
+  font-size: 18px;
+  margin: 0 7px;
+}
+
+nav.navigation span.burger {
+  display: inline-block;
+  width: 30px;
+  height: 18px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav.navigation span.burger span {
+  height: 3px;
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  background: #333;
+}
+
+header.banner {
+  background: url(../assets/banner_image.jpg);
+  background-repeat: no-repeat;
+  background-position: -120px;
+}
+
+header.banner div.floating-message {
+  background: #fff;
+  padding: 20px;
+}
+
+header.banner div.floating-message h2 {
+  padding-bottom: 10px;
+}
+
+footer.footer {
+  padding: 20px;
+}
+
+footer.footer select.choose-language {
+  padding: 20px 20px;
+  width: 200px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  background: transparent;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+footer.footer nav.footer-navigation ul li {
+  display: block;
+}
+
+footer.footer nav.footer-navigation ul li a {
+  padding: 15px 0;
+  display: inline-block;
+  color: #333;
 }
 /*# sourceMappingURL=base.css.map */

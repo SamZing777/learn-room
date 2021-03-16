@@ -1,0 +1,86 @@
+div.start-learning h2.title {
+  padding: 20px;
+}
+
+div.start-learning div.list-of-course {
+  padding: 20px 0;
+}
+
+div.start-learning div.list-of-course div.sliding-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-left: 20px;
+}
+
+div.start-learning div.list-of-course div.sliding-container div.course-thumb {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  width: 300px;
+  height: 100px;
+  margin-right: 15px;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.start-learning div.list-of-course div.sliding-container div.course-thumb div.video-thumbnail {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+  position: relative;
+  background: lightgrey;
+}
+
+div.start-learning div.list-of-course div.sliding-container div.course-thumb div.video-thumbnail span.play-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 28px;
+}
+
+div.start-learning div.list-of-course div.sliding-container div.course-thumb div.course-details {
+  position: relative;
+}
+
+div.start-learning div.list-of-course div.sliding-container div.course-thumb div.course-details div.text-container {
+  padding: 5px;
+}
+
+div.start-learning div.list-of-course div.sliding-container div.course-thumb div.course-details span.progress {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  border-radius: 5px;
+  background: slateblue;
+}
+
+div.recommended-topics {
+  padding: 20px;
+}
+
+div.recommended-topics a {
+  display: inline-block;
+  padding: 15px 20px;
+  margin-right: 5px;
+  text-align: center;
+  width: 150px;
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+  color: #333;
+  border-radius: 30px;
+}
+
+div.recommended-for-you {
+  padding: 20px;
+}
+/*# sourceMappingURL=style1.css.map */
