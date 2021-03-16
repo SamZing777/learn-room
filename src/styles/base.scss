@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 @import "./variables";
 * {
@@ -7,11 +7,12 @@
   box-sizing: border-box;
   outline: none;
   border: none;
+  transition: all 300ms;
 }
 
 body {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: $default-color;
 }
 
@@ -30,10 +31,51 @@ nav.navigation {
   height: 60px;
   padding: $default-general-padding;
   display: flex;
+  background: #fff;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 200;
 
+  div.mobile-side-navigation-menu-container {
+    position: fixed;
+    left: 0;
+    transform: translateX(-100vw);
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000000;
+
+    &.activate-sidenav {
+      transform: translateX(0vw);
+    }
+    div.mobile-side-navigation {
+      width: 75%;
+      background: #fff;
+      height: 100%;
+      position: relative;
+      padding: $default-general-padding;
+      button.close-btn {
+        padding: 10px;
+        background: transparent;
+        font-size: 24px;
+      }
+      ul {
+        li {
+          display: block;
+          a {
+            display: block;
+            padding: 15px 0;
+            color: $default-color;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
   a.brand {
     color: $default-color;
     font-weight: bold;

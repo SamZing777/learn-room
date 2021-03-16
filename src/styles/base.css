@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +6,13 @@
           box-sizing: border-box;
   outline: none;
   border: none;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
 }
 
 body {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #333;
 }
 
@@ -32,6 +34,7 @@ nav.navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #fff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -40,6 +43,52 @@ nav.navigation {
           justify-content: space-between;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container {
+  position: fixed;
+  left: 0;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000000;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container.activate-sidenav {
+  -webkit-transform: translateX(0vw);
+          transform: translateX(0vw);
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation {
+  width: 75%;
+  background: #fff;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation button.close-btn {
+  padding: 10px;
+  background: transparent;
+  font-size: 24px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation ul li {
+  display: block;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation ul li a {
+  display: block;
+  padding: 15px 0;
+  color: #333;
+  font-size: 18px;
 }
 
 nav.navigation a.brand {
