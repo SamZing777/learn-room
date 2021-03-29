@@ -47,6 +47,11 @@ div.body div.authentication-container div.login-with-email form div.input-contai
   padding-bottom: 15px;
 }
 
+div.body div.authentication-container div.login-with-email form div.input-container p {
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
 div.body div.authentication-container div.login-with-email form div.input-container input,
 div.body div.authentication-container div.login-with-email form div.input-container button {
   padding: 20px 5px;

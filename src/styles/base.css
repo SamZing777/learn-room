@@ -61,6 +61,86 @@ nav.navigation div.mobile-side-navigation-menu-container {
   z-index: 100000000;
 }
 
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation {
+  overflow-x: auto;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-top {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-top div.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-top div.top div.avatar-rounded {
+  height: 70px;
+  width: 70px;
+  background: lightgrey;
+  border-radius: 70px;
+  position: relative;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-top div.top div.avatar-rounded span.indicator {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: red;
+  right: 7px;
+  border-radius: 15px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-top div.top div.user-details {
+  padding: 0 10px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.why-learn-room {
+  padding: 15px 10px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container p.title {
+  padding-bottom: 10px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.your-learning {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.more-from-learn-room {
+  padding: 10px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.more-from-learn-room a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-bottom {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-bottom ul li {
+  padding: 10px 0;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.mobile-navigation-bottom ul li a {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333;
+}
+
 nav.navigation div.mobile-side-navigation-menu-container.activate-sidenav {
   -webkit-transform: translateX(0vw);
           transform: translateX(0vw);
@@ -71,24 +151,12 @@ nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigat
   background: #fff;
   height: 100%;
   position: relative;
-  padding: 20px;
 }
 
 nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation button.close-btn {
   padding: 10px;
   background: transparent;
   font-size: 24px;
-}
-
-nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation ul li {
-  display: block;
-}
-
-nav.navigation div.mobile-side-navigation-menu-container div.mobile-side-navigation ul li a {
-  display: block;
-  padding: 15px 0;
-  color: #333;
-  font-size: 18px;
 }
 
 nav.navigation a.brand {

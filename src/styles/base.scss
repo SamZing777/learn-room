@@ -48,6 +48,71 @@ nav.navigation {
     width: 100vw;
     height: 100vh;
     z-index: 100000000;
+    div.mobile-side-navigation {
+      overflow-x: auto;
+    }
+    div.mobile-navigation-top {
+      padding: 10px;
+      border-bottom: 1px solid lightgrey;
+      div.top {
+        display: flex;
+        div.avatar-rounded {
+          height: 70px;
+          width: 70px;
+          background: lightgrey;
+          border-radius: 70px;
+          position: relative;
+
+          span.indicator {
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background: red;
+            right: 7px;
+            border-radius: 15px;
+          }
+        }
+
+        div.user-details {
+          padding: 0 10px;
+        }
+      }
+    }
+    div.why-learn-room {
+      padding: 15px 10px;
+    }
+    p.title {
+      padding-bottom: 10px;
+    }
+    div.your-learning {
+      padding: 10px;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    div.more-from-learn-room {
+      padding: 10px;
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    div.mobile-navigation-bottom {
+      padding: 10px;
+      border-bottom: 1px solid lightgrey;
+      ul {
+        li {
+          padding: 10px 0;
+          a {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            color: $default-color;
+          }
+        }
+      }
+    }
 
     &.activate-sidenav {
       transform: translateX(0vw);
@@ -57,22 +122,11 @@ nav.navigation {
       background: #fff;
       height: 100%;
       position: relative;
-      padding: $default-general-padding;
+      // mobile-
       button.close-btn {
         padding: 10px;
         background: transparent;
         font-size: 24px;
-      }
-      ul {
-        li {
-          display: block;
-          a {
-            display: block;
-            padding: 15px 0;
-            color: $default-color;
-            font-size: 18px;
-          }
-        }
       }
     }
   }
