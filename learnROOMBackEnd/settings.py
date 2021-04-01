@@ -95,10 +95,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'learnROOMBackEnd.urls'
 
+# TEMPLATE_DIRS = [
+#     os.path.join(PROJECT_DIR, 'templates'),
+# ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates",] ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -184,3 +188,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+# Email is sent using the SMTP HOST and Port Specified here
+# EMAIL_HOST = 
+# EMAIL_HOST_USER =
+# EMAIL_HOST_PASSWORD = 
+# EMAIL_USE_TLS = 
+# EMAIL_USE_SSL = 
