@@ -35,4 +35,3 @@ class MyVerifyEmailView(VerifyEmailView):
 @api_view()
 def null_view(request):
     return Response(status=status.HTTP_400_BAD_REQUEST)
->>>>>>> ea4234fe33d8cc05e2a9cf617f04efc62aec68e0
