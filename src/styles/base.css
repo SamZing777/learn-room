@@ -247,4 +247,13 @@ footer.footer nav.footer-navigation ul li a {
   display: inline-block;
   color: #333;
 }
+
+.slashed {
+  text-decoration: line-through;
+}
+
+.link-btn {
+  padding: 12px;
+  display: block;
+}
 /*# sourceMappingURL=base.css.map */
