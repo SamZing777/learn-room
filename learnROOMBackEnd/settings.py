@@ -183,15 +183,18 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # Email is sent using the SMTP HOST and Port Specified here
-# EMAIL_HOST = 
-# EMAIL_HOST_USER =
-# EMAIL_HOST_PASSWORD = 
-# EMAIL_USE_TLS = 
-# EMAIL_USE_SSL = 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'admin@learnroom.co'
+EMAIL_HOST_PASSWORD = 'PKGVHjRaapbg'
+EMAIL_USE_TLS =  False
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+
+#stops Relaying disallowed as webmaster@localhost 
+DEFAULT_FROM_EMAIL = 'admin@learnroom.co'
