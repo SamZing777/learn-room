@@ -145,7 +145,6 @@ class Lesson(models.Model):
 		return self.title
 
 
-"""
 class StudentFeedBack(models.Model):
 	student = models.ForeignKey(User, on_delete=models.CASCADE)
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
@@ -163,7 +162,3 @@ class FeatureReview(models.Model):
 
 	def __str__(self):
 		return str(self.course)
-
-
-# id_student = models.CharField(primary_key=True, max_length=10, validators=[RegexValidator(r'^\d{1,10}$')])
-"""

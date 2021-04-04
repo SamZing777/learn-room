@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,9 +33,11 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'live_class.apps.LiveClassConfig',
     'enrollment.apps.EnrollmentConfig',
-    'djmoney',
+    'assessment.apps.AssessmentConfig',
+    
 
     # third party app
+    'djmoney',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
