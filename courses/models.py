@@ -145,25 +145,5 @@ class Lesson(models.Model):
 		return self.title
 
 
-"""
-class StudentFeedBack(models.Model):
-	student = models.ForeignKey(User, on_delete=models.CASCADE)
-	course = models.ForeignKey(Course, on_delete=models.CASCADE)
-	ratings = [MaxValueValidator(5)]
-	review = models.TextField()
-	timeStamp = models.DateTimeField(auto_now_add=True)
-
-	def __str__(self):
-		return str(self.course)
-
-
-class FeatureReview(models.Model):
-	review = models.ForeignKey(StudentFeedBack, on_delete=models.CASCADE)
-	timeStamp = models.DateTimeField(auto_now_add=True)
-
-	def __str__(self):
-		return str(self.course)
-
 
 # id_student = models.CharField(primary_key=True, max_length=10, validators=[RegexValidator(r'^\d{1,10}$')])
-"""

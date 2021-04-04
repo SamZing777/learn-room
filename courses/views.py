@@ -47,3 +47,57 @@ class SectionListAPIView(generics.ListAPIView):
 class LessonListAPIView(generics.ListAPIView):
 	queryset = Lesson.objects.all()
 	serializer_class = LessonSerializer
+
+
+class CourseWriteAPIView(generics.CreateAPIView):
+	queryset = Course.objects.all()
+	serializer_class = CourseSerializer
+
+
+class PartWriteAPIView(generics.CreateAPIView):
+	queryset = Part.objects.all()
+	serializer_class = PartSerializer
+
+
+class SectionWriteAPIView(generics.CreateAPIView):
+	queryset = Section.objects.all()
+	serializer_class = SectionSerializer
+
+
+class LessonWriteAPIView(generics.CreateAPIView):
+	queryset = Lesson.objects.all()
+	serializer_class = LessonSerializer
+
+
+class CategoryRetrieveAPIView(generics.RetrieveAPIView):
+	queryset = Category.objects.all()
+	serializer_class = CategorySerializer
+
+
+class SubCategoryRetrieveAPIView(generics.RetrieveAPIView):
+	queryset = SubCategory.objects.all()
+	serializer_class = SubCategorySerializer
+
+
+class CourseChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Course.objects.all()
+	serializer_class = CourseSerializer
+	lookup_fields = ['title', 'instructor']
+
+
+class PartChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Part.objects.all()
+	serializer_class = PartSerializer
+	lookup_fields = ['name']
+
+
+class SectionChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Section.objects.all()
+	serializer_class = SectionSerializer
+	lookup_fields = ['name']
+
+
+class LessonChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Lesson.objects.all()
+	serializer_class = LessonSerializer
+	lookup_fields = ['title', 'can_preview']
