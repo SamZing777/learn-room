@@ -12,6 +12,14 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
+"""
+class UserProfileView(generics.RetrieveAPIView):
+	queryset = UserProfile.objects.all()
+	serializer_class = UserProfileSerializer
+	lookup_field = id
+"""
+
+
 class InstructorViewSet(viewsets.ModelViewSet):
     queryset = Instructor.objects.all()
     serializer_class = InstructorSerializer

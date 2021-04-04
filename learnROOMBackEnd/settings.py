@@ -32,6 +32,9 @@ INSTALLED_APPS = [
     # local apps
     'users.apps.UsersConfig',
     'courses.apps.CoursesConfig',
+    'live_class.apps.LiveClassConfig',
+    'enrollment.apps.EnrollmentConfig',
+    'djmoney',
 
     # third party app
     'allauth',
@@ -43,7 +46,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
-     'rest_framework_swagger'
+    'rest_framework_swagger'
 ]
 
 

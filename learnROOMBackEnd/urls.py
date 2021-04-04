@@ -17,14 +17,16 @@ urlpatterns = [
     path('rest/', include('rest_auth.urls')),
     path('rest/registration/', include('rest_auth.registration.urls')),
     path('verify-email/', MyVerifyEmailView.as_view(), name='rest_verify_email'),
-    path('rest/registration/account-confirm-email/(?P<key>[-:\w]+)/$', MyVerifyEmailView.as_view(),
-        name='account_confirm_email'),
 
     path('auth/', include('rest_framework.urls')),
     path('api/v1/users/', include('users.urls')),
+    path('course/', include('courses.urls')),
 
 	# documentation for the API
     path('docs/', include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),
     path('swagger-docs/', schema_view),
     path('schema/', schema_view),
 ]
+
+# path('rest/registration/account-confirm-email/(?P<key>[-:\w]+)/$', MyVerifyEmailView.as_view(),
+#        name='account_confirm_email'),
