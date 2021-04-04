@@ -6,28 +6,25 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_auth.registration.views import VerifyEmailView
+from rest_framework.response import Response
+from rest_framework.decorators import action
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
 
+    @action(detail=True, methods=['get'])
+    def userprofile(self, request, pk):
+        qs = self.get_object().userprofile_set.all()
+        serializer = UserProfileSerializer(qs, many=True)
+        return Response(serializer.data)
 
-"""
-class UserProfileView(generics.RetrieveAPIView):
-	queryset = UserProfile.objects.all()
-	serializer_class = UserProfileSerializer
-	lookup_field = id
-"""
 
 
 class InstructorViewSet(viewsets.ModelViewSet):
     queryset = Instructor.objects.all()
     serializer_class = InstructorSerializer
-
-# class UserProfileView(generics.RetrieveAPIView):
-	# queryset = UserProfile.objects.all()
-	# serializer_class = UserProfileSerializer
-	# lookup_field = id
 
 class MyVerifyEmailView(VerifyEmailView):
     template_name = 'account/email_confirm.html'
