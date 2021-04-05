@@ -1,13 +1,22 @@
-from rest_framework import viewsets, generics
 from django.contrib.auth import get_user_model
-from .serializers import UserSerializer, UserProfileSerializer, InstructorSerializer
-from .models import UserProfile, Instructor
+from rest_framework import viewsets, generics
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_auth.registration.views import VerifyEmailView
 from rest_framework.response import Response
 from rest_framework.decorators import action
+
+from .serializers import (
+    UserSerializer,
+    UserProfileSerializer, 
+    InstructorSerializer
+    )
+
+from .models import (
+    Profile, 
+    Instructor
+    )
 
 
 
@@ -22,10 +31,10 @@ class UserViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
-
 class InstructorViewSet(viewsets.ModelViewSet):
     queryset = Instructor.objects.all()
     serializer_class = InstructorSerializer
+
 
 class MyVerifyEmailView(VerifyEmailView):
     template_name = 'account/email_confirm.html'

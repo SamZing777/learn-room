@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 
 from .models import (
 	Category,
@@ -18,6 +18,8 @@ from .serializers import (
 	LessonSerializer
 	)
 
+from .permissions import IsInstructorOrReadOnly
+
 
 class CategoryListAPIView(generics.ListAPIView):
 	queryset = Category.objects.all()
@@ -29,21 +31,46 @@ class SubCategoryListAPIView(generics.ListAPIView):
 	serializer_class = SubCategorySerializer
 
 
-class CourseListAPIView(generics.ListAPIView):
+class CourseListAPIView(generics.ListCreateAPIView):
 	queryset = Course.objects.all()
 	serializer_class = CourseSerializer
+	permisson_classes = (permissions.IsAuthenticatedOrReadOnly)
 
 
-class PartListAPIView(generics.ListAPIView):
+class PartListAPIView(generics.ListCreateAPIView):
 	queryset = Part.objects.all()
 	serializer_class = PartSerializer
 
 
-class SectionListAPIView(generics.ListAPIView):
+class SectionListAPIView(generics.ListCreateAPIView):
 	queryset = Section.objects.all()
 	serializer_class = SectionSerializer
 
 
-class LessonListAPIView(generics.ListAPIView):
+class LessonListAPIView(generics.ListCreateAPIView):
 	queryset = Lesson.objects.all()
 	serializer_class = LessonSerializer
+
+
+class CourseChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Course.objects.all()
+	serializer_class = CourseSerializer
+	permisson_classes = (permissions.IsAuthenticated, IsInstructorOrReadOnly)
+
+
+class PartChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Part.objects.all()
+	serializer_class = PartSerializer
+	permisson_classes = (permissions.IsAuthenticated, IsInstructorOrReadOnly)
+
+
+class SectionChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Section.objects.all()
+	serializer_class = SectionSerializer
+	permisson_classes = (permissions.IsAuthenticated, IsInstructorOrReadOnly)
+
+
+class LessonChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Lesson.objects.all()
+	serializer_class = LessonSerializer
+	permisson_classes = (permissions.IsAuthenticated, IsInstructorOrReadOnly)

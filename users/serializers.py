@@ -2,12 +2,13 @@ from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth import get_user_model
 
-User = get_user_model()
-
 from .models import (
-    UserProfile,
+    Profile,
     Instructor
     )
+
+
+User = get_user_model()
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -28,7 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = UserProfile
+        model = Profile
         fields = '__all__'
         lookup_field = id
 

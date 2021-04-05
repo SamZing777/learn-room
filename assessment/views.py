@@ -21,6 +21,9 @@ from .serializers import (
 	)
 
 
+from .permissions import IsStudentOrReadOnly
+
+
 class QuizListCreateAPIView(generics.ListCreateAPIView):
 	queryset = Quiz.objects.all()
 	serializer_class = QuizSerializer
