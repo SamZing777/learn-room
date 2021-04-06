@@ -16,9 +16,7 @@ const UserReview = ({ review }) => {
         </span>
         <span className="time"> 20 days ago</span>
       </div>
-      <p className="review-message">
-        review message about whatever the user wants to say goes in here
-      </p>
+      <p className="review-message">{review_message}</p>
       <p>Was this review helpful ?</p>
       <div className="reaction">
         <button className="thumbs-up">

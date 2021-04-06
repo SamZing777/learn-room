@@ -7,6 +7,7 @@ import PreviewView from "./components/pages/preview_course";
 import "./styles/base.css";
 import "./styles/style1.css";
 import "./styles/auth.css";
+import "./styles/preview_course.css";
 
 function App() {
   return (

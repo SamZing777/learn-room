@@ -1,0 +1,46 @@
+div.course-preview-container div.video-container {
+  position: relative;
+}
+
+div.course-preview-container div.video-container button.play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3.5em;
+  background: transparent;
+  cursor: pointer;
+}
+
+div.course-preview-container div.video-container img {
+  min-width: 100%;
+}
+
+div.course-preview-container div.about-course {
+  padding: 1em;
+}
+
+div.course-preview-container div.about-course h3.title {
+  padding-bottom: 10px;
+}
+
+div.course-preview-container div.about-course p.description {
+  padding: 10px 0;
+}
+
+div.course-preview-container div.about-course div.star-rating div.star-rating-container {
+  padding: 10px 0;
+  position: relative;
+}
+
+div.course-preview-container div.about-course div.star-rating div.star-rating-container span.star {
+  color: gold;
+  margin-right: 10px;
+}
+
+div.course-preview-container div.about-course div.star-rating div.star-rating-container span.total-students {
+  position: absolute;
+  right: 0;
+}
+/*# sourceMappingURL=preview_course.css.map */

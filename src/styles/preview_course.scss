@@ -1,0 +1,46 @@
+div.course-preview-container {
+  // video container
+  div.video-container {
+    position: relative;
+    button.play-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.5em;
+      background: transparent;
+      cursor: pointer;
+    }
+    img {
+      min-width: 100%;
+    }
+  }
+
+  //   about course
+  div.about-course {
+    padding: 1em;
+    h3.title {
+      padding-bottom: 10px;
+    }
+
+    p.description {
+      padding: 10px 0;
+    }
+
+    div.star-rating {
+      div.star-rating-container {
+        padding: 10px 0;
+        position: relative;
+        span.star {
+          color: gold;
+          margin-right: 10px;
+        }
+
+        span.total-students {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+}

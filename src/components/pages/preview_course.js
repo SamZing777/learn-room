@@ -47,21 +47,24 @@ const PreviewCourse = () => {
           </button>
         </div>
         <div className="about-course">
-          <h3>Learn Javascript from scratch(ES6)</h3>
-          <p>
+          <h3 className="title">Learn Javascript from scratch(ES6)</h3>
+          <p className="description">
             Learn to build projects with pure javascript (No Frameworks or
             Libraries)
           </p>
           <div className="star-rating">
-            <span className="star">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-            </span>
-            <span className="total-rated">(12,621)</span>
-            <span className="total-students">80,000 students</span>
+            <div class="star-rating-container">
+              <span className="star">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </span>
+              <span className="total-rated">(12,621)</span>
+              <span className="total-students">80,000 students</span>
+            </div>
+
             <div className="created-by">
               <p>
                 Created by <a href="#toinstructor">Dest ian</a>
