@@ -1,0 +1,23 @@
+name: Learnroom CI
+
+on: 
+  push:
+    branches:
+      - "react-s3"
+
+
+jobs:
+  build:
+    runs on: -ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
+
