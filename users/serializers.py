@@ -31,7 +31,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = '__all__'
-        lookup_field = id
 
 
 class InstructorSerializer(serializers.ModelSerializer):

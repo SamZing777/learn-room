@@ -6,7 +6,9 @@ from .models import (
 	Course,
 	Part,
 	Section,
-	Lesson
+	Lesson,
+	StudentFeedback,
+	FeaturedReview
 	)
 
 
@@ -20,20 +22,29 @@ class SectionInline(admin.StackedInline):
 	extra = 1
 
 
-class LessonInline(admin.TabularInline):
-	model = Lesson
-	extra = 1
-
-
 class CourseAdmin(admin.ModelAdmin):
 	inlines = [
 		PartInline,
-		SectionInline,
-		LessonInline
+		SectionInline
 	]
+
 	list_display = ['title', 'is_self_paced', 'is_live_class']
+
+
+class ReviewInline(admin.StackedInline):
+	model = FeaturedReview
+	extra = 1
+
+
+class FeedbackAdmin(admin.ModelAdmin):
+	inlines = [
+		ReviewInline
+	]
+	list_display = ['student', 'course', 'ratings']
 
 
 admin.site.register(Category)
 admin.site.register(SubCategory)
 admin.site.register(Course, CourseAdmin)
+admin.site.register(Lesson)
+admin.site.register(StudentFeedback, FeedbackAdmin)

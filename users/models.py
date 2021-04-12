@@ -24,7 +24,7 @@ class Instructor(models.Model):
 
 
 class Profile(models.Model):
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	picture = models.CharField(max_length=20)
 	mobile_number = models.CharField(max_length=20)
 	country = models.CharField(max_length=50)
@@ -32,13 +32,15 @@ class Profile(models.Model):
 	 help_text='A short sentence about you as a student',
 	 default='Enthusiastic....')
 
+	def __str__(self):
+		return str(self.user)
+
+"""
 	@receiver(post_save, sender=User)
 	def create_user_profile(sender, instance, created, **kwargs):
 		if created:
 			Profile.objects.create(user=instance)
-
-	def __str__(self):
-		return str(self.user)
+"""
 
 
 

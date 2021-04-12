@@ -1,4 +1,9 @@
+import rest_framework_filters as filters
+from django.db.models import Q
 from rest_framework import generics, permissions
+from rest_framework.views import APIView
+
+# from django_filters import rest_framework as filters
 
 from .models import (
 	Category,
@@ -6,7 +11,9 @@ from .models import (
 	Course,
 	Part,
 	Section,
-	Lesson
+	Lesson,
+	StudentFeedback,
+	FeaturedReview
 	)
 
 from .serializers import (
@@ -15,7 +22,9 @@ from .serializers import (
 	CourseSerializer,
 	PartSerializer,
 	SectionSerializer,
-	LessonSerializer
+	LessonSerializer,
+	FeedbackSerializer,
+	ReviewSerializer
 	)
 
 from .permissions import IsInstructorOrReadOnly
@@ -26,36 +35,70 @@ class CategoryListAPIView(generics.ListAPIView):
 	serializer_class = CategorySerializer
 
 
+class SubCategoryFilter(filters.FilterSet):
+
+	class Meta:
+		model = SubCategory
+		fields = {'name': ['exact']}
+		# fields = ('name')
+
+
 class SubCategoryListAPIView(generics.ListAPIView):
 	queryset = SubCategory.objects.all()
 	serializer_class = SubCategorySerializer
+	filter_class = SubCategoryFilter
+
+
+
+"""
+	def get_context_data(self, *args, **kwargs):
+		sub_category = self.object.subcategory.name
+		context = super(SubCategoryListAPIView, self).get_context_data(*args, **kwargs)
+		context['sub_features'] = SubCategory.objects.filter(subcategory__name=sub_category)
+		return context
+"""
 
 
 class CourseListAPIView(generics.ListCreateAPIView):
-	queryset = Course.objects.all()
+	search_fields = ['title', 'instructor']
 	serializer_class = CourseSerializer
 	permisson_classes = (permissions.IsAuthenticatedOrReadOnly)
+
+	def get_queryset(self, *args, **kwargs):
+		query_list = Course.objects.all()
+		query = Course.objects.all()
+		query = self.request.GET.get('q')
+		if query:
+			query_list = queryset.list.filter(
+				Q(title__contains=query) |
+				Q(instructor__contains=query)
+				).distinct()
+		return query_list
 
 
 class PartListAPIView(generics.ListCreateAPIView):
 	queryset = Part.objects.all()
 	serializer_class = PartSerializer
+	permisson_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class SectionListAPIView(generics.ListCreateAPIView):
 	queryset = Section.objects.all()
 	serializer_class = SectionSerializer
+	permisson_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class LessonListAPIView(generics.ListCreateAPIView):
 	queryset = Lesson.objects.all()
 	serializer_class = LessonSerializer
+	permisson_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class CourseChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Course.objects.all()
 	serializer_class = CourseSerializer
 	permisson_classes = (permissions.IsAuthenticated, IsInstructorOrReadOnly)
+	lookup_field = 'slug'
 
 
 class PartChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
@@ -74,3 +117,13 @@ class LessonChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Lesson.objects.all()
 	serializer_class = LessonSerializer
 	permisson_classes = (permissions.IsAuthenticated, IsInstructorOrReadOnly)
+	lookup_field = 'slug'
+
+
+class StudentFeedbackListAPIView(generics.ListCreateAPIView):
+	queryset = StudentFeedback.objects.all()
+	serializer_class = FeedbackSerializer
+	permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+
+
+# class FeaturedReviewListAPIView(APIView):

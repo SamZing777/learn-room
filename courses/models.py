@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.timezone import now
 from autoslug import AutoSlugField
@@ -29,8 +30,12 @@ class Category(models.Model):
 	def __str__(self):
 		return self.name
 
+	def get_absolute_url(self):
+		return reverse('course_category', args=[str(self.slug)])
+
 	class Meta:
 		verbose_name_plural = 'Categories'
+
 
 
 class SubCategory(models.Model):
@@ -42,6 +47,9 @@ class SubCategory(models.Model):
 
 	def __str__(self):
 		return self.name
+
+	def get_absolute_url(self):
+		return reverse('sub_category', args=[str(self.slug)])
 
 	class Meta:
 		verbose_name_plural = 'Sub Categories'
@@ -73,17 +81,11 @@ class Course(models.Model):
 	is_free_for_self_paced = models.BooleanField(default=False)
 	is_free_for_live_class = models.BooleanField(default=False)
 	self_paced_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD',
-						validators=[
-					            MinMoneyValidator(5),
-					            MaxMoneyValidator(50),])
+								null=True, blank=True)
 	live_class_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD',
-						validators=[
-					            MinMoneyValidator(20),
-					            MaxMoneyValidator(1000),])
+								null=True, blank=True)
 	our_live_class_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD',
-								validators=[
-					            MinMoneyValidator(40),
-					            MaxMoneyValidator(5000),])
+								null=True, blank=True)
 	is_published = models.BooleanField(default=False)
 	status = models.CharField(max_length=10, choices=STATUS)
 	date_created = models.DateTimeField(auto_now_add=True)
@@ -91,6 +93,9 @@ class Course(models.Model):
 
 	def __str__(self):
 	    return self.title
+
+	def get_absolute_url(self):
+		return reverse('course_detail', args=[str(self.slug)])
 
 """
 class CourseContent(models.Model):
@@ -114,6 +119,9 @@ class Part(models.Model):
 	def __str__(self):
 		return self.name
 
+	def get_absolute_url(self):
+		return reverse('part', args=[str(self.id)])
+
 
 class Section(models.Model):
 	course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
@@ -124,6 +132,9 @@ class Section(models.Model):
 
 	def __str__(self):
 		return self.name
+
+	def get_absolute_url(self):
+		return reverse('section', args=[str(self.id)])
 
 
 
@@ -144,21 +155,28 @@ class Lesson(models.Model):
 	def  __str__(self):
 		return self.title
 
+	def get_absolute_url(self):
+		return reverse('lesson_content', args=[str(self.slug)])
 
-class StudentFeedBack(models.Model):
+
+class StudentFeedback(models.Model):
 	student = models.ForeignKey(User, on_delete=models.CASCADE)
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
-	ratings = [MaxValueValidator(5)]
+	ratings = models.FloatField(default=4.5, validators=[MaxValueValidator(5)])
 	review = models.TextField()
 	timeStamp = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return str(self.course)
 
+	def get_absolute_url(self):
+		return reverse('student_feedback', args=[str(self.slug)])
 
-class FeatureReview(models.Model):
-	review = models.ForeignKey(StudentFeedBack, on_delete=models.CASCADE)
+
+class FeaturedReview(models.Model):
+	review = models.ForeignKey(StudentFeedback, on_delete=models.CASCADE)
+	short_note = models.CharField(max_length=50, default='Thanks')
 	timeStamp = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return str(self.course)
+		return str(self.review)

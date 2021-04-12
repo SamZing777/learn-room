@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'live_class.apps.LiveClassConfig',
     'enrollment.apps.EnrollmentConfig',
     'assessment.apps.AssessmentConfig',
+    'jobs.apps.JobsConfig',
     
 
     # third party app
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'rest_framework_filters',
+    'django_filters',
     'corsheaders',
     'rest_auth',
     'rest_auth.registration',
@@ -55,7 +58,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication'
-    ], 
+    ],
+
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework_filters.backends.DjangoFilterBackend',),
 
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 
@@ -184,7 +189,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'courses'
 LOGOUT_REDIRECT_URL = '/'
 
 # Email is sent using the SMTP HOST and Port Specified here

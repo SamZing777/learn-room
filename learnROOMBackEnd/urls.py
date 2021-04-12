@@ -21,6 +21,7 @@ urlpatterns = [
     path('auth/', include('rest_framework.urls')),
     path('api/v1/users/', include('users.urls')),
     path('course/', include('courses.urls')),
+    path('', include('jobs.urls')),
 
 	# documentation for the API
     path('docs/', include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),

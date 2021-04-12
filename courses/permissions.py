@@ -1,6 +1,13 @@
 from rest_framework import permissions
 
 
+"""
+class IsInstructor(permissions.BasePermission):
+	if user.is_instructor
+		pass
+"""
+
+
 class IsInstructorOrReadOnly(permissions.BasePermission):
 	# only the specific owner of the course can make any changes to the course
 
@@ -10,3 +17,9 @@ class IsInstructorOrReadOnly(permissions.BasePermission):
 			return True
 
 		return obj.user.id == request.instructor.id
+
+
+"""
+class StudentIsEnrolled(permissions.BasePermission):
+	pass
+"""

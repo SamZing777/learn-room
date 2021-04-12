@@ -6,7 +6,9 @@ from .models import (
 	Course,
 	Part,
 	Section,
-	Lesson
+	Lesson,
+	StudentFeedback,
+	FeaturedReview
 	)
 
 
@@ -49,4 +51,18 @@ class LessonSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Lesson
+		fields = '__all__'
+
+
+class FeedbackSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = StudentFeedback
+		fields = '__all__'
+
+
+class ReviewSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = FeaturedReview
 		fields = '__all__'
