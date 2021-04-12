@@ -1,4 +1,3 @@
-import rest_framework_filters as filters
 from django.db.models import Q
 from rest_framework import generics, permissions
 from rest_framework.views import APIView
@@ -35,18 +34,19 @@ class CategoryListAPIView(generics.ListAPIView):
 	serializer_class = CategorySerializer
 
 
+"""
 class SubCategoryFilter(filters.FilterSet):
 
 	class Meta:
 		model = SubCategory
 		fields = {'name': ['exact']}
 		# fields = ('name')
-
+"""
 
 class SubCategoryListAPIView(generics.ListAPIView):
 	queryset = SubCategory.objects.all()
 	serializer_class = SubCategorySerializer
-	filter_class = SubCategoryFilter
+	# filter_class = SubCategoryFilter
 
 
 
