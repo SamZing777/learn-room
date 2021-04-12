@@ -1,0 +1,144 @@
+// live class styling
+
+div.live-class-container {
+  div.video-container {
+    position: relative;
+  }
+  button.trigger-btn {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 80px;
+    font-size: 1.1em;
+    color: rgb(255, 220, 20);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  div.more-action-container {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    button.more-action {
+      font-size: 20px;
+      background: transparent;
+      margin: 0 10px;
+    }
+  }
+}
+
+h3.title {
+  padding: 15px 0;
+}
+
+div.category {
+  padding: 20px 10px;
+  h3.title {
+    text-align: center;
+  }
+
+  p.total_learners {
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+
+div.container {
+  padding: 20px;
+
+  div.form-container {
+    div.input-container {
+      border: 1px solid lightgrey;
+      margin: 10px 0;
+
+      border-radius: 5px;
+      select,
+      input {
+        background: transparent;
+        width: 100%;
+        padding: 18px 10px;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+// inputs container
+div.input-container {
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+
+  border-radius: 5px;
+  select,
+  input {
+    background: transparent;
+    width: 100%;
+    padding: 18px 10px;
+    font-size: 1em;
+  }
+}
+
+// jobs
+div.jobs {
+  padding: 20px;
+
+  div.banner {
+    position: relative;
+    img {
+      //   height: 300px;
+    }
+    h2 {
+      background: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      color: #fff;
+      width: 90%;
+      text-align: center;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  div.job-search-filter {
+    padding: 20px 0;
+    // form  {
+    //     div.input-container {
+    //         select
+    //     }
+    // }
+  }
+
+  div.top-jobs {
+    div.job {
+      background: lightgreen;
+
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      div.left {
+        font-size: 30px;
+        padding: 0 20px;
+      }
+
+      div.right {
+        flex: 1;
+        font-weight: 500;
+        h4 {
+          padding-bottom: 5px;
+        }
+        p {
+          padding-bottom: 5px;
+        }
+
+        div.type-time {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

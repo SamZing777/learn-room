@@ -133,3 +133,29 @@ div.become-instructor {
     border-radius: 8px;
   }
 }
+
+div.recommended-courses-container {
+  padding: 20px 10px;
+  div.recommended-courses-scrollable {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    div.a-course {
+      flex: 0 0 80%;
+      margin-right: 20px;
+      div.star-and-total-enrolled {
+        padding: 8px 0;
+      }
+      h4.course_name {
+        padding: 10px 0;
+      }
+
+      p.instructor_name {
+        padding-bottom: 5px;
+      }
+      img.course-thumbnail {
+        height: 170px;
+      }
+    }
+  }
+}

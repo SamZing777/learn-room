@@ -1,0 +1,150 @@
+div.live-class-container div.video-container {
+  position: relative;
+}
+
+div.live-class-container button.trigger-btn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 80px;
+  font-size: 1.1em;
+  color: #ffdc14;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+div.live-class-container div.more-action-container {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+div.live-class-container div.more-action-container button.more-action {
+  font-size: 20px;
+  background: transparent;
+  margin: 0 10px;
+}
+
+h3.title {
+  padding: 15px 0;
+}
+
+div.category {
+  padding: 20px 10px;
+}
+
+div.category h3.title {
+  text-align: center;
+}
+
+div.category p.total_learners {
+  text-align: center;
+  padding: 30px 0;
+}
+
+div.container {
+  padding: 20px;
+}
+
+div.container div.form-container div.input-container {
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+div.container div.form-container div.input-container select,
+div.container div.form-container div.input-container input {
+  background: transparent;
+  width: 100%;
+  padding: 18px 10px;
+  font-size: 1em;
+}
+
+div.input-container {
+  border: 1px solid lightgrey;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+div.input-container select,
+div.input-container input {
+  background: transparent;
+  width: 100%;
+  padding: 18px 10px;
+  font-size: 1em;
+}
+
+div.jobs {
+  padding: 20px;
+}
+
+div.jobs div.banner {
+  position: relative;
+}
+
+div.jobs div.banner h2 {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  color: #fff;
+  width: 90%;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.jobs div.job-search-filter {
+  padding: 20px 0;
+}
+
+div.jobs div.top-jobs div.job {
+  background: lightgreen;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.jobs div.top-jobs div.job div.left {
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+div.jobs div.top-jobs div.job div.right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 500;
+}
+
+div.jobs div.top-jobs div.job div.right h4 {
+  padding-bottom: 5px;
+}
+
+div.jobs div.top-jobs div.job div.right p {
+  padding-bottom: 5px;
+}
+
+div.jobs div.top-jobs div.job div.right div.type-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+/*# sourceMappingURL=style2.css.map */

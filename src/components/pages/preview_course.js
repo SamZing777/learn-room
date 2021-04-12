@@ -92,7 +92,7 @@ const PreviewCourse = () => {
             <span className="slashed">N40,000</span>
             <span>91% off</span>
           </div>
-          <p style={{ color: "red" }}>
+          <p style={{ color: "red" }} className="price-count">
             <FaClock />
             <span>2 days left at this price</span>
           </p>
@@ -101,7 +101,7 @@ const PreviewCourse = () => {
               Add to cart
             </a>
           </div>
-          <p className="price-durations"> 15 days at this price</p>
+          <p className="price-durations"> 15 days left at this price</p>
           <div className="other-actions">
             <button>Add to wishlist</button>
             <button>Share</button>
@@ -110,7 +110,7 @@ const PreviewCourse = () => {
           </div>
         </div>
         <div className="what-you-will-learn">
-          <h1>What you'll learn</h1>
+          <h3>What you'll learn</h3>
           <p>
             <span className="check">
               <FaCheck />
@@ -190,7 +190,7 @@ const PreviewCourse = () => {
           </div>
         </div>
 
-        <div className="requirement-description">
+        <div className="requirements-description">
           <h3>Requirements</h3>
           <p>Basic HTML / CSS Knowledge</p>
           <h3>Description</h3>
@@ -216,9 +216,9 @@ const PreviewCourse = () => {
           <div className="reviews-container">{renderReviews}</div>
           <a href="#more">See more reviews</a>
         </div>
-        <div className="more-courses">
+        {/* <div className="more-courses">
           <h3>More courses by Instructor</h3>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </React.Fragment>
