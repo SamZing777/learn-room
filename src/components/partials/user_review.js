@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
 const UserReview = ({ review }) => {
-  const { name, review_message, time } = review;
+  const { name, review_message } = review;
   return (
     <div className="user-review">
       <h3>{name}</h3>
