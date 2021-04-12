@@ -163,4 +163,40 @@ div.become-instructor a.link-btn {
   color: #fff;
   border-radius: 8px;
 }
+
+div.recommended-courses-container {
+  padding: 20px 10px;
+}
+
+div.recommended-courses-container div.recommended-courses-scrollable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+div.recommended-courses-container div.recommended-courses-scrollable div.a-course {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  margin-right: 20px;
+}
+
+div.recommended-courses-container div.recommended-courses-scrollable div.a-course div.star-and-total-enrolled {
+  padding: 8px 0;
+}
+
+div.recommended-courses-container div.recommended-courses-scrollable div.a-course h4.course_name {
+  padding: 10px 0;
+}
+
+div.recommended-courses-container div.recommended-courses-scrollable div.a-course p.instructor_name {
+  padding-bottom: 5px;
+}
+
+div.recommended-courses-container div.recommended-courses-scrollable div.a-course img.course-thumbnail {
+  height: 170px;
+}
 /*# sourceMappingURL=style1.css.map */

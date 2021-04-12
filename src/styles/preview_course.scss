@@ -41,6 +41,175 @@ div.course-preview-container {
           right: 0;
         }
       }
+
+      div.created-by {
+        padding: 10px 0;
+
+        a {
+          color: green;
+        }
+      }
+
+      div.offers {
+        padding: 10px 0;
+        div.an-offer {
+          display: flex;
+          align-items: center;
+          padding-bottom: 10px;
+          span {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  div.price-and-add {
+    padding: 10px;
+    div.price {
+      padding-bottom: 15px;
+      display: flex;
+      span {
+        margin-right: 15px;
+      }
+    }
+
+    p.price-count {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    a.link-btn {
+      display: block;
+      width: 100%;
+      background: rgb(247, 29, 29);
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    p.price-durations {
+      padding: 10px;
+      text-align: center;
+    }
+
+    div.other-actions {
+      button {
+        display: block;
+        width: 100%;
+        background: transparent;
+        border: 1px solid green;
+        padding: 15px 10px;
+        margin-bottom: 8px;
+        color: green;
+      }
+    }
+  }
+
+  div.what-you-will-learn {
+    width: 90%;
+    margin: 0 auto;
+    background: rgb(192, 255, 167);
+    padding: 10px;
+
+    h3 {
+      padding-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  div.course-content {
+    padding: 10px;
+    div {
+      display: flex;
+      padding: 10px 0;
+      span {
+        font-size: 0.9em;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  div.course-includes {
+    padding: 10px;
+    h3 {
+      padding-bottom: 10px;
+    }
+
+    div {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  div.requirements-description {
+    padding: 10px;
+    h3 {
+      padding-bottom: 10px;
+    }
+
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  div.instructor-and-feedback {
+    padding: 10px;
+    h3 {
+      padding-bottom: 15px;
+    }
+
+    p.about {
+      padding: 10px 0;
+    }
+  }
+
+  div.reviews {
+    padding: 10px;
+    h3 {
+      padding: 10px 0;
+    }
+    div.reviews-container {
+      div.user-review {
+        div.rating-and-time {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+        }
+      }
+    }
+
+    p.review-message {
+      padding-bottom: 10px;
+    }
+    div.reaction {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+
+      button {
+        margin-right: 10px;
+        font-size: 1.2em;
+        background: transparent;
+      }
     }
   }
 }
