@@ -4,7 +4,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.timezone import now
 from autoslug import AutoSlugField
 from djmoney.models.fields import MoneyField
-from djmoney.models.validators import MaxMoneyValidator, MinMoneyValidator
 
 from users.models import User
 
@@ -25,7 +24,7 @@ class Category(models.Model):
 	name = models.CharField(max_length=50)
 	slug = AutoSlugField(populate_from='name', unique=True, 
 			     always_update=False, default='')
-	image = models.CharField(max_length=20)
+	image = models.FileField(max_length=20)
 
 	def __str__(self):
 		return self.name
@@ -43,7 +42,6 @@ class SubCategory(models.Model):
 	name = models.CharField(max_length=50)
 	slug = AutoSlugField(populate_from='name', unique=True, 
 			     always_update=False, default='')
-	image = models.CharField(max_length=20)
 
 	def __str__(self):
 		return self.name
@@ -70,7 +68,7 @@ class Course(models.Model):
 					null=True, blank=True)
 	slug = AutoSlugField(populate_from='title', unique=True, 
 			     always_update=False, default='')
-	thumb_nail = models.CharField(max_length=20, help_text='A cover image for your course')
+	thumb_nail = models.FileField(help_text='A cover image for your Course')
 	short_note = models.CharField(max_length=250)
 	description = models.TextField()
 	requirements = models.TextField()
@@ -80,12 +78,12 @@ class Course(models.Model):
 	is_live_class = models.BooleanField(default=True, null=True, blank=True)
 	is_free_for_self_paced = models.BooleanField(default=False)
 	is_free_for_live_class = models.BooleanField(default=False)
-	self_paced_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD',
-								null=True, blank=True)
-	live_class_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD',
-								null=True, blank=True)
-	our_live_class_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD',
-								null=True, blank=True)
+	self_paced_price = MoneyField(max_digits=14, decimal_places=2, 
+								  default_currency='USD', null=True, blank=True)
+	live_class_price = MoneyField(max_digits=14, decimal_places=2,
+								  default_currency='USD', null=True, blank=True)
+	our_live_class_price = MoneyField(max_digits=14, decimal_places=2, 
+								  default_currency='USD', null=True, blank=True)
 	is_published = models.BooleanField(default=False)
 	status = models.CharField(max_length=10, choices=STATUS)
 	date_created = models.DateTimeField(auto_now_add=True)

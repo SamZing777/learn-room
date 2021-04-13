@@ -51,7 +51,10 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_framework_swagger'
+    'rest_framework_swagger',
+
+    # Cloud computing Service
+    'storages'
 ]
 
 
@@ -209,3 +212,19 @@ EMAIL_PORT = 465
 
 #stops Relaying disallowed as webmaster@localhost 
 DEFAULT_FROM_EMAIL = 'admin@learnroom.co'
+
+
+# AWS FILE UPLOAD
+AWS_ACCESS_KEY_ID = 'AKIAXLZOCW5EXO43MNTF'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'course-img'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_REGION_NAME = "us-east-2"
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+
+
+
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
