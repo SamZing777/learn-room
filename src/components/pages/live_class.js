@@ -1,3 +1,5 @@
+/*
+
 import React, { useRef, useState } from "react";
 import Navigation from "../partials/navigation";
 import coding_video from "../../assets/video/coding_video.mp4";
@@ -62,3 +64,5 @@ const LiveClass = () => {
 };
 
 export default LiveClass;
+
+*/
