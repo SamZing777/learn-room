@@ -9,10 +9,12 @@ import "./styles/style1.css";
 import "./styles/auth.css";
 import "./styles/preview_course.css";
 import "./styles/style2.css";
+import "./styles/style3.css";
 import LiveClass from "./components/pages/live_class";
 import CourseCategory from "./components/pages/category";
 import AddCourse from "./components/pages/create_course";
 import Jobs from "./components/pages/jobs";
+import ClassRoom from "./components/pages/class";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path="/category" exact component={CourseCategory} />
         <Route path="/add_course" exact component={AddCourse} />
         <Route path="/jobs" exact component={Jobs} />
+        <Route path="/classroom" exact component={ClassRoom} />
         <Route component={NotFound404} />
       </Switch>
     </Router>

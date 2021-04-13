@@ -1,8 +1,8 @@
-div.live-class-container div.video-container {
+div.video-wrapper div.video-container {
   position: relative;
 }
 
-div.live-class-container button.trigger-btn {
+div.video-wrapper button.trigger-btn {
   position: absolute;
   height: 50px;
   width: 50px;
@@ -16,7 +16,7 @@ div.live-class-container button.trigger-btn {
           transform: translate(-50%, -50%);
 }
 
-div.live-class-container div.more-action-container {
+div.video-wrapper div.more-action-container {
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,7 +26,7 @@ div.live-class-container div.more-action-container {
           justify-content: flex-end;
 }
 
-div.live-class-container div.more-action-container button.more-action {
+div.video-wrapper div.more-action-container button.more-action {
   font-size: 20px;
   background: transparent;
   margin: 0 10px;

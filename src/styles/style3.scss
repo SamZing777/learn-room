@@ -1,0 +1,36 @@
+div.class_room {
+  padding: 20px;
+  div.board {
+    display: flex;
+    div.left {
+      flex: 0 0 50px;
+      padding: 0 10px;
+      svg {
+        position: relative;
+      }
+      div.topic-list {
+        position: absolute;
+        width: 300px;
+        background: #fff;
+        z-index: 20;
+        min-height: 100vh;
+        padding: 20px;
+        display: none;
+
+        &.menu-out {
+          display: block;
+        }
+        li {
+          padding: 10px 0;
+        }
+      }
+    }
+    div.right {
+      padding: 0 15px;
+
+      h3.current-topic {
+        padding-bottom: 15x;
+      }
+    }
+  }
+}
