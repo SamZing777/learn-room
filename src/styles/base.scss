@@ -91,6 +91,26 @@ nav.navigation {
     div.your-learning {
       padding: 10px;
       border-bottom: 1px solid lightgrey;
+
+      a {
+        display: block;
+        &.auth-link {
+          padding: 10px 0;
+          text-align: center;
+          margin-top: 10px;
+          border-radius: 5px;
+        }
+
+        &.login {
+          background: red;
+          color: #fff;
+        }
+
+        &.signup {
+          background: lightgrey;
+          color: #333;
+        }
+      }
     }
 
     div.more-from-learn-room {

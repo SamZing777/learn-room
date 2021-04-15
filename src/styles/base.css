@@ -114,6 +114,27 @@ nav.navigation div.mobile-side-navigation-menu-container div.your-learning {
   border-bottom: 1px solid lightgrey;
 }
 
+nav.navigation div.mobile-side-navigation-menu-container div.your-learning a {
+  display: block;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.your-learning a.auth-link {
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.your-learning a.login {
+  background: red;
+  color: #fff;
+}
+
+nav.navigation div.mobile-side-navigation-menu-container div.your-learning a.signup {
+  background: lightgrey;
+  color: #333;
+}
+
 nav.navigation div.mobile-side-navigation-menu-container div.more-from-learn-room {
   padding: 10px;
 }
