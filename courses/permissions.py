@@ -2,7 +2,7 @@ from rest_framework import permissions
 
 
 """
-class IsInstructor(permissions.BasePermission):
+class IsInstructorOrReadOnly(permissions.BasePermission):
 	if user.is_instructor
 		pass
 """

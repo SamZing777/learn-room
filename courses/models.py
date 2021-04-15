@@ -19,6 +19,24 @@ class CategoryTag(models.TextChoices):
 
 """
 
+class CourseQuerySet(models.query.QuerySet):
+	def active(self):
+		return self.filter(is_published=True)
+
+
+class CourseManager(models.Manager):
+	def get_queryset(self):
+		return CourseQuerySet(self.model, using=self._db)
+
+	def all(self, *args, **kwargs):
+		return self.get_queryset().active()
+
+	def get_related(self, instance):
+		course_one = self.get_queryset().filter(categories__in=instance.category.all())
+		course_two = self.get_queryset().filter(default=instance.default)
+		qs = (course_one | course_two).exclude(id=instance.id).distinct()
+		return qs
+
 
 class Category(models.Model):
 	name = models.CharField(max_length=50)
@@ -118,7 +136,7 @@ class Part(models.Model):
 		return self.name
 
 	def get_absolute_url(self):
-		return reverse('part', args=[str(self.id)])
+		return reverse('part_content', args=[str(self.id)])
 
 
 class Section(models.Model):
@@ -132,13 +150,13 @@ class Section(models.Model):
 		return self.name
 
 	def get_absolute_url(self):
-		return reverse('section', args=[str(self.id)])
+		return reverse('section_content', args=[str(self.id)])
 
 
 
 class Lesson(models.Model):
 	title = models.CharField(max_length=100)
-	Course = models.ForeignKey(Course, on_delete=models.CASCADE)
+	Course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='course_content')
 	SubCategory = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
 	slug = AutoSlugField(populate_from='title', unique=True, 
 			     always_update=False, default='')

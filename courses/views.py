@@ -1,6 +1,7 @@
 from django.db.models import Q
 from rest_framework import generics, permissions
 from rest_framework.views import APIView
+from rest_framework.response import Response
 
 # from django_filters import rest_framework as filters
 
@@ -28,10 +29,18 @@ from .serializers import (
 
 from .permissions import IsInstructorOrReadOnly
 
+from .pagination import (
+		CategoryPagination,
+		CoursePagination
+	)
+
+# from .filters import CourseFilter
+
 
 class CategoryListAPIView(generics.ListAPIView):
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
+	pagination_class = CategoryPagination
 
 
 """
@@ -63,6 +72,8 @@ class CourseListAPIView(generics.ListCreateAPIView):
 	search_fields = ['title', 'instructor']
 	serializer_class = CourseSerializer
 	permisson_classes = (permissions.IsAuthenticatedOrReadOnly)
+	pagination_class = CoursePagination
+	# filter_class = CourseFilter
 
 	def get_queryset(self, *args, **kwargs):
 		query_list = Course.objects.all()
@@ -74,6 +85,11 @@ class CourseListAPIView(generics.ListCreateAPIView):
 				Q(instructor__contains=query)
 				).distinct()
 		return query_list
+
+	def enroll(self, request, *args, **kwargs):
+		course = self.get_object()
+		course.users.add(request.user)
+		return Response({'enrolled': True})
 
 
 class PartListAPIView(generics.ListCreateAPIView):

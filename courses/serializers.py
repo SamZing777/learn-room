@@ -12,45 +12,67 @@ from .models import (
 	)
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class LessonSerializer(serializers.ModelSerializer):
 
 	class Meta:
-		model = Category
+		model = Lesson
 		fields = '__all__'
 
 
-class SubCategorySerializer(serializers.ModelSerializer):
-
+class SectionSerializer(serializers.ModelSerializer):
+	"""
+	url = serializers.HyperlinkedIdentityField(view_name='section_content')
+	lesson_set = LessonSerializer(many=True)
+	"""
+	
 	class Meta:
-		model = SubCategory
+		model = Section
+		fields = '__all__'
+
+
+class PartSerializer(serializers.ModelSerializer):
+	"""
+	url = serializers.HyperlinkedIdentityField(view_name='part_content')
+	section_set = SectionSerializer(many=True)
+	lesson_set = LessonSerializer(many=True)
+	"""
+	class Meta:
+		model = Part
 		fields = '__all__'
 
 
 class CourseSerializer(serializers.ModelSerializer):
+	"""
+	url = serializers.HyperlinkedIdentityField(view_name='course_content')
+	part = PartSerializer(many=True)
+	section = SectionSerializer(many=True)
+	lesson = LessonSerializer(many=True)
+	"""
 
 	class Meta:
 		model = Course
 		fields = '__all__'
 
 
-class PartSerializer(serializers.ModelSerializer):
+class SubCategorySerializer(serializers.ModelSerializer):
+	"""
+	url = serializers.HyperlinkedIdentityField(view_name='subcategory')
+	course_set = CourseSerializer(many=True)
+	"""
 
 	class Meta:
-		model = Part
+		model = SubCategory
 		fields = '__all__'
 
 
-class SectionSerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
+	"""
+	url = serializers.HyperlinkedIdentityField(view_name='course_category')
+	course_set = SubCategorySerializer(many=True)
+	"""
 
 	class Meta:
-		model = Section
-		fields = '__all__'
-
-
-class LessonSerializer(serializers.ModelSerializer):
-
-	class Meta:
-		model = Lesson
+		model = Category
 		fields = '__all__'
 
 

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # local apps
     'users.apps.UsersConfig',
     'courses.apps.CoursesConfig',
+    'students.apps.StudentsConfig',
     'live_class.apps.LiveClassConfig',
     'enrollment.apps.EnrollmentConfig',
     'assessment.apps.AssessmentConfig',
