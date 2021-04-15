@@ -1,4 +1,5 @@
 from django.urls import path, include
+from rest_framework import routers
 
 from .views import (
 	CategoryListAPIView,
@@ -11,8 +12,12 @@ from .views import (
 	PartChangeAPIView,
 	SectionChangeAPIView,
 	LessonChangeAPIView,
-	StudentFeedbackListAPIView
+	StudentFeedbackListAPIView,
+	RatingViewSet
 	)
+
+router = routers.DefaultRouter()
+router.register('ratings', RatingViewSet)
 
 
 urlpatterns = [
@@ -27,5 +32,6 @@ urlpatterns = [
 			path('part/<int:pk>/section/<int:id>/', SectionChangeAPIView.as_view(), name='section_change'),
 			path('lesson/', LessonListAPIView.as_view(), name='lesson'),
 			path('lesson/<slug:slug>/', LessonChangeAPIView.as_view(), name='lesson_change'),
-			path('courses/<slug:slug>/feedback/', StudentFeedbackListAPIView.as_view(), name='feedback')
+			path('courses/<slug:slug>/feedback/', StudentFeedbackListAPIView.as_view(), name='feedback'),
+			path('course/ratings/', include(router.urls))
 		]

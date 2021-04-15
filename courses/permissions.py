@@ -2,13 +2,16 @@ from rest_framework import permissions
 
 
 """
-class IsInstructorOrReadOnly(permissions.BasePermission):
+class UserIsInstructor(permissions.BasePermission):
 	if user.is_instructor
 		pass
 """
 
 
-class IsInstructorOrReadOnly(permissions.BasePermission):
+# If user in Owner of the course:
+#    other read only
+
+class IsOwnerOrReadOnly(permissions.BasePermission):
 	# only the specific owner of the course can make any changes to the course
 
 	def has_object_permission(self, request, view, obj):
@@ -20,6 +23,6 @@ class IsInstructorOrReadOnly(permissions.BasePermission):
 
 
 """
-class StudentIsEnrolled(permissions.BasePermission):
+class IsEnrolledForTheCourse(permissions.BasePermission):
 	pass
 """

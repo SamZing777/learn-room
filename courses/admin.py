@@ -8,7 +8,8 @@ from .models import (
 	Section,
 	Lesson,
 	StudentFeedback,
-	FeaturedReview
+	FeaturedReview,
+	Rating
 	)
 
 
@@ -48,3 +49,4 @@ admin.site.register(SubCategory)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson)
 admin.site.register(StudentFeedback, FeedbackAdmin)
+admin.site.register(Rating)

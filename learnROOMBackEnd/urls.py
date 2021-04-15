@@ -21,6 +21,7 @@ urlpatterns = [
     path('auth/', include('rest_framework.urls')),
     path('api/v1/users/', include('users.urls')),
     path('course/', include('courses.urls')),
+    path('assessments/', include('assessment.urls')),
     path('', include('jobs.urls')),
 
 	# documentation for the API

@@ -11,56 +11,50 @@ from .models import (
 	)
 
 
-all = '__all__'
-
-
 class QuizSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Quiz
-		fields = all
+		fields = '__all__'
 
 
 class OptionSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Option
-		fields = all
+		fields = '__all__'
 
 
 class ProjectSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Project
-		fields = all
+		fields = '__all__'
 
 
 class StudentQuizAnswerSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = StudentQuizAnswer
-		fields = all
+		fields = '__all__'
 
 
 class StudentProjectReportSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = StudentProjectReport
-		fields = all
+		fields = '__all__'
 
 
 class StudentQuizScoreSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = StudentQuizScore
-		fields = all
+		fields = '__all__'
 
 
 class StudentProjectScoreSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = StudentProjectScore
-		fields = all
-
-
-
+		fields = '__all__'

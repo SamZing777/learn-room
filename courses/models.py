@@ -113,6 +113,22 @@ class Course(models.Model):
 	def get_absolute_url(self):
 		return reverse('course_detail', args=[str(self.slug)])
 
+	def no_of_ratings(self):
+		ratings = Rating.objects.filter(movie=self)
+		return len(ratings)
+
+	def avg_rating(self):
+		sum = 0
+		ratings = Rating.objects.filter(movie=self)
+
+		for rating in ratings:
+		    sum += rating.stars
+
+		if len(ratings) > 0:
+		    return sum / len(ratings)
+		else:
+		    return 0
+
 """
 class CourseContent(models.Model):
 	title = models.CharField(max_length=100)
@@ -196,3 +212,13 @@ class FeaturedReview(models.Model):
 
 	def __str__(self):
 		return str(self.review)
+
+
+class Rating(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    stars = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
+
+    class Meta:
+        unique_together = (('user', 'course'),)
+        index_together = (('user', 'course'),)

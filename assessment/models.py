@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from users.models import User
 
@@ -19,6 +20,13 @@ class Quiz(models.Model):
 
 	def __str__(self):
 		return str(self.course)
+
+	def get_absolute_url(self):
+		return reverse('quiz_content', args=[str(self.slug)])
+
+	class Meta:
+		verbose_name = 'Quiz'
+		verbose_name_plural = 'Quizzes'
 
 
 class Option(models.Model):
@@ -43,6 +51,9 @@ class Project(models.Model):
 	def __str__(self):
 		return self.topic
 
+	def get_absolute_url(self):
+		return reverse('project_content', args=[str(self.slug)])
+
 
 class StudentQuizAnswer(models.Model):
 	student = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -51,6 +62,9 @@ class StudentQuizAnswer(models.Model):
 
 	def __str__(self):
 		return str(self.student)
+
+	def get_absolute_url(self):
+		return reverse('student_quiz', args=[str(self.slug)])
 
 
 class StudentProjectReport(models.Model):
@@ -62,6 +76,9 @@ class StudentProjectReport(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	def get_absolute_url(self):
+		return reverse('project_report', args=[str(self.slug)])
 
 
 class StudentQuizScore(models.Model):
