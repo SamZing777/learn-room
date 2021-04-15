@@ -4,8 +4,8 @@ from django.urls import reverse
 from django.db import models
 from django.db.models.signals import pre_save, post_save, post_delete
 
+from users.models import User
 from courses.models import Course
-# Create your models here.
 
 
 class CartItem(models.Model):
@@ -41,9 +41,9 @@ post_delete.connect(cart_item_post_save_receiver, sender=CartItem)
 
 
 class Cart(models.Model):
-	user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True,
+	user = models.ForeignKey(User, null=True, blank=True,
 							on_delete=models.CASCADE)
-	items = models.ManyToManyField(Variation, through=CartItem)
+	Course = models.ForeignKey(Course, on_delete=models.CASCADE)
 	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 	subtotal = models.DecimalField(max_digits=50, decimal_places=2, default=0.00)
@@ -69,8 +69,6 @@ class Cart(models.Model):
 	def is_complete(self):
 		self.active = False
 		self.save()
-
-
 
 
 def do_tax_and_total_receiver(sender, instance, *args, **kwargs):

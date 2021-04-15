@@ -1,3 +1,4 @@
+import datetime
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'students.apps.StudentsConfig',
     'live_class.apps.LiveClassConfig',
+    'carts.apps.CartsConfig',
     'enrollment.apps.EnrollmentConfig',
     'assessment.apps.AssessmentConfig',
     'jobs.apps.JobsConfig',
@@ -69,7 +71,21 @@ REST_FRAMEWORK = {
 
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
+        ],
+
+    'DEFAULT_PAGINATION_CLASS': [
+        'courses.pagination.CoursePagination',
+        # 'SEARCH_PARAM' : 'q'
     ]
+      
+}
+
+
+JWT_AUTH = {
+    "JWT_RESPONSE_PAYLOAD_HANDLER": 
+            "learnROOMBackEnd.utils.jwt_response_payload_handler",
+    "JWT_EXPIRATION_DELTA": datetime.timedelta(seconds=30000),
+    "JWT_ALLOW_REFRESH": True, #False
 }
 
 
@@ -229,3 +245,8 @@ AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+BRAINTREE_PUBLIC = "test public"
+BRAINTREE_PRIVATE = "test private"
+BRAINTREE_MERCHANT_ID = "nwcnlnbgf2ou568p"
+BRAINTREE_ENVIRONEMNT = "Sandbox"
