@@ -1,0 +1,84 @@
+@media (min-width: 920px) {
+  *[class^="desk"] {
+    display: block;
+  }
+  div.desk-bottom-nav {
+    background: #fff;
+    padding: 15px 0;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      li {
+        a {
+          color: #333;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  nav.navigation {
+    justify-content: space-evenly;
+    height: 70px;
+    span.burger {
+      display: none;
+    }
+
+    a.brand {
+      font-size: 20px;
+      margin-right: 20px;
+    }
+
+    div.mobile-menu {
+      display: none;
+    }
+    div.desk-search-container {
+      border: 1px solid lightgrey;
+      margin: 0 10px;
+      padding: 5px 10px;
+      flex: 1;
+      border-radius: 40px;
+      font-size: 16px;
+      input {
+        padding: 10px 0;
+        width: 100%;
+      }
+    }
+
+    div.desk-nav-menu {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          display: inline-block;
+          padding: 0 15px;
+          a {
+            color: #333;
+            font-size: 14px;
+          }
+          svg {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  header.banner {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    div.floating-message {
+      left: 50px;
+      top: 50px;
+      z-index: 10px;
+      position: absolute;
+      width: 350px;
+    }
+  }
+
+  div.search-container {
+    display: none;
+  }
+}

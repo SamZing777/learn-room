@@ -65,3 +65,20 @@ div.class_room {
     }
   }
 }
+
+// choose-us
+
+div.choose-us {
+  padding: 20px;
+  div.reason {
+    text-align: center;
+    padding: 30px 10px;
+    svg {
+      font-size: 50px;
+    }
+
+    h3 {
+      padding: 15px 0;
+    }
+  }
+}

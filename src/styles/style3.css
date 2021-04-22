@@ -86,4 +86,21 @@ div.class_room div.other-topics div.other-topic div.about-topic button span {
 div.class_room div.other-topics div.other-topic div.about-topic button span svg {
   font-size: 16px;
 }
+
+div.choose-us {
+  padding: 20px;
+}
+
+div.choose-us div.reason {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+div.choose-us div.reason svg {
+  font-size: 50px;
+}
+
+div.choose-us div.reason h3 {
+  padding: 15px 0;
+}
 /*# sourceMappingURL=style3.css.map */
