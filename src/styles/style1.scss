@@ -72,7 +72,8 @@ div.search-container {
 // recommended topics
 div.recommended-topics {
   padding: $default-general-padding;
-
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   a {
     display: block;
     padding: 15px 20px;
@@ -92,13 +93,36 @@ div.recommended-for-you {
   padding: $default-general-padding;
   div.recommended-courses-container {
     padding: 20px 0;
+    position: relative;
+    button.slider-btn {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      background: #fff;
+      border-radius: 80px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+        -5px -5px -5px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      &.left-slider {
+        top: 50px;
+        left: -15px;
+      }
+      &.right-slider {
+        right: 0;
+        top: 50px;
+      }
+    }
     div.recommended-courses-scrollable {
       display: flex;
       flex-wrap: nowrap;
-      overflow-x: scroll;
+      overflow-x: hidden;
+      position: relative;
+      scroll-behavior: smooth;
       div.a-course {
-        flex: 0 0 80%;
         margin-right: 20px;
+        flex: 0 0 300px;
         div.star-and-total-enrolled {
           padding: 8px 0;
         }
@@ -110,7 +134,7 @@ div.recommended-for-you {
           padding-bottom: 5px;
         }
         img.course-thumbnail {
-          height: 170px;
+          height: 200px;
         }
       }
     }
@@ -119,9 +143,12 @@ div.recommended-for-you {
 
 div.become-instructor {
   padding: $default-general-padding;
+
   text-align: center;
-  h3 {
-    padding-bottom: 10px;
+  div {
+    h3 {
+      padding-bottom: 10px;
+    }
   }
 
   a.link-btn {
@@ -139,10 +166,10 @@ div.recommended-courses-container {
   div.recommended-courses-scrollable {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
     div.a-course {
-      flex: 0 0 80%;
       margin-right: 20px;
+      width: 300px;
       div.star-and-total-enrolled {
         padding: 8px 0;
       }

@@ -16,6 +16,8 @@ const Home = () => {
       <SearchField />
       <StartLearning />
       <Recommended />
+      <Recommended />
+      <Recommended />
       <RecommendedTopics />
       <BecomeAnInstructor />
       <Footer />

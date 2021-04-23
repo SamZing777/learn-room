@@ -5,6 +5,11 @@
   div.desk-bottom-nav {
     background: #fff;
     padding: 15px 0;
+    border-bottom: 1px solid lightgrey;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 65px;
+    z-index: 30;
   }
   div.desk-bottom-nav ul {
     display: -webkit-box;
@@ -82,6 +87,58 @@
   }
   div.search-container {
     display: none;
+  }
+  div.recommended-courses-container div.recommended-courses-scrollable {
+    overflow-x: hidden;
+  }
+  div.recommended-topics {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  div.become-instructor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #efefef;
+  }
+  div.become-instructor div {
+    padding: 0 4em;
+  }
+  div.become-instructor div p {
+    width: 500px;
+  }
+  footer.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer.footer select {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  footer.footer nav.footer-navigation ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 100px;
   }
 }
 /*# sourceMappingURL=media-query1.css.map */

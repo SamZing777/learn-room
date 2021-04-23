@@ -5,7 +5,10 @@
   div.desk-bottom-nav {
     background: #fff;
     padding: 15px 0;
-
+    border-bottom: 1px solid lightgrey;
+    position: sticky;
+    top: 65px;
+    z-index: 30;
     ul {
       display: flex;
       justify-content: space-evenly;
@@ -80,5 +83,50 @@
 
   div.search-container {
     display: none;
+  }
+
+  div.recommended-courses-container {
+    div.recommended-courses-scrollable {
+      overflow-x: hidden;
+    }
+  }
+
+  div.recommended-topics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    a {
+      // grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  div.become-instructor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #efefef;
+    div {
+      padding: 0 4em;
+      p {
+        width: 500px;
+      }
+    }
+  }
+
+  footer.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    select {
+      align-self: flex-start;
+    }
+
+    nav.footer-navigation {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 100px;
+      }
+    }
   }
 }

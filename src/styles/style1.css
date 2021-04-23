@@ -91,6 +91,10 @@ div.search-container div.search input {
 
 div.recommended-topics {
   padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
 }
 
 div.recommended-topics a {
@@ -112,6 +116,30 @@ div.recommended-for-you {
 
 div.recommended-for-you div.recommended-courses-container {
   padding: 20px 0;
+  position: relative;
+}
+
+div.recommended-for-you div.recommended-courses-container button.slider-btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), -5px -5px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), -5px -5px -5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+div.recommended-for-you div.recommended-courses-container button.slider-btn.left-slider {
+  top: 50px;
+  left: -15px;
+}
+
+div.recommended-for-you div.recommended-courses-container button.slider-btn.right-slider {
+  right: 0;
+  top: 50px;
 }
 
 div.recommended-for-you div.recommended-courses-container div.recommended-courses-scrollable {
@@ -120,14 +148,16 @@ div.recommended-for-you div.recommended-courses-container div.recommended-course
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 div.recommended-for-you div.recommended-courses-container div.recommended-courses-scrollable div.a-course {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 80%;
-          flex: 0 0 80%;
   margin-right: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
 }
 
 div.recommended-for-you div.recommended-courses-container div.recommended-courses-scrollable div.a-course div.star-and-total-enrolled {
@@ -143,7 +173,7 @@ div.recommended-for-you div.recommended-courses-container div.recommended-course
 }
 
 div.recommended-for-you div.recommended-courses-container div.recommended-courses-scrollable div.a-course img.course-thumbnail {
-  height: 170px;
+  height: 200px;
 }
 
 div.become-instructor {
@@ -151,7 +181,7 @@ div.become-instructor {
   text-align: center;
 }
 
-div.become-instructor h3 {
+div.become-instructor div h3 {
   padding-bottom: 10px;
 }
 
@@ -174,14 +204,12 @@ div.recommended-courses-container div.recommended-courses-scrollable {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 div.recommended-courses-container div.recommended-courses-scrollable div.a-course {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 80%;
-          flex: 0 0 80%;
   margin-right: 20px;
+  width: 300px;
 }
 
 div.recommended-courses-container div.recommended-courses-scrollable div.a-course div.star-and-total-enrolled {

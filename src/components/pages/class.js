@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Footer from "../partials/footer";
 import Navigation from "../partials/navigation";
 import video from "../../assets/video/coding_video.mp4";
