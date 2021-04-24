@@ -1,0 +1,8 @@
+@media (min-width: 920px) {
+  div.live-class-container div.video-wrapper {
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+/*# sourceMappingURL=media-query2.css.map */
