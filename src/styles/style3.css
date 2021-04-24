@@ -1,0 +1,106 @@
+div.class_room {
+  padding: 20px;
+}
+
+div.class_room div.board div.left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  padding: 0 10px;
+}
+
+div.class_room div.board div.left svg {
+  position: relative;
+}
+
+div.class_room div.board div.left div.topic-list {
+  position: absolute;
+  width: 300px;
+  background: #fff;
+  z-index: 20;
+  min-height: 100vh;
+  padding: 20px;
+  display: none;
+}
+
+div.class_room div.board div.left div.topic-list.menu-out {
+  display: block;
+}
+
+div.class_room div.board div.left div.topic-list li {
+  padding: 10px 0;
+}
+
+div.class_room div.board div.right {
+  padding: 0 15px;
+}
+
+div.class_room div.board div.right h3.current-topic {
+  padding-bottom: 15x;
+}
+
+div.class_room div.other-topics {
+  padding: 20px 0;
+}
+
+div.class_room div.other-topics div.other-topic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0;
+}
+
+div.class_room div.other-topics div.other-topic div.thumbnail {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+}
+
+div.class_room div.other-topics div.other-topic div.about-topic {
+  padding: 0 10px;
+}
+
+div.class_room div.other-topics div.other-topic div.about-topic p {
+  padding-bottom: 10px;
+}
+
+div.class_room div.other-topics div.other-topic div.about-topic button {
+  width: 100%;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.class_room div.other-topics div.other-topic div.about-topic button span {
+  margin-right: 5px;
+  color: purple;
+}
+
+div.class_room div.other-topics div.other-topic div.about-topic button span svg {
+  font-size: 16px;
+}
+
+div.choose-us {
+  padding: 20px;
+}
+
+div.choose-us div.reason {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+div.choose-us div.reason svg {
+  font-size: 50px;
+}
+
+div.choose-us div.reason h3 {
+  padding: 15px 0;
+}
+/*# sourceMappingURL=style3.css.map */

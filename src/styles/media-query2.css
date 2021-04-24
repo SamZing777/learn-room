@@ -1,0 +1,78 @@
+@media (min-width: 920px) {
+  div.live-class-container div.video-wrapper {
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  div.class_room div.board {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  div.class_room div.board div.video-container {
+    padding: 0 20px;
+  }
+  div.class_room div.board div.video-container div.video-wrapper {
+    width: 700px;
+    margin: 0;
+  }
+  div.class_room div.board div.other-topics {
+    padding-top: 0;
+    height: 400px;
+    overflow: auto;
+  }
+  div.jobs div.banner {
+    height: 300px;
+    overflow: hidden;
+  }
+  div.jobs div.banner h2 {
+    padding: 30px 0;
+  }
+  div.jobs div.job-search-container {
+    width: 800px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  div.jobs div.job-search-container div.job-search-filter {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    padding: 0 20px;
+  }
+  div.jobs div.job-search-container div.top-jobs {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  div.jobs div.job-search-container div.top-jobs div.jobs-listing {
+    height: 400px;
+    overflow: auto;
+    padding: 0 20px;
+  }
+  div.jobs div.job-search-container div.top-jobs div.jobs-listing div.job {
+    margin-bottom: 10px;
+  }
+  div.jobs div.job-search-container div.top-jobs div.jobs-listing div.job div.left {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  div.jobs div.job-search-container div.top-jobs div.jobs-listing div.job div.right h4 {
+    font-size: 15px;
+  }
+  div.jobs div.job-search-container div.top-jobs div.jobs-listing div.job div.right p {
+    font-size: 14px;
+  }
+  div.choose-us h2 {
+    text-align: center;
+    padding: 10px 0;
+  }
+  div.choose-us div.reasons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*# sourceMappingURL=media-query2.css.map */

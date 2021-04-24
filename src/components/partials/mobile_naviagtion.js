@@ -1,5 +1,6 @@
 import React from "react";
 import { FaChevronRight, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const MobileNavigation = ({ navigationRef }) => {
   return (
@@ -33,50 +34,56 @@ const MobileNavigation = ({ navigationRef }) => {
       <div className="your-learning">
         <p className="title">Learn</p>
         <a href="#mylearning">My learning</a>
+        <Link to="/auth/login" className="auth-link login">
+          Login
+        </Link>
+        <Link to="/auth/signup" className="auth-link signup">
+          Signup
+        </Link>
       </div>
       <div className="mobile-navigation-bottom">
         <ul>
           <li>
-            <a href="#Academics">
+            <Link to="/category">
               <span>Academics</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Finace">
+            <Link to="/category">
               <span>Finace</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Linguistics">
+            <Link to="/category">
               <span>Linguistics</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Master Class">
+            <Link to="/category">
               <span>Master Class</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Professional">
+            <Link to="/category">
               <span>Professional</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Technology">
+            <Link to="/category">
               <span>Technology</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Vocational">
+            <Link to="/category">
               <span>Vocational</span>
               <FaChevronRight />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
