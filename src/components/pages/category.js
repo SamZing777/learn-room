@@ -10,6 +10,7 @@ const CourseCategory = () => {
       <div className="category">
         <h3 className="title">Professionals</h3>
         <p className="total_learners">12,345,344 Learners</p>
+        {/* <div className="recommended-courses-container"></div> */}
         <CourseSlider />
       </div>
       <Footer />

@@ -259,6 +259,7 @@ header.banner div.floating-message h2 {
 
 footer.footer {
   padding: 20px;
+  background: #eee;
 }
 
 footer.footer select.choose-language {
