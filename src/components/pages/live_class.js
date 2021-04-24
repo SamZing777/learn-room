@@ -82,4 +82,7 @@ const LiveClass = () => {
 };
 
 export default LiveClass;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe0f2b665c7bcb5096c97ae1784c73e047135ecd
