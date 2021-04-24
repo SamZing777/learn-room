@@ -16,7 +16,6 @@ const LiveClass = () => {
 
 export default LiveClass;
 
-
 /*
 
 import React, { useRef, useState } from "react";
@@ -83,5 +82,3 @@ const LiveClass = () => {
 };
 
 export default LiveClass;
-
-*/
