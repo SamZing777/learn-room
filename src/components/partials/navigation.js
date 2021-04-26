@@ -24,9 +24,9 @@ const Navigation = () => {
           <span />
           <span />
         </span>
-        <a href="#somewhere" className="brand">
+        <Link to="/" className="brand">
           Learnroom
-        </a>
+        </Link>
         <div className="desk-search-container">
           <input type="search" placeholder="What do you want to learn?" />
         </div>

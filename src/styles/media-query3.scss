@@ -1,0 +1,53 @@
+@media (min-width: 900px) {
+  div.course-preview-container {
+    section.content {
+      width: 60%;
+      background: #f7f7f7;
+      margin: 30px 0;
+      border-radius: 10px;
+      padding: 20px;
+      div.price-and-add {
+        display: none;
+      }
+    }
+    section.course-description {
+      position: relative;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+
+      div.about-course {
+        color: #fff;
+      }
+      div.video-container {
+        flex: 0 0 400px;
+        padding: 0 50px;
+        position: absolute;
+        right: 150px;
+        padding: 20px 10px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3) -5px -5px -5px rgba(0, 0, 0, 0.3);
+        div.video {
+          position: relative;
+        }
+
+        div.desk-action-container {
+          padding: 10px;
+          a {
+            padding: 10px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: lightgrey;
+            color: #333;
+            &.add-to-cart {
+              background: red;
+              color: #fff;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

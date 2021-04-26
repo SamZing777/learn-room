@@ -165,15 +165,18 @@ div.course-preview-container div.course-content div span {
   margin-right: 10px;
 }
 
-div.course-preview-container div.course-includes {
+div.course-preview-container div.course-includes,
+div.course-preview-container div.desk-course-includes {
   padding: 10px;
 }
 
-div.course-preview-container div.course-includes h3 {
+div.course-preview-container div.course-includes h3,
+div.course-preview-container div.desk-course-includes h3 {
   padding-bottom: 10px;
 }
 
-div.course-preview-container div.course-includes div {
+div.course-preview-container div.course-includes div,
+div.course-preview-container div.desk-course-includes div {
   padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,7 +186,8 @@ div.course-preview-container div.course-includes div {
           align-items: center;
 }
 
-div.course-preview-container div.course-includes div svg {
+div.course-preview-container div.course-includes div svg,
+div.course-preview-container div.desk-course-includes div svg {
   margin-right: 20px;
   font-size: 20px;
 }

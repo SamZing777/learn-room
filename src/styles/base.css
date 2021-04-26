@@ -259,7 +259,8 @@ header.banner div.floating-message h2 {
 
 footer.footer {
   padding: 20px;
-  background: #eee;
+  background: #2a3a47;
+  color: #fff;
 }
 
 footer.footer select.choose-language {
@@ -270,6 +271,23 @@ footer.footer select.choose-language {
   background: transparent;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  color: #fff;
+}
+
+footer.footer select.choose-language::-webkit-input-placeholder {
+  color: #fff;
+}
+
+footer.footer select.choose-language:-ms-input-placeholder {
+  color: #fff;
+}
+
+footer.footer select.choose-language::-ms-input-placeholder {
+  color: #fff;
+}
+
+footer.footer select.choose-language::placeholder {
+  color: #fff;
 }
 
 footer.footer nav.footer-navigation ul li {
@@ -278,8 +296,9 @@ footer.footer nav.footer-navigation ul li {
 
 footer.footer nav.footer-navigation ul li a {
   padding: 15px 0;
+  color: #fff;
   display: inline-block;
-  color: #333;
+  font-size: 15px;
 }
 
 .slashed {

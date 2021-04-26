@@ -215,7 +215,8 @@ header.banner {
 
 footer.footer {
   padding: $default-general-padding;
-  background: #eee;
+  background: rgb(42, 58, 71);
+  color: #fff;
   select.choose-language {
     padding: 20px 20px;
     width: 200px;
@@ -224,6 +225,10 @@ footer.footer {
     background: transparent;
     border: 1px solid lightgrey;
     border-radius: 5px;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+    }
   }
   nav.footer-navigation {
     ul {
@@ -231,8 +236,9 @@ footer.footer {
         display: block;
         a {
           padding: 15px 0;
+          color: #fff;
           display: inline-block;
-          color: $default-color;
+          font-size: 15px;
         }
       }
     }
