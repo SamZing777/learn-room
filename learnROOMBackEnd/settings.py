@@ -248,7 +248,9 @@ AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+"""
 BRAINTREE_PUBLIC = "test public"
 BRAINTREE_PRIVATE = "test private"
 BRAINTREE_MERCHANT_ID = "nwcnlnbgf2ou568p"
 BRAINTREE_ENVIRONEMNT = "Sandbox"
+"""
