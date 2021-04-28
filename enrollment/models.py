@@ -64,10 +64,9 @@ class UserCheckOut(models.Model):
 def update_braintree_id(sender, instance, *args, **kwargs):
 	if not instance.braintree_id:
 		instance.get_braintree_id
-"""
 
 post_save.connect(update_braintree_id, sender=UserCheckOut)
-
+"""
 
 
 
