@@ -10,36 +10,32 @@ const Star = (rated) => {
 
 const RecommendCourse = ({ course_data }) => {
   const {
-    source_img,
-    course_name,
+    thumb_nail,
+    title,
     total_enrolled,
-    course_price,
-    slashed_sale,
-    instructor_name,
+    language,
+    self_paced_price,
+    live_class_price,
   } = course_data;
   return (
     <div className="a-course">
-      <img
-        className="course-thumbnail"
-        src={source_img}
-        alt={course_name}
-      ></img>
+      <img className="course-thumbnail" src={thumb_nail} alt={title}></img>
       <div className="course-details">
-        <h4 className="course_name">{course_name}</h4>
-        <p className="instructor_name">{instructor_name}</p>
+        <h4 className="course_name">{title}</h4>
+        <p className="instructor_name">Simpson</p>
         <div className="star-and-total-enrolled">
           <Star />
           <Star />
           <Star />
           <Star />
           <Star />
-          <span>({total_enrolled})</span>
+          <span>({language})</span>
         </div>
         <div className="price">
           <span className="price">
-            ${slashed_sale} (
+            ${live_class_price} (
             <span style={{ textDecoration: "line-through" }}>
-              {course_price}
+              {self_paced_price}
             </span>
             )
           </span>
