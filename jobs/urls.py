@@ -8,5 +8,5 @@ from .views import (
 
 urlpatterns = [
 	path('jobs/', JobListCreateAPIView.as_view(), name='jobs'),
-	path('jobs/<slug:slug>/', JobChangeAPIView.as_view(), name='job_detail')
+	path('jobs/<int:pk>/', JobChangeAPIView.as_view(), name='job_detail')
 ]

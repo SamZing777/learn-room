@@ -9,8 +9,7 @@ class JobListCreateAPIView(generics.ListCreateAPIView):
 	serializer_class = JobSerializer
 
 
-
 class JobChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Job.objects.all()
 	serializer_class = JobSerializer
-	lookup_field = 'slug'
+	lookup_field = 'id'
