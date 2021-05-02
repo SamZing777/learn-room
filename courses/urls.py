@@ -17,21 +17,21 @@ from .views import (
 	)
 
 router = routers.DefaultRouter()
-router.register('ratings', RatingViewSet)
+router.register('ratings', RatingViewSet, basename='ratings')
+router.register('part', PartListAPIView, basename='part')
+router.register('studentfeedback', StudentFeedbackListAPIView, basename='studentfeedback')
+router.register('lessonchange', LessonChangeAPIView, basename='lessonchange')
+router.register('partchange', PartChangeAPIView, basename='partchange')
+router.register('coursechange', CourseChangeAPIView, basename='coursechange')
+router.register('lesson', LessonListAPIView, basename='lesson')
+router.register('section', SectionListAPIView, basename='section')
+router.register('courselist', CourseListAPIView, basename='courselist')
+router.register('subcategory', SubCategoryListAPIView, basename='subcategory')
+router.register('category', CategoryListAPIView, basename='category')
+
 
 
 urlpatterns = [
-			path('categories/', CategoryListAPIView.as_view(), name='categories'),
-			path('categories/<slug:slug>/', SubCategoryListAPIView.as_view(), name='course_category'),
-			path('categories/<slug:slug>/course/', SubCategoryListAPIView.as_view(), name='categorized_course'),
-			path('courses/', CourseListAPIView.as_view(), name='courses'),
-			path('courses/<slug:slug>/', CourseChangeAPIView.as_view(), name='course_detail'),
-			path('part/', PartListAPIView.as_view(), name='part'),
-			path('part/<int:pk>/', PartChangeAPIView.as_view(), name='part_change'),
-			path('part/<int:pk>/section/', SectionListAPIView.as_view(), name='section'),
-			path('part/<int:pk>/section/<int:id>/', SectionChangeAPIView.as_view(), name='section_change'),
-			path('lesson/', LessonListAPIView.as_view(), name='lesson'),
-			path('lesson/<slug:slug>/', LessonChangeAPIView.as_view(), name='lesson_change'),
-			path('courses/<slug:slug>/feedback/', StudentFeedbackListAPIView.as_view(), name='feedback'),
-			path('course/ratings/', include(router.urls))
-		]
+	path('courselist/<int:pk>/rating/<int:rating>/', CourseListAPIView.as_view({"get": "rating"})),
+	path('courselist/<int:pk>/enroll/', CourseListAPIView.as_view({"get": "enroll"}))
+		] + router.urls

@@ -32,11 +32,6 @@ class SectionSerializer(serializers.ModelSerializer):
 
 
 class PartSerializer(serializers.ModelSerializer):
-	"""
-	url = serializers.HyperlinkedIdentityField(view_name='part_content')
-	section_set = SectionSerializer(many=True)
-	lesson_set = LessonSerializer(many=True)
-	"""
 	class Meta:
 		model = Part
 		fields = '__all__'
@@ -95,4 +90,4 @@ class RatingSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Rating
-		fields = '__all__'
+		fields =[ 'user', 'stars']

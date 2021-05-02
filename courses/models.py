@@ -8,6 +8,12 @@ from djmoney.models.fields import MoneyField
 from users.models import User
 
 
+
+class Rating(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE,)
+    stars = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
+
+
 """
 class CategoryTag(models.TextChoices):
     ACADEMICS = 'Academics',
@@ -79,23 +85,23 @@ class Course(models.Model):
 		)
 
 
-	instructor = models.ForeignKey(User, on_delete=models.CASCADE)
-	title = models.CharField(max_length=100)
-	category = models.ForeignKey(Category, on_delete=models.CASCADE)
+	instructor = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+	title = models.CharField(max_length=100, null=True, blank=True)
+	category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
 	sub_category = models.ForeignKey(SubCategory, on_delete=models.CASCADE,
 					null=True, blank=True)
 	slug = AutoSlugField(populate_from='title', unique=True, 
-			     always_update=False, default='')
-	thumb_nail = models.FileField(help_text='A cover image for your Course')
-	short_note = models.CharField(max_length=250)
-	description = models.TextField()
-	requirements = models.TextField()
-	what_you_will_learn = models.TextField()
-	language = models.CharField(max_length=100)
+			     always_update=False, default='', null=True, blank=True)
+	thumb_nail = models.FileField(help_text='A cover image for your Course', null=True, blank=True)
+	short_note = models.CharField(max_length=250, null=True, blank=True)
+	description = models.TextField(null=True, blank=True)
+	requirements = models.TextField(null=True, blank=True)
+	what_you_will_learn = models.TextField(null=True, blank=True)
+	language = models.CharField(max_length=100, null=True, blank=True)
 	is_self_paced = models.BooleanField(default=True, null=True, blank=True)
 	is_live_class = models.BooleanField(default=True, null=True, blank=True)
-	is_free_for_self_paced = models.BooleanField(default=False)
-	is_free_for_live_class = models.BooleanField(default=False)
+	is_free_for_self_paced = models.BooleanField(default=False, null=True, blank=True)
+	is_free_for_live_class = models.BooleanField(default=False, null=True, blank=True)
 	self_paced_price = MoneyField(max_digits=14, decimal_places=2, 
 								  default_currency='USD', null=True, blank=True)
 	live_class_price = MoneyField(max_digits=14, decimal_places=2,
@@ -103,13 +109,17 @@ class Course(models.Model):
 	our_live_class_price = MoneyField(max_digits=14, decimal_places=2, 
 								  default_currency='USD', null=True, blank=True)
 	is_published = models.BooleanField(default=False)
-	status = models.CharField(max_length=10, choices=STATUS)
-	date_created = models.DateTimeField(auto_now_add=True)
-	last_updated = models.DateTimeField(default=now)
+	status = models.CharField(max_length=10, choices=STATUS, null=True, blank=True)
+	date_created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+	last_updated = models.DateTimeField(default=now, null=True, blank=True)
+	rate = models.ForeignKey(Rating, blank=True, null=True, on_delete=models.CASCADE)
 
 	def __str__(self):
 	    return self.title
 
+	def set_rating(self, id):
+		rate = id
+		
 	def get_absolute_url(self):
 		return reverse('course_detail', args=[str(self.slug)])
 
@@ -212,13 +222,3 @@ class FeaturedReview(models.Model):
 
 	def __str__(self):
 		return str(self.review)
-
-
-class Rating(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    stars = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
-
-    class Meta:
-        unique_together = (('user', 'course'),)
-        index_together = (('user', 'course'),)

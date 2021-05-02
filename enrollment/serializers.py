@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from carts.mixins import TokenMixin
+# from .mixins import TokenMixin
 from .models import (
 	Enrolled,
 	Order,
@@ -28,7 +28,7 @@ class EnrolledSerializers(serializers.ModelSerializer):
 
 
 
-class FinalizedOrderSerializer(TokenMixin, serializers.Serializer):
+class FinalizedOrderSerializer(serializers.Serializer):
 	order_token = serializers.CharField()
 	payment_method_nonce = serializers.CharField()
 	order_id =  serializers.IntegerField(required=False)

@@ -2,10 +2,13 @@ from django.db.models import Q
 from rest_framework import generics, permissions
 from rest_framework import viewsets
 from rest_framework.views import APIView
+from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.authentication import TokenAuthentication
 
+from users.models import User
+from students.models import Enroll
 # from django_filters import rest_framework as filters
 
 from .models import (
@@ -39,137 +42,144 @@ from .pagination import (
 		CoursePagination
 	)
 
-# from .filters import CourseFilter
 
-
-class CategoryListAPIView(generics.ListAPIView):
+class CategoryListAPIView(viewsets.ModelViewSet):
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
-	pagination_class = CategoryPagination
+	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly,)
+	pagination_class = CoursePagination	
 
-
-"""
-class SubCategoryFilter(filters.FilterSet):
-
-	class Meta:
-		model = SubCategory
-		fields = {'name': ['exact']}
-		# fields = ('name')
-"""
-
-class SubCategoryListAPIView(generics.ListAPIView):
+class SubCategoryListAPIView(viewsets.ModelViewSet):
 	queryset = SubCategory.objects.all()
 	serializer_class = SubCategorySerializer
-	# filter_class = SubCategoryFilter
+	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly,)
+	pagination_class = CoursePagination
 
 
-
-"""
-	def get_context_data(self, *args, **kwargs):
-		sub_category = self.object.subcategory.name
-		context = super(SubCategoryListAPIView, self).get_context_data(*args, **kwargs)
-		context['sub_features'] = SubCategory.objects.filter(subcategory__name=sub_category)
-		return context
-"""
-
-
-class CourseListAPIView(generics.ListCreateAPIView):
+class CourseListAPIView(viewsets.ModelViewSet):
 	search_fields = ['title', 'instructor']
 	serializer_class = CourseSerializer
 	permisson_classes = (permissions.IsAuthenticatedOrReadOnly) # IsEnrolledForTheCourse, UserIsIntructor
 	pagination_class = CoursePagination
-	# filter_class = CourseFilter
 
-	def get_queryset(self, *args, **kwargs):
-		query_list = Course.objects.all()
-		query = Course.objects.all()
-		query = self.request.GET.get('q')
-		if query:
-			query_list = queryset.list.filter(
-				Q(title__contains=query) |
-				Q(instructor__contains=query)
-				).distinct()
-		return query_list
+	def get_queryset(self):
+		queryset = Course.objects.all()
+		query = self.request.query_params.get('q')
+		cousrse_id = self.request.query_params.get('id')
+		category = self.request.query_params.get('category')
+		sub_category = self.request.query_params.get('sub_category')
+		if cousrse_id is not None and sub_category is None and category is None:
+			queryset = queryset.filter(id=cousrse_id)
+		if cousrse_id is None and sub_category is None and category is not None:
+			queryset = queryset.filter(category=category)
+		if cousrse_id is None and category is None and sub_category is not None:
+			queryset = queryset.filter(sub_category=sub_category)
+		if cousrse_id is not None and sub_category is not None and category is None:
+			queryset = queryset.filter(
+				Q(id=cousrse_id) |
+				Q(sub_category=sub_category)
+			)	
+		if cousrse_id is not None and sub_category is None and category is not None:
+			queryset = queryset.filter(
+				Q(id=cousrse_id) |
+				Q(category=category)
+			)
+		if cousrse_id is None and sub_category is not None and category is not None:
+			queryset = queryset.filter(
+				Q(sub_category=sub_category) |
+				Q(category=category)
+			)
+		if cousrse_id is not None and sub_category is not None and category is not None:
+			queryset = queryset.filter(
+				Q(id=cousrse_id) |
+				Q(category=category) |
+				Q(sub_category=sub_category)
+			)
+		if query is not None:
+			queryset = queryset.filter(
+				title__contains=query
+			)	
+		return queryset
 
+	@action(detail=True, methods=['POST', 'GET'])
 	def enroll(self, request, *args, **kwargs):
 		course = self.get_object()
-		course.users.add(request.user)
-		return Response({'enrolled': True})
+		user = User.objects.get(email=request.user.email)
+		enroll = Enroll.objects.create(user=user, course=course)
+		return Response({'enroll': True})
 
-	@action(detail=True, methods=['POST'])
-	def rate_course(self, request, pk=None):
-		if 'stars' in request.data:
+	@action(detail=True, methods=['POST', 'GET'])
+	def rating(self, request, pk=None, *args, **kwargs):
+		course = self.get_object()
+		rating = int(kwargs['rating'])
+		rating = Rating.objects.create(user=request.user, stars=rating)
+		course.set_rating(rating.id)
+		return Response({'rating': True})
 
-		    course = Course.objects.get(id=pk) # Course.objects.filter(slug=.....kwargs.Matchurlresolvers)
-		    stars = request.data['stars']
-		    user = request.user
+	@action(detail=True, methods=['POST', 'GET'])
+	def add_part(self, request, pk=None, *args, **kwargs):
+		course = self.get_object()
+		name = int(kwargs['name'])
+		part = Part.objects.create(course=course, name=name)
+		return Response({'part': True})
 
-		    try:
-		        rating = Rating.objects.get(user=user.id, course=course.id)
-		        rating.stars = stars
-		        rating.save()
-		        serializer = RatingSerializer(rating, many=False)
-		        response = {'message': 'Rating updated', 'result': serializer.data}
-		        return Response(response, status=status.HTTP_200_OK)
-		    except:
-		        rating = Rating.objects.create(user=user, course=course, stars=stars)
-		        serializer = RatingSerializer(rating, many=False)
-		        response = {'message': 'Rating created', 'result': serializer.data}
-		        return Response(response, status=status.HTTP_200_OK)
-
-		else:
-		    response = {'message': 'You need to provide stars'}
-		    return Response(response, status=status.HTTP_400_BAD_REQUEST)
-
-
-class PartListAPIView(generics.ListCreateAPIView):
+class PartListAPIView(viewsets.ModelViewSet):
 	queryset = Part.objects.all()
 	serializer_class = PartSerializer
 	permisson_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly) # UserIsIntructor
+	pagination_class = CoursePagination
 
 
-class SectionListAPIView(generics.ListCreateAPIView):
+
+class SectionListAPIView(viewsets.ModelViewSet):
 	queryset = Section.objects.all()
 	serializer_class = SectionSerializer
 	permisson_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly) # UserIsIntructor
+	pagination_class = CoursePagination
 
 
-class LessonListAPIView(generics.ListCreateAPIView):
+class LessonListAPIView(viewsets.ModelViewSet):
 	queryset = Lesson.objects.all()
 	serializer_class = LessonSerializer
 	permisson_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly) # UserIsIntructor
+	pagination_class = CoursePagination
 
 
-class CourseChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+class CourseChangeAPIView(viewsets.ModelViewSet):
 	queryset = Course.objects.all()
 	serializer_class = CourseSerializer
 	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly,) # IsEnrolledForTheCourse, UserIsIntructor
 	lookup_field = 'slug'
+	pagination_class = CoursePagination
 
 
-class PartChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+class PartChangeAPIView(viewsets.ModelViewSet):
 	queryset = Part.objects.all()
 	serializer_class = PartSerializer
-	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly,)
+	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly)
+	pagination_class = CoursePagination
 
 
-class SectionChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+class SectionChangeAPIView(viewsets.ModelViewSet):
 	queryset = Section.objects.all()
 	serializer_class = SectionSerializer
 	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly,)
+	pagination_class = CoursePagination
 
 
-class LessonChangeAPIView(generics.RetrieveUpdateDestroyAPIView):
+class LessonChangeAPIView(viewsets.ModelViewSet):
 	queryset = Lesson.objects.all()
 	serializer_class = LessonSerializer
 	permisson_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly,) # IsEnrolledForTheCourse, UserIsIntructor
 	lookup_field = 'slug'
+	pagination_class = CoursePagination
 
 
-class StudentFeedbackListAPIView(generics.ListCreateAPIView):
+class StudentFeedbackListAPIView(viewsets.ModelViewSet):
 	queryset = StudentFeedback.objects.all()
 	serializer_class = FeedbackSerializer
 	permission_classes = (permissions.IsAuthenticatedOrReadOnly,) # IsEnrolledForTheCourse
+	pagination_class = CoursePagination
 
 
 class RatingViewSet(viewsets.ModelViewSet):
@@ -177,14 +187,5 @@ class RatingViewSet(viewsets.ModelViewSet):
     serializer_class = RatingSerializer
     authentication_classes = (TokenAuthentication, )
     permission_classes = (permissions.IsAuthenticated,)
+    pagination_class = CoursePagination
 
-    def update(self, request, *args, **kwargs):
-        response = {'message': 'You cant update rating like that'}
-        return Response(response, status=status.HTTP_400_BAD_REQUEST)
-
-    def create(self, request, *args, **kwargs):
-        response = {'message': 'You cant create rating like that'}
-        return Response(response, status=status.HTTP_400_BAD_REQUEST)
-
-
-# class FeaturedReviewListAPIView(APIView):

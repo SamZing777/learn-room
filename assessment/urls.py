@@ -1,4 +1,5 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter
 
 from .views import (
 		QuizListCreateAPIView,
@@ -11,8 +12,33 @@ from .views import (
 		ProjectReportCreateAPIView,
 		QuizScoreAPIView,
 		ProjectScoreAPIView,
-		ProjectReportChangeAPIView
+		ProjectReportChangeAPIView,
+
+		QuizViewSet,
+
+		OptionViewSet,
+
+		ProjectViewSet,
+
+		StudentQuizAnswerViewSet,
+
+		StudentProjectReportViewSet,
+
+		StudentQuizScoreViewSet,
+
+		StudentProjectScoreViewSet
 	)
+
+router = DefaultRouter()
+
+router.register('quiz', QuizViewSet, basename = 'quiz'),
+router.register('option', OptionViewSet, basename = 'option'),
+router.register('project', ProjectViewSet, basename = 'project'),
+router.register('student_quiz_answer', StudentQuizAnswerViewSet, basename = 'student_quiz_answer'),
+router.register('student_quiz_score', StudentQuizScoreViewSet, basename = 'student_quiz_score'),
+router.register('student_project_report', StudentProjectReportViewSet, basename = 'student_project_report'),
+router.register('student_project_score', StudentProjectScoreViewSet, basename = 'student_project_score'),
+
 
 urlpatterns = [
 	path('quizzes/', QuizListCreateAPIView.as_view(), name='quizzes'),
@@ -26,4 +52,5 @@ urlpatterns = [
 	path('project/<slug:slug>/project_report/', ProjectReportCreateAPIView.as_view(), name='project_report'),
 	path('project_report/slug:slug>/', ProjectReportChangeAPIView.as_view(), name='report_change'),
 	path('project/<slug:slug>/project_score/', ProjectScoreAPIView.as_view(), name='project_score')
-]
+	
+] + router.urls

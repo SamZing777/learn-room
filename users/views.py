@@ -6,23 +6,30 @@ from rest_framework.response import Response
 from rest_auth.registration.views import VerifyEmailView
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from django.contrib.auth.models import Group, Permission
 
 from .serializers import (
     UserSerializer,
     UserProfileSerializer, 
-    InstructorSerializer
+    InstructorSerializer,
+    GroupSerializer,
+    PermissionSerializer
     )
 
 from .models import (
     Profile, 
-    Instructor
+    Instructor,
     )
 
-
+from rest_framework.pagination import (
+	LimitOffsetPagination,
+	PageNumberPagination
+	)
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
+    pagination_class = LimitOffsetPagination
 
     @action(detail=True, methods=['get'])
     def userprofile(self, request, pk):
@@ -34,10 +41,26 @@ class UserViewSet(viewsets.ModelViewSet):
 class InstructorViewSet(viewsets.ModelViewSet):
     queryset = Instructor.objects.all()
     serializer_class = InstructorSerializer
+    pagination_class = LimitOffsetPagination
 
 
 class MyVerifyEmailView(VerifyEmailView):
     template_name = 'account/email_confirm.html'
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = UserProfileSerializer
+    pagination_class = LimitOffsetPagination
+
+class GroupViewSet(viewsets.ModelViewSet):
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+    pagination_class = LimitOffsetPagination
+
+class PermissionViewSet(viewsets.ModelViewSet):
+    queryset = Permission.objects.all()
+    serializer_class = PermissionSerializer
+    pagination_class = LimitOffsetPagination
 
 @api_view()
 def null_view(request):

@@ -1,7 +1,14 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 
-from .model import Enroll
+from .models import Enroll
 from .serializers import EnrollSerializer
+
+
+
+class EnrollViewSet(viewsets.ModelViewSet):
+	queryset = Enroll.objects.all()
+	serializer_class = EnrollSerializer
+
 
 
 class EnrollListAPIView(generics.ListAPIView):
