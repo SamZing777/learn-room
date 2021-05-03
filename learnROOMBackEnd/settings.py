@@ -73,10 +73,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
         ],
 
-    'DEFAULT_PAGINATION_CLASS': [
-        'courses.pagination.CoursePagination',
-        # 'SEARCH_PARAM' : 'q'
-    ]
+    # 'DEFAULT_PAGINATION_CLASS': [
+    # 'courses.pagination.CoursePagination',
+    # 'SEARCH_PARAM' : 'q'
+    # ]
       
 }
 

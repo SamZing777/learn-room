@@ -1,7 +1,40 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter
 
 from .views import (
-		QuizListCreateAPIView,
+
+		QuizViewSet,
+
+		OptionViewSet,
+
+		ProjectViewSet,
+
+		StudentQuizAnswerViewSet,
+
+		StudentProjectReportViewSet,
+
+		StudentQuizScoreViewSet,
+
+		StudentProjectScoreViewSet
+	)
+
+router = DefaultRouter()
+
+router.register('quiz', QuizViewSet, basename = 'quiz'),
+router.register('option', OptionViewSet, basename = 'option'),
+router.register('project', ProjectViewSet, basename = 'project'),
+router.register('student_quiz_answer', StudentQuizAnswerViewSet, basename = 'student_quiz_answer'),
+router.register('student_quiz_score', StudentQuizScoreViewSet, basename = 'student_quiz_score'),
+router.register('student_project_report', StudentProjectReportViewSet, basename = 'student_project_report'),
+router.register('student_project_score', StudentProjectScoreViewSet, basename = 'student_project_score'),
+
+
+urlpatterns = [
+	
+] + router.urls
+
+"""
+	QuizListCreateAPIView,
 		QuizChangeAPIView,
 		OptionListCreateAPIView,
 		OptionChangeAPIView,
@@ -11,11 +44,10 @@ from .views import (
 		ProjectReportCreateAPIView,
 		QuizScoreAPIView,
 		ProjectScoreAPIView,
-		ProjectReportChangeAPIView
-	)
+		ProjectReportChangeAPIView,
 
-urlpatterns = [
-	path('quizzes/', QuizListCreateAPIView.as_view(), name='quizzes'),
+
+		path('quizzes/', QuizListCreateAPIView.as_view(), name='quizzes'),
 	path('quizzes/<slug:slug>/', QuizChangeAPIView.as_view(), name='quiz_change'),
 	path('quizzes/<slug:slug>/option/', OptionListCreateAPIView.as_view(), name='options'),
 	path('option_change/<slug:slug>/', OptionChangeAPIView.as_view(), name='option_change'),
@@ -26,4 +58,4 @@ urlpatterns = [
 	path('project/<slug:slug>/project_report/', ProjectReportCreateAPIView.as_view(), name='project_report'),
 	path('project_report/slug:slug>/', ProjectReportChangeAPIView.as_view(), name='report_change'),
 	path('project/<slug:slug>/project_score/', ProjectScoreAPIView.as_view(), name='project_score')
-]
+"""

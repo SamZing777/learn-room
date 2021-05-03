@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from rest_framework import views
 from rest_framework import permissions
 
@@ -22,10 +22,65 @@ from .serializers import (
 		StudentProjectScoreSerializer
 	)
 
+from rest_framework.pagination import (
+	LimitOffsetPagination,
+	PageNumberPagination
+	)
 
 from courses.permissions import IsOwnerOrReadOnly
 from .permissions import IsStudentOwnerOrReadOnly
 
+
+class QuizViewSet(viewsets.ModelViewSet):
+	queryset = Quiz.objects.all()
+	serializer_class = QuizSerializer
+	pagination_class = LimitOffsetPagination
+
+class OptionViewSet(viewsets.ModelViewSet):
+	queryset = Option.objects.all()
+	serializer_class = OptionSerializer
+	pagination_class = LimitOffsetPagination
+
+
+class ProjectViewSet(viewsets.ModelViewSet, LimitOffsetPagination):
+	queryset = Project.objects.all()
+	serializer_class = ProjectSerializer
+	pagination_class = LimitOffsetPagination
+
+
+class StudentQuizAnswerViewSet(viewsets.ModelViewSet):
+	queryset = StudentQuizAnswer.objects.all()
+	serializer_class = StudentQuizAnswerSerializer
+	pagination_class = PageNumberPagination
+
+
+class StudentProjectReportViewSet(viewsets.ModelViewSet):
+	queryset = StudentProjectReport.objects.all()
+	serializer_class = StudentProjectReportSerializer
+	pagination_class = LimitOffsetPagination
+
+
+class StudentQuizScoreViewSet(viewsets.ModelViewSet):
+	queryset = StudentQuizScore.objects.all()
+	serializer_class = StudentQuizScoreSerializer
+	pagination_class = LimitOffsetPagination
+
+
+class StudentProjectScoreViewSet(viewsets.ModelViewSet):
+	queryset = StudentProjectScore.objects.all()
+	serializer_class = StudentProjectScoreSerializer
+	pagination_class = LimitOffsetPagination
+
+
+
+
+
+
+
+
+
+
+"""
 
 class QuizListCreateAPIView(generics.ListCreateAPIView):
 	queryset = Quiz.objects.all()
@@ -91,3 +146,4 @@ class QuizScoreAPIView(views.APIView):
 class ProjectScoreAPIView(views.APIView):
 	queryset = StudentProjectScore.objects.all()
 	serializer_class = StudentProjectScoreSerializer
+"""

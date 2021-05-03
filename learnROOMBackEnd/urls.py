@@ -23,6 +23,7 @@ urlpatterns = [
     path('course/', include('courses.urls')),
     path('assessments/', include('assessment.urls')),
     path('', include('jobs.urls')),
+    path('student/', include('students.urls')),
 
 	# documentation for the API
     path('docs/', include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),

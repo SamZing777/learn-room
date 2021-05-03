@@ -1,5 +1,3 @@
-# import braintree
-
 from django.db import models
 from decimal import Decimal
 from django.conf import settings
@@ -9,14 +7,6 @@ from django.db.models.signals import pre_save, post_save
 from users.models import User
 from courses.models import Course
 from carts.models import Cart
-
-"""
-if settings.DEBUG:
-	braintree.Configuration.configure(braintree.Environment.Sandbox,
-      merchant_id=settings.BRAINTREE_MERCHANT_ID,
-      public_key=settings.BRAINTREE_PUBLIC,
-      private_key=settings.BRAINTREE_PRIVATE)
-"""
 
 
 class Enrolled(models.Model):
@@ -37,36 +27,6 @@ class UserCheckOut(models.Model):
 
 	def __unicode__(self): #def __str__(self):
 		return self.email
-
-"""
-@property
-	def get_braintree_id(self,):
-		instance = self
-		if not instance.braintree_id:
-			result = braintree.Customer.create({
-			    "email": instance.email,
-			})
-			if result.is_success:
-				instance.braintree_id = result.customer.id
-				instance.save()
-		return instance.braintree_id
-
-	def get_client_token(self):
-		customer_id = self.get_braintree_id
-		if customer_id:
-			client_token = braintree.ClientToken.generate({
-			    "customer_id": customer_id
-			})
-			return client_token
-		return None
-
-
-def update_braintree_id(sender, instance, *args, **kwargs):
-	if not instance.braintree_id:
-		instance.get_braintree_id
-
-post_save.connect(update_braintree_id, sender=UserCheckOut)
-"""
 
 
 
@@ -135,9 +95,3 @@ def order_pre_save(sender, instance, *args, **kwargs):
 	instance.order_total = order_total
 
 pre_save.connect(order_pre_save, sender=Order)
-
-# #if status == "refunded":
-# 	braintree refud
-# post_save.connect()
-
-# 	
