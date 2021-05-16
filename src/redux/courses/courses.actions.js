@@ -2,6 +2,7 @@ import {
   fetch_course,
   gotten_course_data,
   set_course_categories,
+  set_course_category_data,
 } from "./courses.types";
 import axios from "axios";
 
@@ -16,6 +17,13 @@ export const setCategories = (categories) => {
   return {
     type: set_course_categories,
     payload: categories,
+  };
+};
+
+export const setCourseCategoryData = (data) => {
+  return {
+    type: set_course_category_data,
+    payload: data,
   };
 };
 
@@ -43,6 +51,19 @@ export const getCategories = () => {
     if (status === 200 && statusText === "OK") {
       const { results } = data;
       dispatch(setCategories(results));
+    }
+  };
+};
+
+export const getCoursesForCategory = (category_id) => {
+  return async (dispatch) => {
+    const fetch_category_data = await axios.get(
+      `http://learnroom.herokuapp.com/course/courses/?category=${category_id}`
+    );
+    const { data, status, statusText } = fetch_category_data;
+    if (status === 200 && statusText === "OK") {
+      const { results } = data;
+      dispatch(setCourseCategoryData(results));
     }
   };
 };

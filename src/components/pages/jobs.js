@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Footer from "../partials/footer";
 import Navigation from "../partials/navigation";
 import right_job from "../../assets/right_job_trim.jpg";
 import JobLists from "../partials/job_lists.js";
+import { getJobs } from "../../redux/jobs/jobs.actions";
 
 const Jobs = () => {
+  const dispatch = useDispatch();
+  const { jobs: data } = useSelector((state) => state.jobs);
+  useEffect(() => {
+    dispatch(getJobs());
+  }, []);
   return (
     <React.Fragment>
       <Navigation />
@@ -54,7 +61,7 @@ const Jobs = () => {
           <div className="top-jobs">
             <h2 style={{ padding: "15px 0", textAlign: "center" }}>Top Jobs</h2>
             <div className="jobs-listing">
-              <JobLists />
+              <JobLists data={data} />
             </div>
           </div>
         </div>
