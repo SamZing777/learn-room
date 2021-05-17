@@ -103,4 +103,66 @@ div.choose-us div.reason svg {
 div.choose-us div.reason h3 {
   padding: 15px 0;
 }
+
+div.loader-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+div.loader-container div.placeholder-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+  margin-right: 30px;
+  opacity: 0;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+div.loader-container div.placeholder-container div.thumbnail {
+  height: 120px;
+  width: 100%;
+  background: #cacaca;
+  margin-bottom: 20px;
+}
+
+div.loader-container div.placeholder-container div.title {
+  width: 80%;
+  height: 5px;
+  background: #cacaca;
+  border-radius: 8px;
+}
+
+div.loader-container div.placeholder-container div.text {
+  width: 100%;
+  height: 8px;
+  margin: 10px 0;
+  background: #cacaca;
+  border-radius: 8px;
+}
+
+div.loader-container div.placeholder-container div.text:nth-child(2) {
+  width: 75%;
+}
+
+@-webkit-keyframes blink {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=style3.css.map */

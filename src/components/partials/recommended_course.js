@@ -1,5 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+
+// single recommended course structure
 const Star = (rated) => {
   return (
     <span className="star ">

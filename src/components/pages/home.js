@@ -22,7 +22,7 @@ const Home = () => {
       <Navigation />
       <Banner />
       <SearchField />
-      <StartLearning />
+      {/* <StartLearning /> */}
       <Recommended data={data} />
       <Recommended data={data} />
       <Recommended data={data} />

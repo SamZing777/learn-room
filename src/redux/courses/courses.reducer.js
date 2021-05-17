@@ -7,7 +7,7 @@ import {
 
 const initState = {
   courses: [],
-  getting_courses: false,
+  getting_courses: true,
   course_categories: [],
   category_data: [],
 };
@@ -17,13 +17,21 @@ const courseReducer = (state = initState, action) => {
     case fetch_course:
       break;
     case gotten_course_data:
-      state = { ...state, courses: action.payload };
+      state = { ...state, courses: action.payload, getting_courses: false };
       break;
     case set_course_categories:
-      state = { ...state, course_categories: action.payload };
+      state = {
+        ...state,
+        course_categories: action.payload,
+        getting_courses: false,
+      };
       break;
     case set_course_category_data:
-      state = { ...state, category_data: action.payload };
+      state = {
+        ...state,
+        category_data: action.payload,
+        getting_courses: false,
+      };
       break;
     default:
       break;
