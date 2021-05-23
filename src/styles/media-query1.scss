@@ -88,6 +88,11 @@
   div.recommended-courses-container {
     div.recommended-courses-scrollable {
       overflow-x: hidden;
+      scroll-behavior: smooth;
+      div.a-course {
+        flex: 0 0 300px;
+        width: 300px;
+      }
     }
   }
 

@@ -24,9 +24,9 @@ const Navigation = () => {
           <span />
           <span />
         </span>
-        <a href="#somewhere" className="brand">
+        <Link to="/" className="brand">
           Learnroom
-        </a>
+        </Link>
         <div className="desk-search-container">
           <input type="search" placeholder="What do you want to learn?" />
         </div>
@@ -63,27 +63,41 @@ const Navigation = () => {
       </nav>
       <div className="desk-bottom-nav">
         <ul>
+          {/* <li>
+            <a href="http://localhost:3000/category/?category=1&title=academics">
+              Academics
+            </a>
+          </li> */}
           <li>
-            <Link to="/category">Academics</Link>
+            <a href="http://localhost:3000/category/?category=1&title=finance">
+              Finance
+            </a>
           </li>
           <li>
-            <Link to="/category">Finance</Link>
+            <a href="http://localhost:3000/category/?category=4&title=linguistics">
+              Linguistics
+            </a>
           </li>
           <li>
-            <Link to="/category">Linguistics</Link>
+            <a href="http://localhost:3000/category/?category=3&title=Master Class">
+              Master Class
+            </a>
           </li>
           <li>
-            <Link to="/category">Master Class</Link>
+            <a href="http://localhost:3000/category/?category=2&title=Professional">
+              Professional
+            </a>
+          </li>
+          {/* <li>
+            <a href="http://localhost:3000/category?category=6&title=technology">
+              Technology
+            </a>
           </li>
           <li>
-            <Link to="/category">Professional</Link>
-          </li>
-          <li>
-            <Link to="/category">Technology</Link>
-          </li>
-          <li>
-            <Link to="/category">Vocational</Link>
-          </li>
+            <a href="http://localhost:3000/category/?category=7&title=vocational">
+              Vocational
+            </a>
+          </li> */}
         </ul>
       </div>
     </React.Fragment>

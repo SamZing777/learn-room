@@ -90,6 +90,13 @@
   }
   div.recommended-courses-container div.recommended-courses-scrollable {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  div.recommended-courses-container div.recommended-courses-scrollable div.a-course {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    width: 300px;
   }
   div.recommended-topics {
     display: -ms-grid;

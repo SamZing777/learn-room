@@ -1,0 +1,74 @@
+div.assessment-container div.center-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+  -ms-grid-columns: 1fr 450px;
+      grid-template-columns: 1fr 450px;
+}
+
+div.assessment-container div.center-container div.assessment-right-container {
+  height: 600px;
+  overflow: auto;
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container {
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.question-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container p.question {
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.options-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.options-container label input {
+  visibility: hidden;
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.options-container label input:checked + div {
+  background: slateblue;
+  color: #fff;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.options-container label div.container {
+  background: #efefef;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.options-container label div.container:hover {
+  background: #e4dfff;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+div.assessment-container div.center-container div.assessment-right-container div.questions-container div.question-container div.options-container label div.container p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 920px) {
+  div.assessment-container div.center-container {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=assessment.css.map */

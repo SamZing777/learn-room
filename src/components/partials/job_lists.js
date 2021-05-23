@@ -1,50 +1,19 @@
 import React from "react";
 import { FaBriefcase } from "react-icons/fa";
 
-const jobs = [
-  {
-    job_title: "Marketer",
-    company_name: "Optimus lla",
-    location: "Abuja",
-    contract: "Full time",
-  },
-  {
-    job_title: "Marketer",
-    company_name: "Optimus lla",
-    location: "Abuja",
-    contract: "Full time",
-  },
-  {
-    job_title: "Marketer",
-    company_name: "Optimus lla",
-    location: "Abuja",
-    contract: "Full time",
-  },
-  {
-    job_title: "Marketer",
-    company_name: "Optimus lla",
-    location: "Abuja",
-    contract: "Full time",
-  },
-  {
-    job_title: "Marketer",
-    company_name: "Optimus lla",
-    location: "Abuja",
-    contract: "Full time",
-  },
-];
 const Job = ({ job }) => {
-  const { job_title, company_name, location, contract } = job;
+  const { title, company_name, location, is_full_time, description } = job;
   return (
     <div className="job">
       <div className="left">
         <FaBriefcase />
       </div>
       <div className="right">
-        <h4>{job_title}</h4>
-        <p>{company_name}</p>
+        <h4>{company_name}</h4>
+        <p>{title}</p>
+        <p>{description}</p>
         <p>
-          {location} | {contract}
+          {location} | {is_full_time ? "fulltime" : ""}
         </p>
         <div className="type-time">
           <span>I.T</span>
@@ -54,8 +23,8 @@ const Job = ({ job }) => {
     </div>
   );
 };
-const JobLists = () => {
-  const renderJobs = jobs.map((job, index) => {
+const JobLists = ({ data }) => {
+  const renderJobs = data.map((job, index) => {
     return <Job job={job} key={index} />;
   });
   return <div className="lists">{renderJobs}</div>;

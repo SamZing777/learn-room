@@ -85,4 +85,13 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  //   create course
+  div.container {
+    width: 700px;
+    margin: 0 auto;
+    h3.title {
+      text-align: center;
+    }
+  }
 }

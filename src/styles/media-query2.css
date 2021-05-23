@@ -74,5 +74,12 @@
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  div.container {
+    width: 700px;
+    margin: 0 auto;
+  }
+  div.container h3.title {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=media-query2.css.map */

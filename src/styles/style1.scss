@@ -170,6 +170,7 @@ div.recommended-courses-container {
     div.a-course {
       margin-right: 20px;
       width: 300px;
+
       div.star-and-total-enrolled {
         padding: 8px 0;
       }
@@ -182,6 +183,55 @@ div.recommended-courses-container {
       }
       img.course-thumbnail {
         height: 170px;
+      }
+    }
+  }
+}
+
+div.recommended-courses-container {
+  padding: 20px 0;
+  position: relative;
+  button.slider-btn {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+      -5px -5px -5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    &.left-slider {
+      top: 50px;
+      left: -15px;
+    }
+    &.right-slider {
+      right: 0;
+      top: 50px;
+    }
+  }
+  div.recommended-courses-scrollable {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    div.a-course {
+      margin-right: 20px;
+      flex: 0 0 300px;
+      div.star-and-total-enrolled {
+        padding: 8px 0;
+      }
+      h4.course_name {
+        padding: 10px 0;
+      }
+
+      p.instructor_name {
+        padding-bottom: 5px;
+      }
+      img.course-thumbnail {
+        height: 200px;
       }
     }
   }

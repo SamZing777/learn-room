@@ -88,7 +88,7 @@ const MobileNavigation = ({ navigationRef }) => {
         </ul>
       </div>
       <div className="why-learn-room">
-        <a href="#why_choose_us">Why choose us?</a>
+        <Link to="/why_choose_us">Why choose us?</Link>
       </div>
       <div className="more-from-learn-room">
         <p className="title">More from Learnroom</p>

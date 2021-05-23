@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
     <React.Fragment>
       <Navigation />
       <div className="choose-us">
-        <h2>Why choose LearnROOM</h2>
+        <h2>Why choose LearnROOM.</h2>
         <div className="reasons">
           <div className="reason">
             <FaLandmark />
