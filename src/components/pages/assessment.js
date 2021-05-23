@@ -3,7 +3,7 @@ import Footer from "../partials/footer";
 import Navigation from "../partials/navigation";
 
 const Assessment = () => {
-  const [questions, setQuestions] = useState([
+  const [questions] = useState([
     {
       question:
         "Root it has but no one sees, tall taller than trees, up it goes but it never grows",

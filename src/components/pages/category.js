@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCoursesForCategory } from "../../redux/courses/courses.actions";
 import CourseSlider from "../partials/course_slider";
@@ -7,14 +7,16 @@ import Navigation from "../partials/navigation";
 import queryString from "query-string";
 
 const CourseCategory = ({ location }) => {
-  const [category_id, setCategoryId] = useState(null);
+  // const [category_id, setCategoryId] = useState(null);
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses.category_data);
   const parsed = queryString.parse(location.search);
   const { category, title } = parsed;
   useEffect(() => {
     dispatch(getCoursesForCategory(category));
-  }, [dispatch]);
+  }, 
+    // [dispatch]
+    );
   return (
     <React.Fragment>
       <Navigation />

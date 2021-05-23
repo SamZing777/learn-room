@@ -15,7 +15,6 @@ import "./styles/media-query1.css";
 import "./styles/media-query2.css";
 import "./styles/media-query3.css";
 
-import LiveClass from "./components/pages/live_class";
 import CourseCategory from "./components/pages/category";
 import AddCourse from "./components/pages/create_course";
 import Jobs from "./components/pages/jobs";
@@ -31,7 +30,6 @@ function App() {
         <Route path="/auth/signup" exact component={Signup} />
         <Route path="/auth/login" exact component={Login} />
         <Route path="/preview" exact component={PreviewView} />
-        <Route path="/live_class" exact component={LiveClass} />
         <Route path="/category" exact component={CourseCategory} />
         <Route path="/add_course" exact component={AddCourse} />
         <Route path="/jobs" exact component={Jobs} />
@@ -45,3 +43,6 @@ function App() {
 }
 
 export default App;
+
+// import LiveClass from "./components/pages/live_class";
+// <Route path="/live_class" exact component={LiveClass} />

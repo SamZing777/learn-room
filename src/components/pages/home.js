@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navigation from "../partials/navigation";
 import Banner from "../partials/banner";
-import StartLearning from "../partials/start_learning";
+// import StartLearning from "../partials/start_learning";
 import SearchField from "../partials/search_field";
 import Recommended from "../partials/recommended";
 import RecommendedTopics from "../partials/recommended_topics";

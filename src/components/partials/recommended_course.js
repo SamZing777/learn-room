@@ -14,7 +14,6 @@ const RecommendCourse = ({ course_data }) => {
   const {
     thumb_nail,
     title,
-    total_enrolled,
     language,
     self_paced_price,
     live_class_price,

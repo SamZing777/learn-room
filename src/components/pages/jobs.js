@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";                  // , { useEffect } 
+import { useSelector } from "react-redux";  // , useDispatch
 import Footer from "../partials/footer";
 import Navigation from "../partials/navigation";
 import right_job from "../../assets/right_job_trim.jpg";
 import JobLists from "../partials/job_lists.js";
-import { getJobs } from "../../redux/jobs/jobs.actions";
+// import { getJobs } from "../../redux/jobs/jobs.actions";
 
 const Jobs = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { jobs: data } = useSelector((state) => state.jobs);
+  /*
   useEffect(() => {
     dispatch(getJobs());
-  }, []);
+    
+  }, []);*/
+
   return (
     <React.Fragment>
       <Navigation />
