@@ -64,40 +64,39 @@ const Navigation = () => {
       <div className="desk-bottom-nav">
         <ul>
           {/* <li>
-            <a href="http://learnroom.herokuapp.com/course/courses/?category=1">
+            <a href="/category/?category=1&title=academics">
               Academics
             </a>
           </li> */}
-
           <li>
-            <a href="http://learnroom.herokuapp.com/course/courses/?category=1">
+            <Link to="/category/?category=1&title=finance">
               Finance
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="http://learnroom.herokuapp.com/course/courses/?category=4">
+            <Link to="/category/?category=4&title=linguistics">
               Linguistics
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="http://learnroom.herokuapp.com/course/courses/?category=3">
+            <Link to="/category/?category=3&title=Master Class">
               Master Class
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="http://learnroom.herokuapp.com/course/courses/?category=2">
+            <Link to="/category/?category=2&title=Professional">
               Professional
-            </a>
+            </Link>
           </li>
           {/* <li>
-            <a href="http://learnroom.herokuapp.com/course/courses?category=6&title=technology">
+            <Link to="/category?category=6&title=technology">
               Technology
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="http://learnroom.herokuapp.com/course/courses/?category=7&title=vocational">
+            <Link to="/category/?category=7&title=vocational">
               Vocational
-            </a>
+            </Link>
           </li> */}
         </ul>
       </div>

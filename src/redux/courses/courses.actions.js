@@ -4,6 +4,7 @@ import {
   set_course_categories,
   set_course_category_data,
 } from "./courses.types";
+
 import axios from "axios";
 
 export const setCourse = (courses) => {

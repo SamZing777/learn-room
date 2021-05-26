@@ -50,25 +50,25 @@ const MobileNavigation = ({ navigationRef }) => {
             </Link>
           </li>
           <li>
-            <Link to="/category">
-              <span>Finace</span>
+            <Link to="/category/?category=1">
+              <span>Finance</span>
               <FaChevronRight />
             </Link>
           </li>
           <li>
-            <Link to="/category">
+            <Link to="/category/?category=4">
               <span>Linguistics</span>
               <FaChevronRight />
             </Link>
           </li>
           <li>
-            <Link to="/category">
+            <Link to="category/?category=3">
               <span>Master Class</span>
               <FaChevronRight />
             </Link>
           </li>
           <li>
-            <Link to="/category">
+            <Link to="category/?category=2">
               <span>Professional</span>
               <FaChevronRight />
             </Link>
