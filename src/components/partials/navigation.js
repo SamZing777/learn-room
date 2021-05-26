@@ -64,37 +64,38 @@ const Navigation = () => {
       <div className="desk-bottom-nav">
         <ul>
           {/* <li>
-            <a href="http://localhost:3000/category/?category=1&title=academics">
+            <a href="http://learnroom.herokuapp.com/course/courses/?category=1">
               Academics
             </a>
           </li> */}
+
           <li>
-            <a href="http://localhost:3000/category/?category=1&title=finance">
+            <a href="http://learnroom.herokuapp.com/course/courses/?category=1">
               Finance
             </a>
           </li>
           <li>
-            <a href="http://localhost:3000/category/?category=4&title=linguistics">
+            <a href="http://learnroom.herokuapp.com/course/courses/?category=4">
               Linguistics
             </a>
           </li>
           <li>
-            <a href="http://localhost:3000/category/?category=3&title=Master Class">
+            <a href="http://learnroom.herokuapp.com/course/courses/?category=3">
               Master Class
             </a>
           </li>
           <li>
-            <a href="http://localhost:3000/category/?category=2&title=Professional">
+            <a href="http://learnroom.herokuapp.com/course/courses/?category=2">
               Professional
             </a>
           </li>
           {/* <li>
-            <a href="http://localhost:3000/category?category=6&title=technology">
+            <a href="http://learnroom.herokuapp.com/course/courses?category=6&title=technology">
               Technology
             </a>
           </li>
           <li>
-            <a href="http://localhost:3000/category/?category=7&title=vocational">
+            <a href="http://learnroom.herokuapp.com/course/courses/?category=7&title=vocational">
               Vocational
             </a>
           </li> */}
