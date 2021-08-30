@@ -23,6 +23,7 @@ const TabNavigator = () => {
         initialRouteName="Home"
         activeColor="#f0edf6"
         inactiveColor="#3e2465"
+        shifting={false}
         barStyle={{ backgroundColor: Colors.apple }}
       >
         <Tab.Screen 
@@ -51,6 +52,26 @@ const TabNavigator = () => {
                 tabBarLabel: 'Wish List',
                 tabBarIcon: ({ color }) => (
                   <MaterialCommunityIcons name="star-box-multiple" color={color} size={26} />
+                ),
+              }} 
+        
+        
+        />
+         <Tab.Screen name="Category" component={Category} 
+              options={{
+                tabBarLabel: 'Category',
+                tabBarIcon: ({ color }) => (
+                  <MaterialCommunityIcons name="distribute-horizontal-center" color={color} size={26} />
+                ),
+              }} 
+        
+        
+        />
+         <Tab.Screen name="My Learning" component={MyLearning} 
+              options={{
+                tabBarLabel: 'Wish List',
+                tabBarIcon: ({ color }) => (
+                  <MaterialCommunityIcons name="school" color={color} size={26} />
                 ),
               }} 
         
