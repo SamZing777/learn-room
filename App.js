@@ -6,16 +6,22 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import AuthStackNavigator from "./modules/navigation/stackNavigator";
-
-
-
-
+import 'react-native-gesture-handler';
+import React, {useState} from 'react';
+import AuthStackNavigator from "./src/navigation/stackNavigator";
+import TabNavigator from './src/navigation/tabNavigator';
+import RootNavigator from './src/modules/index'
+import { Provider } from 'react-redux'
+import {store } from "./src/Redux/store";
 
 const App = () => {
+  const [signedIn, setSignedIn] = useState(true)
   return (
-    <AuthStackNavigator></AuthStackNavigator>
+    <Provider store={store}>
+        {!signedIn && <AuthStackNavigator />}
+        {signedIn && <TabNavigator />}
+        
+    </Provider>
   )
 };
 

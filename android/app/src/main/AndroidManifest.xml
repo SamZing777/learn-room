@@ -2,6 +2,7 @@
   package="com.learnroom">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <application android:usesCleartextTraffic="true" />
 
     <application
       android:name=".MainApplication"

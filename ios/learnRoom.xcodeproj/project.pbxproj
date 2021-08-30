@@ -9,39 +9,38 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* learnRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* learnRoomTests.m */; };
 		0498DBA9D9477C4CBA965185 /* libPods-learnRoom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D55056239FCA369A2FD485 /* libPods-learnRoom.a */; };
+		061A20907E98459798984568 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECF7E399E6DE492F958C2EA8 /* Rubik-ExtraBoldItalic.ttf */; };
+		0D4EBFCEC18A41359F32E88E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F72987735734B8ABF858AA6 /* Roboto-Medium.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		24EE1C3590B3448CA3565117 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F344A1D07B4576B3622CA1 /* Roboto-BlackItalic.ttf */; };
+		276A0F7B3B3D4629AF2064B5 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6453831F64374F8AB9577B8F /* Roboto-LightItalic.ttf */; };
+		29D6A220F808433BBAFFCDB6 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47D87BA499414A7381F9F547 /* Rubik-MediumItalic.ttf */; };
+		32CC3F92430D4924A3752178 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE36F7ED4D0453DB9C158ED /* Rubik-Bold.ttf */; };
+		335939A060A64414916D2576 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5303C599DF044E9B957366EA /* Rubik-BlackItalic.ttf */; };
+		372D423FEDA1495B8C781BA3 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60BB070B90DB46968383E359 /* Roboto-MediumItalic.ttf */; };
+		373F0FCE4DBD4CFBBAA212E2 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62A3588CCF9941CC8472F592 /* Roboto-ThinItalic.ttf */; };
+		3ACEC92187F9456BB777C746 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D872D56898B943BF9C84332E /* Roboto-Bold.ttf */; };
+		4753B285EF1C48DFB6825B08 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C5303DB6EA34C18802B0EA3 /* Roboto-Black.ttf */; };
+		49637547DAD6476E8D8C3493 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA161CCCA5044341A0C7DCAA /* Rubik-VariableFont_wght.ttf */; };
+		55ABBFDD177A4E1D893B986C /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5FD6EDD976F4838873A4B92 /* Rubik-LightItalic.ttf */; };
+		56ED5A21EA1149ACAEAB7A8D /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679C1DE296CC424D93C852FC /* Rubik-Black.ttf */; };
+		6F9246D7C94B4EB0942277A6 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47609392F1434630886ED1B7 /* Rubik-Medium.ttf */; };
+		7131D669608E43C49E6DA000 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */; };
 		73396361211E2B520932F74D /* libPods-learnRoom-learnRoomTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD448D9ECB8F4C22AFD75FB2 /* libPods-learnRoom-learnRoomTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		4753B285EF1C48DFB6825B08 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C5303DB6EA34C18802B0EA3 /* Roboto-Black.ttf */; };
-		24EE1C3590B3448CA3565117 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F344A1D07B4576B3622CA1 /* Roboto-BlackItalic.ttf */; };
-		3ACEC92187F9456BB777C746 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D872D56898B943BF9C84332E /* Roboto-Bold.ttf */; };
-		B078D4FDFC6A4A9B96089F77 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A929215FE0B3455893082B9D /* Roboto-BoldItalic.ttf */; };
-		9D5513FFEFBC464DB2B62B7F /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */; };
-		E61561BB617E410FB9013817 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06E510F9D8134C7FA268B961 /* Roboto-Light.ttf */; };
-		276A0F7B3B3D4629AF2064B5 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6453831F64374F8AB9577B8F /* Roboto-LightItalic.ttf */; };
-		0D4EBFCEC18A41359F32E88E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F72987735734B8ABF858AA6 /* Roboto-Medium.ttf */; };
-		372D423FEDA1495B8C781BA3 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60BB070B90DB46968383E359 /* Roboto-MediumItalic.ttf */; };
-		A3AD3A1653974155A350F942 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B696931964F5EA7B2890E /* Roboto-Regular.ttf */; };
-		D7689666A5AE40C197880D07 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEE7A3D922E4466BDF9BAEC /* Roboto-Thin.ttf */; };
-		373F0FCE4DBD4CFBBAA212E2 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62A3588CCF9941CC8472F592 /* Roboto-ThinItalic.ttf */; };
-		DA47A48BE1294F2C8E971424 /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91BAB7E1748B4AD5B5A47124 /* Rubik-Italic-VariableFont_wght.ttf */; };
-		49637547DAD6476E8D8C3493 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA161CCCA5044341A0C7DCAA /* Rubik-VariableFont_wght.ttf */; };
-		56ED5A21EA1149ACAEAB7A8D /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 679C1DE296CC424D93C852FC /* Rubik-Black.ttf */; };
-		335939A060A64414916D2576 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5303C599DF044E9B957366EA /* Rubik-BlackItalic.ttf */; };
-		32CC3F92430D4924A3752178 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE36F7ED4D0453DB9C158ED /* Rubik-Bold.ttf */; };
-		B73C50BA571E4AB4A2258322 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44348C755D1941609A59FB74 /* Rubik-BoldItalic.ttf */; };
-		DB8B098F1D8D4B8A9929EDD7 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A72FB004DD4BBBAEAEFA3D /* Rubik-ExtraBold.ttf */; };
-		061A20907E98459798984568 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECF7E399E6DE492F958C2EA8 /* Rubik-ExtraBoldItalic.ttf */; };
 		9AA6F1440E3640A983E1D61F /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC2AF1DDC2449B96C7D843 /* Rubik-Italic.ttf */; };
-		7131D669608E43C49E6DA000 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */; };
-		55ABBFDD177A4E1D893B986C /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5FD6EDD976F4838873A4B92 /* Rubik-LightItalic.ttf */; };
-		6F9246D7C94B4EB0942277A6 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47609392F1434630886ED1B7 /* Rubik-Medium.ttf */; };
-		29D6A220F808433BBAFFCDB6 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47D87BA499414A7381F9F547 /* Rubik-MediumItalic.ttf */; };
 		9CCEEFAE138C4F7AAE9C8A9C /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98DAB80CDCA44F40B50B1FC5 /* Rubik-Regular.ttf */; };
+		9D5513FFEFBC464DB2B62B7F /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */; };
+		A3AD3A1653974155A350F942 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B696931964F5EA7B2890E /* Roboto-Regular.ttf */; };
+		B078D4FDFC6A4A9B96089F77 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A929215FE0B3455893082B9D /* Roboto-BoldItalic.ttf */; };
+		B73C50BA571E4AB4A2258322 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44348C755D1941609A59FB74 /* Rubik-BoldItalic.ttf */; };
 		BE554CBECD834CFE936BD5EC /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE4B34287A47C6B8702D17 /* Rubik-SemiBold.ttf */; };
-		88F9034F76574EC284B33963 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AACD2770F1B047A7828EE400 /* Rubik-SemiBoldItalic.ttf */; };
+		D7689666A5AE40C197880D07 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEE7A3D922E4466BDF9BAEC /* Roboto-Thin.ttf */; };
+		DA47A48BE1294F2C8E971424 /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91BAB7E1748B4AD5B5A47124 /* Rubik-Italic-VariableFont_wght.ttf */; };
+		DB8B098F1D8D4B8A9929EDD7 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A72FB004DD4BBBAEAEFA3D /* Rubik-ExtraBold.ttf */; };
+		E61561BB617E410FB9013817 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06E510F9D8134C7FA268B961 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,48 +57,64 @@
 		00E356EE1AD99517003FC87E /* learnRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learnRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* learnRoomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learnRoomTests.m; sourceTree = "<group>"; };
+		06E510F9D8134C7FA268B961 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		11959E340C804BD8BF84378E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* learnRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = learnRoom/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = learnRoom/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = learnRoom/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = learnRoom/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = learnRoom/main.m; sourceTree = "<group>"; };
+		1C61097EC6D84A0EBD2EA12D /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		1EC360E47B54400CBE4AEAE7 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		1FEE7A3D922E4466BDF9BAEC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		2F24444D6983476881CCADA7 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		37486603CD75475E80F971B7 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		3F72987735734B8ABF858AA6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		44348C755D1941609A59FB74 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BoldItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		473009B1225544A0836DFC95 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		47363B5969A56DA6AEDA2EC1 /* Pods-learnRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnRoom.debug.xcconfig"; path = "Target Support Files/Pods-learnRoom/Pods-learnRoom.debug.xcconfig"; sourceTree = "<group>"; };
+		47609392F1434630886ED1B7 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		47D87BA499414A7381F9F547 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5303C599DF044E9B957366EA /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BlackItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5AB976E6AB374179954093C4 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		5C5303DB6EA34C18802B0EA3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		5E30C7ECF06A5ACE78808B92 /* Pods-learnRoom-learnRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnRoom-learnRoomTests.release.xcconfig"; path = "Target Support Files/Pods-learnRoom-learnRoomTests/Pods-learnRoom-learnRoomTests.release.xcconfig"; sourceTree = "<group>"; };
+		60BB070B90DB46968383E359 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		62A3588CCF9941CC8472F592 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		6453831F64374F8AB9577B8F /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		679C1DE296CC424D93C852FC /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Black.ttf"; sourceTree = "<group>"; };
+		6FC479A5FB794D3486431313 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		71D2F0BAA54900415AF966B1 /* Pods-learnRoom-learnRoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnRoom-learnRoomTests.debug.xcconfig"; path = "Target Support Files/Pods-learnRoom-learnRoomTests/Pods-learnRoom-learnRoomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		777AB7CFC21E437CB9F73445 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		7B3B696931964F5EA7B2890E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		7CFC2AF1DDC2449B96C7D843 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = learnRoom/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85D55056239FCA369A2FD485 /* libPods-learnRoom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learnRoom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C8E4AB63DFD19D3DB7FE3A /* Pods-learnRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnRoom.release.xcconfig"; path = "Target Support Files/Pods-learnRoom/Pods-learnRoom.release.xcconfig"; sourceTree = "<group>"; };
+		91BAB7E1748B4AD5B5A47124 /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic-VariableFont_wght.ttf"; path = "../App/assets/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		98DAB80CDCA44F40B50B1FC5 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		9CE36F7ED4D0453DB9C158ED /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		A929215FE0B3455893082B9D /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AA161CCCA5044341A0C7DCAA /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-VariableFont_wght.ttf"; path = "../App/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		AACD2770F1B047A7828EE400 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBoldItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		AD448D9ECB8F4C22AFD75FB2 /* libPods-learnRoom-learnRoomTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learnRoom-learnRoomTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FD6EDD976F4838873A4B92 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		B778546997074BB1876305AB /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		B802086B0B40451993D5F91C /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		BDF9E9ED61E741D08F98F697 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		C3A72FB004DD4BBBAEAEFA3D /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBold.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C6FAC8F581E846EC94D96503 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		D186AD0DEC96418588D081F6 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		D872D56898B943BF9C84332E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		DE02057B5CCC44529EAFCE65 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		E3BE4B34287A47C6B8702D17 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBold.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		ECF7E399E6DE492F958C2EA8 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBoldItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		5C5303DB6EA34C18802B0EA3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F0F344A1D07B4576B3622CA1 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BlackItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D872D56898B943BF9C84332E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A929215FE0B3455893082B9D /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BoldItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */ = {isa = PBXFileReference; name = "Roboto-Italic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		06E510F9D8134C7FA268B961 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6453831F64374F8AB9577B8F /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-LightItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3F72987735734B8ABF858AA6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		60BB070B90DB46968383E359 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-MediumItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7B3B696931964F5EA7B2890E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1FEE7A3D922E4466BDF9BAEC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../App/assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		62A3588CCF9941CC8472F592 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		91BAB7E1748B4AD5B5A47124 /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "Rubik-Italic-VariableFont_wght.ttf"; path = "../App/assets/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AA161CCCA5044341A0C7DCAA /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "Rubik-VariableFont_wght.ttf"; path = "../App/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		679C1DE296CC424D93C852FC /* Rubik-Black.ttf */ = {isa = PBXFileReference; name = "Rubik-Black.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5303C599DF044E9B957366EA /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BlackItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9CE36F7ED4D0453DB9C158ED /* Rubik-Bold.ttf */ = {isa = PBXFileReference; name = "Rubik-Bold.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		44348C755D1941609A59FB74 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BoldItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C3A72FB004DD4BBBAEAEFA3D /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Rubik-ExtraBold.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		ECF7E399E6DE492F958C2EA8 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-ExtraBoldItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7CFC2AF1DDC2449B96C7D843 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; name = "Rubik-Italic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */ = {isa = PBXFileReference; name = "Rubik-Light.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B5FD6EDD976F4838873A4B92 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-LightItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47609392F1434630886ED1B7 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; name = "Rubik-Medium.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47D87BA499414A7381F9F547 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-MediumItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		98DAB80CDCA44F40B50B1FC5 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; name = "Rubik-Regular.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E3BE4B34287A47C6B8702D17 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; name = "Rubik-SemiBold.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AACD2770F1B047A7828EE400 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-SemiBoldItalic.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0F344A1D07B4576B3622CA1 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../App/assets/fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FFB3EB49BD6D41D4A0963AE9 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../App/assets/fonts/Rubik/static/Rubik-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +177,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38966650740E4D459737ABC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C5303DB6EA34C18802B0EA3 /* Roboto-Black.ttf */,
+				F0F344A1D07B4576B3622CA1 /* Roboto-BlackItalic.ttf */,
+				D872D56898B943BF9C84332E /* Roboto-Bold.ttf */,
+				A929215FE0B3455893082B9D /* Roboto-BoldItalic.ttf */,
+				1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */,
+				06E510F9D8134C7FA268B961 /* Roboto-Light.ttf */,
+				6453831F64374F8AB9577B8F /* Roboto-LightItalic.ttf */,
+				3F72987735734B8ABF858AA6 /* Roboto-Medium.ttf */,
+				60BB070B90DB46968383E359 /* Roboto-MediumItalic.ttf */,
+				7B3B696931964F5EA7B2890E /* Roboto-Regular.ttf */,
+				1FEE7A3D922E4466BDF9BAEC /* Roboto-Thin.ttf */,
+				62A3588CCF9941CC8472F592 /* Roboto-ThinItalic.ttf */,
+				91BAB7E1748B4AD5B5A47124 /* Rubik-Italic-VariableFont_wght.ttf */,
+				AA161CCCA5044341A0C7DCAA /* Rubik-VariableFont_wght.ttf */,
+				679C1DE296CC424D93C852FC /* Rubik-Black.ttf */,
+				5303C599DF044E9B957366EA /* Rubik-BlackItalic.ttf */,
+				9CE36F7ED4D0453DB9C158ED /* Rubik-Bold.ttf */,
+				44348C755D1941609A59FB74 /* Rubik-BoldItalic.ttf */,
+				C3A72FB004DD4BBBAEAEFA3D /* Rubik-ExtraBold.ttf */,
+				ECF7E399E6DE492F958C2EA8 /* Rubik-ExtraBoldItalic.ttf */,
+				7CFC2AF1DDC2449B96C7D843 /* Rubik-Italic.ttf */,
+				FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */,
+				B5FD6EDD976F4838873A4B92 /* Rubik-LightItalic.ttf */,
+				47609392F1434630886ED1B7 /* Rubik-Medium.ttf */,
+				47D87BA499414A7381F9F547 /* Rubik-MediumItalic.ttf */,
+				98DAB80CDCA44F40B50B1FC5 /* Rubik-Regular.ttf */,
+				E3BE4B34287A47C6B8702D17 /* Rubik-SemiBold.ttf */,
+				AACD2770F1B047A7828EE400 /* Rubik-SemiBoldItalic.ttf */,
+				1C61097EC6D84A0EBD2EA12D /* AntDesign.ttf */,
+				B802086B0B40451993D5F91C /* Entypo.ttf */,
+				473009B1225544A0836DFC95 /* EvilIcons.ttf */,
+				D186AD0DEC96418588D081F6 /* Feather.ttf */,
+				1EC360E47B54400CBE4AEAE7 /* FontAwesome.ttf */,
+				B778546997074BB1876305AB /* FontAwesome5_Brands.ttf */,
+				11959E340C804BD8BF84378E /* FontAwesome5_Regular.ttf */,
+				6FC479A5FB794D3486431313 /* FontAwesome5_Solid.ttf */,
+				DE02057B5CCC44529EAFCE65 /* Fontisto.ttf */,
+				37486603CD75475E80F971B7 /* Foundation.ttf */,
+				5AB976E6AB374179954093C4 /* Ionicons.ttf */,
+				BDF9E9ED61E741D08F98F697 /* MaterialCommunityIcons.ttf */,
+				C6FAC8F581E846EC94D96503 /* MaterialIcons.ttf */,
+				FFB3EB49BD6D41D4A0963AE9 /* Octicons.ttf */,
+				777AB7CFC21E437CB9F73445 /* SimpleLineIcons.ttf */,
+				2F24444D6983476881CCADA7 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,45 +268,8 @@
 				71D2F0BAA54900415AF966B1 /* Pods-learnRoom-learnRoomTests.debug.xcconfig */,
 				5E30C7ECF06A5ACE78808B92 /* Pods-learnRoom-learnRoomTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		38966650740E4D459737ABC4 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				5C5303DB6EA34C18802B0EA3 /* Roboto-Black.ttf */,
-				F0F344A1D07B4576B3622CA1 /* Roboto-BlackItalic.ttf */,
-				D872D56898B943BF9C84332E /* Roboto-Bold.ttf */,
-				A929215FE0B3455893082B9D /* Roboto-BoldItalic.ttf */,
-				1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */,
-				06E510F9D8134C7FA268B961 /* Roboto-Light.ttf */,
-				6453831F64374F8AB9577B8F /* Roboto-LightItalic.ttf */,
-				3F72987735734B8ABF858AA6 /* Roboto-Medium.ttf */,
-				60BB070B90DB46968383E359 /* Roboto-MediumItalic.ttf */,
-				7B3B696931964F5EA7B2890E /* Roboto-Regular.ttf */,
-				1FEE7A3D922E4466BDF9BAEC /* Roboto-Thin.ttf */,
-				62A3588CCF9941CC8472F592 /* Roboto-ThinItalic.ttf */,
-				91BAB7E1748B4AD5B5A47124 /* Rubik-Italic-VariableFont_wght.ttf */,
-				AA161CCCA5044341A0C7DCAA /* Rubik-VariableFont_wght.ttf */,
-				679C1DE296CC424D93C852FC /* Rubik-Black.ttf */,
-				5303C599DF044E9B957366EA /* Rubik-BlackItalic.ttf */,
-				9CE36F7ED4D0453DB9C158ED /* Rubik-Bold.ttf */,
-				44348C755D1941609A59FB74 /* Rubik-BoldItalic.ttf */,
-				C3A72FB004DD4BBBAEAEFA3D /* Rubik-ExtraBold.ttf */,
-				ECF7E399E6DE492F958C2EA8 /* Rubik-ExtraBoldItalic.ttf */,
-				7CFC2AF1DDC2449B96C7D843 /* Rubik-Italic.ttf */,
-				FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */,
-				B5FD6EDD976F4838873A4B92 /* Rubik-LightItalic.ttf */,
-				47609392F1434630886ED1B7 /* Rubik-Medium.ttf */,
-				47D87BA499414A7381F9F547 /* Rubik-MediumItalic.ttf */,
-				98DAB80CDCA44F40B50B1FC5 /* Rubik-Regular.ttf */,
-				E3BE4B34287A47C6B8702D17 /* Rubik-SemiBold.ttf */,
-				AACD2770F1B047A7828EE400 /* Rubik-SemiBoldItalic.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -365,7 +394,6 @@
 				29D6A220F808433BBAFFCDB6 /* Rubik-MediumItalic.ttf in Resources */,
 				9CCEEFAE138C4F7AAE9C8A9C /* Rubik-Regular.ttf in Resources */,
 				BE554CBECD834CFE936BD5EC /* Rubik-SemiBold.ttf in Resources */,
-				88F9034F76574EC284B33963 /* Rubik-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
