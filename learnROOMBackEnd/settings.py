@@ -102,9 +102,14 @@ SWAGGER_SETTINGS = {
 
 
 CORS_ORIGIN_WHITELIST = (
+	
+	# React
     'http://localhost:8000',
     'http://localhost:4200',
     'http://localhost:3000',
+    
+    	# React Native
+    'http://localhost:8081'
     # '*'
 )
 
