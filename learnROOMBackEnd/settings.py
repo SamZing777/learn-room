@@ -1,4 +1,5 @@
 import datetime
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -157,6 +158,10 @@ WSGI_APPLICATION = 'learnROOMBackEnd.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
+# Heroku Testing database
+
+django_heroku.settings(config=locals(), staticfiles=False, logging=False)
 
 DATABASES = {
     'default': {
