@@ -170,6 +170,8 @@ DATABASES = {
     }
 }
 
+# django_heroku.settings(config=locals(
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
