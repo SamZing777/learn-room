@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   StyleSheet
 } from "react-native";
+
 import { Colors } from "../../Styles/colors";
 
 const Account = () => {

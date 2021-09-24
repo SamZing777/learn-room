@@ -26,16 +26,7 @@ const TabNavigator = () => {
         shifting={false}
         barStyle={{ backgroundColor: Colors.apple }}
       >
-        <Tab.Screen 
-        name="Account" 
-        component={Account}
-        options={{
-          tabBarLabel: 'Account',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" color={color} size={26} />
-          ),
-        }}  
-        />
+       
         <Tab.Screen name="Featured" component={Featured} 
               name="Featured" 
               component={Featured}
@@ -76,6 +67,16 @@ const TabNavigator = () => {
               }} 
         
         
+        />
+         <Tab.Screen 
+        name="Account" 
+        component={Account}
+        options={{
+          tabBarLabel: 'Account',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" color={color} size={26} />
+          ),
+        }}  
         />
         
       </Tab.Navigator>
