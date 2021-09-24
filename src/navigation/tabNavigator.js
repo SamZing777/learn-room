@@ -11,6 +11,7 @@ import WishList from "../modules/Screens/WishList";
 import {Colors} from "../Styles/colors";
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import SplashScreen from '../modules/Screens/splashScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -70,7 +71,7 @@ const TabNavigator = () => {
         />
          <Tab.Screen 
         name="Account" 
-        component={Account}
+        component={SplashScreen}
         options={{
           tabBarLabel: 'Account',
           tabBarIcon: ({ color }) => (

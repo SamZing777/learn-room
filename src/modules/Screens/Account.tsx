@@ -5,14 +5,17 @@ import {
   SafeAreaView,
   StyleSheet
 } from "react-native";
-
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp
+} from 'react-native-responsive-screen'
 import { Colors } from "../../Styles/colors";
 
 const Account = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View >
-        <Text> Account View</Text>
+      <View style={styles.profileImage}>
+        
       </View>
     </SafeAreaView>
   )
@@ -24,6 +27,9 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
     backgroundColor:Colors.apple
+  },
+  profileImage:{
+    
   }
 })
 
