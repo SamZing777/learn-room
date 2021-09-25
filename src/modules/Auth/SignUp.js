@@ -7,6 +7,9 @@ import {
 } from "react-native-responsive-screen";
 import { connect } from "react-redux";
 import { register } from "../../Redux/actions/register";
+import SignUPSVG from '../../assets/icons/illustration-2.svg';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-ionicons';
 
 const SignUp = (props) => {
   const { navigation, register } = props;
@@ -21,57 +24,37 @@ const SignUp = (props) => {
   };
 
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.header}>Create your learnroom account</Text>
-        <View style={styles.registerForm}>
-          <View style={styles.formFieldView}>
-            <Text style={styles.label}>Name</Text>
-            <TextInput
-              onChangeText={(event) => setName(event)}
-              value={name}
-              style={styles.inputField}
-            />
-          </View>
-          <View style={styles.formFieldView}>
-            <Text style={styles.label}>Email</Text>
-            <TextInput
-              onChangeText={(event) => setEmail(event)}
-              value={email}
-              style={styles.inputField}
-
-            />
-          </View>
-          <View style={styles.formFieldView}>
-            <Text style={styles.label}>Password</Text>
-            <TextInput
-              secureTextEntry={true}
-              onChangeText={(event) => setPassword(event)}
-              value={password}
-              style={styles.inputField}
-            />
-
-          </View>
-          <View style={styles.formFieldView}>
-            <Text style={styles.label}>Confirm Password</Text>
-            <TextInput
-              secureTextEntry={true}
-              onChangeText={(event) => setConfirmPassword(event)}
-              value={confirmPassword}
-              style={styles.inputField}
-            />
-          </View>
-          <TouchableOpacity style={styles.submitBtn} onPress={submitHandler}>
-            <Text style={styles.submitBtnTxt}>Sign me Up</Text>
-          </TouchableOpacity>
-          <View style={styles.signInView}>
-            <Text style={styles.signInText}>Have an account?</Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Login")}>
-              <Text style={styles.signInBtnText}>Sign In</Text>
-            </TouchableOpacity>
-          </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <TouchableOpacity style={styles.backArrowBtn}>
+             <Icon name="arrow-dropleft-circle" color={'black'} size={30}/>         
+        </TouchableOpacity>
+        <View style={{marginTop:hp(3)}}>
+          <SignUPSVG />
+          <Text style={styles.signUpTxt}>Sign up</Text>
+          <Text style={styles.createAcctTxt}>Create your account</Text>
         </View>
-      </View>
+        <TextInput 
+            placeholder='Name'
+            style={styles.formField}
+        />
+        <TextInput 
+            placeholder='E-mail'
+            style={styles.formField}
+        />
+        <TextInput 
+            placeholder='Password'
+            style={styles.formField}
+        />
+        <TouchableOpacity style={styles.signUpBtn}>
+          <Text style={styles.signUpBtnTxt}>Sign up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Text style={styles.loginTxt}>
+          Log in
+        </Text>
+        </TouchableOpacity>
+        </View>
     </SafeAreaView>
   );
 };
@@ -83,66 +66,58 @@ export default connect(mapStateToProps, { register })(SignUp);
 const styles = StyleSheet.create(
   {
     container: {
-      paddingHorizontal: 24,
-      paddingTop: 18,
+      paddingVertical:hp(2.8),
+      paddingHorizontal:hp(3)
+      
     },
-    header: {
-      fontFamily: "Roboto-Bold",
-      color: Colors.primary,
-      fontWeight: "bold",
-      fontSize: hp(2.8),
-      textAlign: "center",
+    backArrowBtn:{
+      borderRadius:100,
+      padding:2,
+      width:40,
+      borderColor:'grey',
+      borderWidth:2
     },
-    registerForm: {
-      marginTop: hp(2),
-      justifyContent: "center",
-      alignItems: "center",
+    signUpTxt:{
+      fontFamily:'Rubik-Medium',
+      fontSize:hp(2.8),
+      textAlign:'center',
+      marginTop:12,
+    }, 
+    createAcctTxt:{
+      fontFamily:'Rubik-light',
+      fontSize:hp(1.7),
+      textAlign:'center',
+      marginTop:12,
     },
-    formFieldView: {
-      height: hp(10),
-      width: "100%",
-      marginBottom: hp(2.2),
-      justifyContent: "space-between",
+    formField:{
+      borderColor:Colors.gray,
+      borderWidth:0.5,
+      height:50,
+      marginTop:hp(1.2),
+      borderRadius:5,
+      paddingHorizontal:20,
+      fontSize:hp(1.8)
     },
-    label: {
-      fontFamily: "Rubik-Medium",
-      fontSize: hp(2.3),
+    signUpBtn:{
+      backgroundColor:Colors.red,
+      marginTop: hp(1.5),
+      height:50,
+      justifyContent:'center',
+      alignItems:'center',
+      borderRadius:5
     },
-    inputField: {
-      height: hp(7),
-      borderColor: "grey",
-      borderWidth: 1.8,
-      fontSize: hp(2.3),
-      paddingHorizontal: 10,
-      borderRadius: 5,
-      fontFamily: "Rubik-Light",
-    },
-    submitBtn: {
-      backgroundColor: Colors.primary,
-      width: "100%",
-      justifyContent: "center",
-      alignItems: "center",
-      height: 65,
-      borderRadius: 5,
-    },
-    submitBtnTxt: {
-      color: Colors.white,
-      fontSize: hp(2.5),
-      fontFamily: "Rubik-Bold",
-    },
-    signInView: {
-      flexDirection: "row",
-      justifyContent: "space-around",
-      width: "100%",
-      marginTop: hp(5),
-    },
-    signInText: {
-      fontFamily: "Rubik-Medium",
-    },
-    signInBtnText: {
-      fontFamily: "Rubik-Medium",
-      color: Colors.secondary,
-    },
+    signUpBtnTxt:{
+      color:Colors.white,
+      fontWeight:'bold',
+      
+    }, 
+    loginTxt:{
+      textAlign:'center',
+      marginTop:hp(1),
+      fontFamily:'Rubik',
+      fontSize:hp(1.8)
+    }
+   
   },
 );
 
