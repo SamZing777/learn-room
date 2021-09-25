@@ -1,14 +1,14 @@
 import * as actionType from '../user/userType';
 import axios from 'axios'
 
-export const register = (username, email, password1, password2) => async (dispatch) => {
+export const register = (username, email, password) => async (dispatch) => {
   const data = {
     username:username,
     email:email,
-    password1:password1,
-    password2:password2
+    password1:password,
+    password2:password
   }
-  console.log(username, email, password1, password2)
+  console.log(username, email, password)
   try {
       await fetch('http://learnroom.herokuapp.com/rest/registration/', {
         method: 'POST',

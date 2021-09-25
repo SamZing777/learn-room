@@ -1,5 +1,18 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text, StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
+// import { useHeaderHeight } from '@react-navigation/stack';
+import { 
+  SafeAreaView, 
+  Text, 
+  StyleSheet, 
+  View, 
+  TextInput, 
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
+  Platform, 
+  ScrollView
+ } from "react-native";
 import { Colors } from "../../Styles/colors";
 import {
   heightPercentageToDP as hp,
@@ -10,6 +23,7 @@ import { register } from "../../Redux/actions/register";
 import SignUPSVG from '../../assets/icons/illustration-2.svg';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-ionicons';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
 
 const SignUp = (props) => {
   const { navigation, register } = props;
@@ -17,16 +31,18 @@ const SignUp = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   const submitHandler = () => {
-    register(name, email, password, confirmPassword);
+    register(name, email, password);
   };
 
   return (
+    <KeyboardAwareScrollView
+        style = {{ flex: 1 }} 
+    >
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <SafeAreaView style={styles.container}>
-      <View>
-        <TouchableOpacity style={styles.backArrowBtn}>
+        <TouchableOpacity style={styles.backArrowBtn} onPress={()=>navigation.goBack()}>
              <Icon name="arrow-dropleft-circle" color={'black'} size={30}/>         
         </TouchableOpacity>
         <View style={{marginTop:hp(3)}}>
@@ -37,25 +53,33 @@ const SignUp = (props) => {
         <TextInput 
             placeholder='Name'
             style={styles.formField}
+            value={name}
+            onChangeText={(event) => {setName(event)}}
         />
         <TextInput 
             placeholder='E-mail'
             style={styles.formField}
+            value={email}
+            onChangeText={(event) => {setEmail(event)}}
         />
         <TextInput 
             placeholder='Password'
             style={styles.formField}
+            value={password}
+            onChangeText={(event) => {setPassword(event)}}
+            secureTextEntry
         />
-        <TouchableOpacity style={styles.signUpBtn}>
+        <TouchableOpacity style={styles.signUpBtn} onPress={submitHandler}>
           <Text style={styles.signUpBtnTxt}>Sign up</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
         <Text style={styles.loginTxt}>
           Log in
         </Text>
         </TouchableOpacity>
-        </View>
     </SafeAreaView>
+    </TouchableWithoutFeedback>
+    </KeyboardAwareScrollView>
   );
 };
 
