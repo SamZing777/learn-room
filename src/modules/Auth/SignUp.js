@@ -21,9 +21,8 @@ import {
 import { connect } from "react-redux";
 import { register } from "../../Redux/actions/register";
 import SignUPSVG from '../../assets/icons/illustration-2.svg';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-ionicons';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview';
 
 const SignUp = (props) => {
   const { navigation, register } = props;
@@ -41,7 +40,8 @@ const SignUp = (props) => {
         style = {{ flex: 1 }} 
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
+      <View style={styles.container}>
         <TouchableOpacity style={styles.backArrowBtn} onPress={()=>navigation.goBack()}>
              <Icon name="arrow-dropleft-circle" color={'black'} size={30}/>         
         </TouchableOpacity>
@@ -77,6 +77,7 @@ const SignUp = (props) => {
           Log in
         </Text>
         </TouchableOpacity>
+        </View>
     </SafeAreaView>
     </TouchableWithoutFeedback>
     </KeyboardAwareScrollView>
@@ -120,7 +121,8 @@ const styles = StyleSheet.create(
       marginTop:hp(1.2),
       borderRadius:5,
       paddingHorizontal:20,
-      fontSize:hp(1.8)
+      fontSize:hp(1.8),
+      // paddingHorizontal:hp(3)
     },
     signUpBtn:{
       backgroundColor:Colors.red,
@@ -128,7 +130,7 @@ const styles = StyleSheet.create(
       height:50,
       justifyContent:'center',
       alignItems:'center',
-      borderRadius:5
+      borderRadius:5,
     },
     signUpBtnTxt:{
       color:Colors.white,

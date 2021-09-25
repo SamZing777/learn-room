@@ -5,6 +5,8 @@ import {
   Text, TextInput,
   TouchableOpacity,
   View,
+  Keyboard,
+  TouchableWithoutFeedback
 } from "react-native";
 import { Colors } from "../../Styles/colors";
 import {
@@ -13,7 +15,11 @@ import {
 } from "react-native-responsive-screen";
 import { login } from "../../Redux/actions/login";
 import { connect } from "react-redux";
-
+import LoginImage from "../../assets/icons/illustration-3.svg"
+import Facebook from "../../assets/icons/facebook.svg";
+import Instagram from "../../assets/icons/instagram.svg"
+import Google from "../../assets/icons/google.svg";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview';
 
 const Login = (props) => {
   const { navigation, login } = props;
@@ -24,65 +30,58 @@ const Login = (props) => {
     login(email, password);
   };
 
-  const facebookIcon = require("../../../App/assets/images/icons/facebook.png");
-  const googleIcon = require("../../../App/assets/images/icons/google.png");
-  const appleIcon = require("../../../App/assets/images/icons/apple.png");
-
-
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={styles.container}>
-          <Text style={styles.header}>Login your learnroom account</Text>
-          <View style={styles.socialButtons}>
-
-            {/* Facebook Social media button */}
-            <TouchableOpacity style={styles.fbSocialBtn}>
-              <Image source={facebookIcon} style={styles.socialIcon} />
-              <Text style={styles.socialBtnTxt}>Login with Facebook</Text>
-            </TouchableOpacity>
-
-            {/* Google social media button */}
-            <TouchableOpacity style={styles.googleSocialBtn}>
-              <Image source={googleIcon} style={styles.socialIcon} />
-              <Text style={styles.socialBtnTxt}>Login with Google</Text>
-            </TouchableOpacity>
-
-          </View>
-
-          {/* Email Login */}
-          <View style={styles.EmailLoginView}>
-            <Text style={styles.header}>Login with email</Text>
-            <View style={styles.formFieldView}>
-              <Text style={styles.label}>Email</Text>
-              <TextInput
-                onChangeText={(event) => setEmail(event)}
-                value={email}
-                style={styles.inputField}
-              />
-            </View>
-            <View style={styles.formFieldView}>
-              <Text style={styles.label}>Password</Text>
-              <TextInput
-                onChangeText={(event) => setPassword(event)}
-                value={password}
-                style={styles.inputField}
-                secureTextEntry={true}
-              />
-            </View>
-            <TouchableOpacity style={styles.submitBtn} onPress={submitHandler}>
-              <Text style={styles.submitBtnTxt}>Sign me In</Text>
-            </TouchableOpacity>
-            <View style={styles.signInView}>
-              <Text style={styles.signInText}>don't have an account?</Text>
-              <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
-                <Text style={styles.signInBtnText}>Sign Up</Text>
+    <KeyboardAwareScrollView
+    style = {{ flex: 1 }} 
+>
+  <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+<SafeAreaView >
+      <View style={styles.container}>
+        <View >
+          <LoginImage />
+          <View>
+            <Text style={styles.loginTxt}>Log in</Text>
+            <Text style={styles.socialText}>Login with social networks</Text>
+            <View style={styles.socialIcons}>
+              <TouchableOpacity style={styles.icon}>
+                  <Facebook />
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.icon}>
+                  <Instagram />
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.icon}>
+                  <Google />
               </TouchableOpacity>
             </View>
+            <TextInput 
+            placeholder='E-mail'
+            style={styles.formField}
+            value={email}
+            onChangeText={(event) => {setEmail(event)}}
+        />
+        <TextInput 
+            placeholder='Password'
+            style={styles.formField}
+            value={password}
+            onChangeText={(event) => {setPassword(event)}}
+            secureTextEntry
+        />
+        <TouchableOpacity style={styles.signUpBtn} onPress={submitHandler}>
+          <Text style={styles.signUpBtnTxt}>Log in</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+        <Text style={styles.signUpTxt}>
+          Sign Up
+        </Text>
+        </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
+    </TouchableWithoutFeedback>
+    </KeyboardAwareScrollView>
+
   );
 };
 
@@ -94,95 +93,58 @@ export default connect(mapStateToProps, { login })(Login);
 const styles = StyleSheet.create(
   {
     container: {
-      paddingHorizontal: wp(3),
-      paddingTop: 10,
+      paddingVertical:hp(2.8),
+      paddingHorizontal:hp(3),
+      paddingTop: hp(6),
     },
-    header: {
-      fontFamily: "Rubik-Bold",
-      color: Colors.primary,
-      fontWeight: "700",
-      fontSize: hp(2.8),
-      textAlign: "center",
-      opacity: 0.5,
+    loginTxt:{
+      fontFamily:'Rubik-Medium',
+      fontSize:hp(2.8),
+      textAlign:'center',
+      marginTop:12,
     },
-    socialButtons: {
-      marginTop: hp(2),
+    socialText:{
+      fontFamily:'Rubik-light',
+      fontSize:hp(1.7),
+      textAlign:'center',
+      marginTop:12,
     },
-    fbSocialBtn: {
-      backgroundColor: Colors.blue,
-      height: hp(7),
-      borderRadius: 4,
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: "row",
-      marginBottom: hp(2),
+    socialIcons:{
+      flexDirection:'row',
+      justifyContent:'center',
+      alignItems:'center',
+      marginTop:10
     },
-    socialIcon: {
-      height: 20,
-      width: 20,
-      marginRight: 10,
+    icon:{
+      marginRight:5
+    }, 
+    formField:{
+      borderColor:Colors.gray,
+      borderWidth:0.5,
+      height:50,
+      marginTop:hp(1.2),
+      borderRadius:5,
+      paddingHorizontal:20,
+      fontSize:hp(1.8)
     },
-    socialBtnTxt: {
-      color: Colors.white,
-      fontSize: hp(2.2),
-      fontFamily: "Rubik-Regular",
+    signUpBtn:{
+      backgroundColor:Colors.red,
+      marginTop: hp(1.5),
+      height:50,
+      justifyContent:'center',
+      alignItems:'center',
+      borderRadius:5
     },
-    googleSocialBtn: {
-      backgroundColor: Colors.red,
-      height: hp(7),
-      borderRadius: 4,
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: "row",
-      marginBottom: hp(2),
-    },
-
-    //  Email Login
-    formFieldView: {
-      height: hp(10),
-      width: "100%",
-      marginBottom: hp(2.2),
-      justifyContent: "space-between",
-    },
-    label: {
-      fontFamily: "Rubik-Medium",
-      fontSize: hp(2.3),
-    },
-    inputField: {
-      height: hp(7),
-      borderColor: "grey",
-      borderWidth: 1.8,
-      fontSize: hp(2.3),
-      paddingHorizontal: 10,
-      borderRadius: 5,
-      fontFamily: "Rubik-Light",
-    },
-    submitBtn: {
-      backgroundColor: Colors.primary,
-      width: "100%",
-      justifyContent: "center",
-      alignItems: "center",
-      height: 65,
-      borderRadius: 5,
-    },
-    submitBtnTxt: {
-      color: Colors.white,
-      fontSize: hp(2.5),
-      fontFamily: "Rubik-Bold",
-    },
-    signInView: {
-      flexDirection: "row",
-      justifyContent: "space-around",
-      width: "100%",
-      marginTop: hp(5),
-    },
-    signInText: {
-      fontFamily: "Rubik-Medium",
-    },
-    signInBtnText: {
-      fontFamily: "Rubik-Medium",
-      color: Colors.secondary,
-    },
-  },
+    signUpBtnTxt:{
+      color:Colors.white,
+      fontWeight:'bold',
+    }, 
+    signUpTxt:{
+      textAlign:'center',
+      color:Colors.gray,
+      fontFamily:'Rubik-Medium',
+      marginTop:hp(2)
+    }
+  }
 );
 
