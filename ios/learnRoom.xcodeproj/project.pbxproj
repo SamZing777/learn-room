@@ -30,7 +30,6 @@
 		7131D669608E43C49E6DA000 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFCC4F3E443646049DAC08CB /* Rubik-Light.ttf */; };
 		73396361211E2B520932F74D /* libPods-learnRoom-learnRoomTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD448D9ECB8F4C22AFD75FB2 /* libPods-learnRoom-learnRoomTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		988EC79086E0466A89C40E05 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EE554ABF74A4CD0AC4895D4 /* Ionicons.ttf */; };
 		9AA6F1440E3640A983E1D61F /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC2AF1DDC2449B96C7D843 /* Rubik-Italic.ttf */; };
 		9CCEEFAE138C4F7AAE9C8A9C /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98DAB80CDCA44F40B50B1FC5 /* Rubik-Regular.ttf */; };
 		9D5513FFEFBC464DB2B62B7F /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DECA9D86A834B59B36A1BEF /* Roboto-Italic.ttf */; };
@@ -397,7 +396,6 @@
 				29D6A220F808433BBAFFCDB6 /* Rubik-MediumItalic.ttf in Resources */,
 				9CCEEFAE138C4F7AAE9C8A9C /* Rubik-Regular.ttf in Resources */,
 				BE554CBECD834CFE936BD5EC /* Rubik-SemiBold.ttf in Resources */,
-				988EC79086E0466A89C40E05 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

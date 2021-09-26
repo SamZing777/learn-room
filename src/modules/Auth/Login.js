@@ -37,8 +37,8 @@ const Login = (props) => {
   <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 <SafeAreaView >
       <View style={styles.container}>
-        <View >
-          <LoginImage />
+        <View>
+          <LoginImage height={hp(30)} width={wp(80)}/>
           <View>
             <Text style={styles.loginTxt}>Log in</Text>
             <Text style={styles.socialText}>Login with social networks</Text>

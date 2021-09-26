@@ -45,8 +45,8 @@ const SignUp = (props) => {
         <TouchableOpacity style={styles.backArrowBtn} onPress={()=>navigation.goBack()}>
              <Icon name="arrow-dropleft-circle" color={'black'} size={30}/>         
         </TouchableOpacity>
-        <View style={{marginTop:hp(3)}}>
-          <SignUPSVG />
+        <View style={{marginTop:hp(3), justifyContent:'center', alignItems:'center'}}>
+          <SignUPSVG width={hp(40)} height={hp(30)} />
           <Text style={styles.signUpTxt}>Sign up</Text>
           <Text style={styles.createAcctTxt}>Create your account</Text>
         </View>
