@@ -32,43 +32,15 @@ const TabNavigator = () => {
               name="Featured" 
               component={Featured}
               options={{
-                tabBarLabel: 'Featured',
+                tabBarLabel: 'Courses',
                 tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="fridge" color={color} size={26} />
+                  <MaterialCommunityIcons name="book-variant-multiple" color={color} size={26} />
                 ),
               }} 
         
         />
-        <Tab.Screen name="WishList" component={WishList} 
-              options={{
-                tabBarLabel: 'Wish List',
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="star-box-multiple" color={color} size={26} />
-                ),
-              }} 
-        
-        
-        />
-         <Tab.Screen name="Category" component={Category} 
-              options={{
-                tabBarLabel: 'Category',
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="distribute-horizontal-center" color={color} size={26} />
-                ),
-              }} 
-        
-        
-        />
-         <Tab.Screen name="My Learning" component={MyLearning} 
-              options={{
-                tabBarLabel: 'Wish List',
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="school" color={color} size={26} />
-                ),
-              }} 
-        
-        
-        />
+       
+         
          <Tab.Screen 
         name="Profile" 
         component={Account}
@@ -78,6 +50,17 @@ const TabNavigator = () => {
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
         }}  
+        />
+
+  <Tab.Screen name="WishList" component={WishList} 
+              options={{
+                tabBarLabel: 'Settings',
+                tabBarIcon: ({ color }) => (
+                  <MaterialCommunityIcons name="cog-outline" color={color} size={26} />
+                ),
+              }} 
+        
+        
         />
         
       </Tab.Navigator>
