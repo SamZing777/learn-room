@@ -15,7 +15,7 @@ import { Provider } from 'react-redux'
 import {store } from "./src/Redux/store";
 
 const App = () => {
-  const [signedIn, setSignedIn] = useState(false)
+  const [signedIn, setSignedIn] = useState(true)
   return (
     <Provider store={store}>
         {!signedIn && <AuthStackNavigator />}

@@ -22,10 +22,10 @@ const TabNavigator = () => {
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
-        activeColor="#f0edf6"
-        inactiveColor="#3e2465"
+        activeColor={Colors.primary}
+        inactiveColor={Colors.gray}
         shifting={false}
-        barStyle={{ backgroundColor: Colors.apple }}
+        barStyle={{ backgroundColor: Colors.white }}
       >
        
         <Tab.Screen name="Featured" component={Featured} 
@@ -70,10 +70,10 @@ const TabNavigator = () => {
         
         />
          <Tab.Screen 
-        name="Account" 
-        component={SplashScreen}
+        name="Profile" 
+        component={Account}
         options={{
-          tabBarLabel: 'Account',
+          tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
