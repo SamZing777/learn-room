@@ -13,7 +13,8 @@ import {
 } from 'react-native-responsive-screen';
 import Icon from 'react-native-ionicons';
 import { Colors } from "../../Styles/colors";
- import ProfileImage from '../../assets/icons/profileImg.svg';
+import ProfileImage from '../../assets/icons/profileImg.svg';
+import BackButton from '../../components/backButton'
 
 const Account = (props) => {
   const {navigation} = props
@@ -21,9 +22,7 @@ const Account = (props) => {
     <SafeAreaView >
       <View style={styles.container}>
       <View style={{flexDirection:'row', alignItems:'center',}}>
-          <TouchableOpacity style={styles.backArrowBtn} onPress={()=>navigation.goBack()}>
-                <Icon name="arrow-dropleft-circle" color={'black'} size={30}/>         
-            </TouchableOpacity>
+          <BackButton />
             <Text style={{textAlign:'center',marginLeft:100, fontSize:hp(2.7), fontFamily:'Rubik-bold'}}>
               Profile
             </Text>

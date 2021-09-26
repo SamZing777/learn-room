@@ -21,8 +21,9 @@ import {
 import { connect } from "react-redux";
 import { register } from "../../Redux/actions/register";
 import SignUPSVG from '../../assets/icons/illustration-2.svg';
-import Icon from 'react-native-ionicons';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview';
+import BackButton from "../../components/backButton";
+
 
 const SignUp = (props) => {
   const { navigation, register } = props;
@@ -42,9 +43,7 @@ const SignUp = (props) => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <SafeAreaView>
       <View style={styles.container}>
-        <TouchableOpacity style={styles.backArrowBtn} onPress={()=>navigation.goBack()}>
-             <Icon name="arrow-dropleft-circle" color={'black'} size={30}/>         
-        </TouchableOpacity>
+        <BackButton />
         <View style={{marginTop:hp(3), justifyContent:'center', alignItems:'center'}}>
           <SignUPSVG width={hp(40)} height={hp(30)} />
           <Text style={styles.signUpTxt}>Sign up</Text>

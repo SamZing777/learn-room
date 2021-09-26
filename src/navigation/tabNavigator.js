@@ -7,7 +7,7 @@ import Account from "../modules/Screens/Account";
 import Category from "../modules/Screens/Category";
 import Featured from "../modules/Screens/Featured";
 import MyLearning from "../modules/Screens/MyLearning";
-import WishList from "../modules/Screens/WishList";
+import Settings from "../modules/Screens/Settings";
 import {Colors} from "../Styles/colors";
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -52,7 +52,7 @@ const TabNavigator = () => {
         }}  
         />
 
-  <Tab.Screen name="WishList" component={WishList} 
+    <Tab.Screen name="Settings" component={Settings} 
               options={{
                 tabBarLabel: 'Settings',
                 tabBarIcon: ({ color }) => (
