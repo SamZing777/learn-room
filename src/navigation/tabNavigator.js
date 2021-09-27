@@ -5,7 +5,7 @@ import {
 import {NavigationContainer} from '@react-navigation/native';
 import Account from "../modules/Screens/Account";
 import Category from "../modules/Screens/Category";
-import Featured from "../modules/Screens/Featured";
+import Courses from "../modules/Screens/Courses";
 import MyLearning from "../modules/Screens/MyLearning";
 import Settings from "../modules/Screens/Settings";
 import {Colors} from "../Styles/colors";
@@ -21,16 +21,16 @@ const TabNavigator = () => {
  return(
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="Courses"
         activeColor={Colors.primary}
         inactiveColor={Colors.gray}
         shifting={false}
         barStyle={{ backgroundColor: Colors.white }}
       >
        
-        <Tab.Screen name="Featured" component={Featured} 
-              name="Featured" 
-              component={Featured}
+        <Tab.Screen name="Courses" component={Courses} 
+              name="Courses" 
+              component={Courses}
               options={{
                 tabBarLabel: 'Courses',
                 tabBarIcon: ({ color }) => (

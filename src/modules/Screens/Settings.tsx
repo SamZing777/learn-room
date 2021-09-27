@@ -8,7 +8,6 @@ import {
   Switch,
   ScrollView
 } from "react-native";
-import { color } from 'react-native-reanimated';
 import { Colors } from "../../Styles/colors";
 import BackButton from '../../components/backButton';
 import {
@@ -29,7 +28,9 @@ const Settings = () => {
   return (
     <SafeAreaView >
 
-      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      <ScrollView style={styles.container} 
+      showsVerticalScrollIndicator={false} 
+      >
       <View style={{flexDirection:'row', alignItems:'center',}}>
         <BackButton />
         <Text style={{textAlign:'center',marginLeft:100, fontSize:hp(2.7), fontFamily:'Rubik-bold'}}>
@@ -95,7 +96,7 @@ const Settings = () => {
 const styles = StyleSheet.create ({
   container:{
     paddingVertical:hp(2.8),
-    paddingHorizontal:hp(3)
+    paddingHorizontal:hp(3),
   },
   btnLinks:{
     borderRadius:16,

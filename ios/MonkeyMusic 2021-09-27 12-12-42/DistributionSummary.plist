@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MonkeyMusic.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>D89F315F9E5307EC56B2897DC3C88290FD821DAE</string>
+				<key>dateExpires</key>
+				<string>15/02/2022</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>78M4YM84B4.com.monkeymusicgroup.djapp</string>
+				<key>aps-environment</key>
+				<string>development</string>
+				<key>com.apple.developer.applesignin</key>
+				<array>
+					<string>Default</string>
+				</array>
+				<key>com.apple.developer.team-identifier</key>
+				<string>78M4YM84B4</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>MonkeyMusic.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>9c4461cf-d62d-4040-aba3-9954b08108cc</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.monkeymusicgroup.djapp</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>78M4YM84B4</string>
+				<key>name</key>
+				<string>MONKEY MUSIC GROUP LTD</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

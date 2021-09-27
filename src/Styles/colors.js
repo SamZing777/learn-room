@@ -9,4 +9,5 @@ export const Colors = {
     apple: '#A2AAAD',
     background: '#FFFFFF',
     darkGray: '#78746D',
+    courseBackground: '#F2F2F2'
 }
