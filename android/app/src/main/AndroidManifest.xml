@@ -2,7 +2,7 @@
   package="com.learnroom">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <application android:usesCleartextTraffic="true" />
+    <!-- <application android:usesCleartextTraffic="true" /> -->
 
     <application
       android:name=".MainApplication"
@@ -10,6 +10,7 @@
       android:icon="@mipmap/ic_launcher"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
+      android:usesCleartextTraffic="true"
       android:theme="@style/AppTheme">
       <activity
         android:name=".MainActivity"

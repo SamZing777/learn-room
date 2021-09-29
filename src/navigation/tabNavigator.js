@@ -16,7 +16,6 @@ import SplashScreen from '../modules/Screens/splashScreen';
 const Tab = createMaterialBottomTabNavigator();
 
 const TabNavigator = () => {
-    const account = require('../assets/icons/account.png')
 
  return(
     <NavigationContainer>
