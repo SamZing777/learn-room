@@ -46,13 +46,9 @@ INSTALLED_APPS = [
 
     # third party app
     'djmoney',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'corsheaders',
     'rest_auth',
     'rest_auth.registration',
-
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
@@ -60,6 +56,12 @@ INSTALLED_APPS = [
     # Cloud computing Service
     'storages'
 ]
+
+"""
+        'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+"""
 
 
 REST_FRAMEWORK = {
@@ -218,17 +220,24 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 AUTH_USER_MODEL = 'users.User'
 
 
+"""
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
+"""
+
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
+    
+]
+
+"""
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-]
+"""
 
 LOGIN_REDIRECT_URL = 'courses'
 LOGOUT_REDIRECT_URL = '/'
@@ -245,6 +254,10 @@ EMAIL_PORT = 465
 
 #stops Relaying disallowed as webmaster@localhost 
 DEFAULT_FROM_EMAIL = 'admin@learnroom.co'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(config=locals(), staticfiles=False, logging=False)
 
 
 # AWS FILE UPLOAD

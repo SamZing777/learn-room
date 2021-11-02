@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class LiveClassConfig(AppConfig):
-    name = 'live_class'
+	default_auto_field = 'django.db.models.BigAutoField'
+	name = 'live_class'
