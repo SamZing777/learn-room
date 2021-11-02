@@ -10,7 +10,7 @@ class User(AbstractUser):
 	is_instructor = models.BooleanField(default=False)
 
 	def __str__(self):
-		return self.email
+		return self.username
 
 
 class Instructor(models.Model): 

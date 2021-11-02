@@ -33,12 +33,13 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
 
+"""
     @action(detail=True, methods=['get'])
     def userprofile(self, request, pk):
         qs = self.get_object().userprofile_set.all()
         serializer = UserProfileSerializer(qs, many=True)
         return Response(serializer.data)
-
+"""
 
 class InstructorViewSet(viewsets.ModelViewSet):
     queryset = Instructor.objects.all()
