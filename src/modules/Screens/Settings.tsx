@@ -31,11 +31,12 @@ const Settings = () => {
       <ScrollView style={styles.container} 
       showsVerticalScrollIndicator={false} 
       >
-      <View style={{flexDirection:'row', alignItems:'center',}}>
+      <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
         <BackButton />
-        <Text style={{textAlign:'center',marginLeft:100, fontSize:hp(2.7), fontFamily:'Rubik-bold'}}>
+        <Text style={{fontSize:hp(2.7), fontFamily:'Rubik-Bold'}}>
               Settings
         </Text>
+        <View></View>
       </View>
       <View style={{justifyContent:'center', alignItems:'center'}}>
           <SettingsImg width={hp(50)} height={hp(40)} />

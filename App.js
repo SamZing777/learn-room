@@ -20,7 +20,7 @@ const App = () => {
     <Provider store={store}>
         {!signedIn && <AuthStackNavigator />}
         {signedIn && <TabNavigator />}
-        
+
     </Provider>
   )
 };

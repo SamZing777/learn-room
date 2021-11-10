@@ -2,7 +2,8 @@ import * as actionType from './userType'
 
 const initialState = {
     user: [],
-    error:''
+    error:'',
+    loading: true
 }
 
 const userReducer = (state=initialState, action) => {
@@ -26,6 +27,11 @@ const userReducer = (state=initialState, action) => {
       return {
         ...state,
         error: action.payload
+      }
+    case actionType.SET_USER_LOADING:
+      return {
+        ...state,
+        loading: action.payload
       }
     default:
       return state;

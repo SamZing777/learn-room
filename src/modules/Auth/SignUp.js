@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 // import { useHeaderHeight } from '@react-navigation/stack';
-import { 
-  SafeAreaView, 
-  Text, 
-  StyleSheet, 
-  View, 
-  TextInput, 
+import {
+  SafeAreaView,
+  Text,
+  StyleSheet,
+  View,
+  TextInput,
   TouchableOpacity,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   Keyboard,
-  Platform, 
+  Platform,
   ScrollView
  } from "react-native";
 import { Colors } from "../../Styles/colors";
@@ -33,12 +33,12 @@ const SignUp = (props) => {
   const [password, setPassword] = useState("");
 
   const submitHandler = () => {
-    register(name, email, password);
+    register(name, email, password, navigation);
   };
 
   return (
     <KeyboardAwareScrollView
-        style = {{ flex: 1 }} 
+        style = {{ flex: 1 }}
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <SafeAreaView>
@@ -49,19 +49,19 @@ const SignUp = (props) => {
           <Text style={styles.signUpTxt}>Sign up</Text>
           <Text style={styles.createAcctTxt}>Create your account</Text>
         </View>
-        <TextInput 
+        <TextInput
             placeholder='Name'
             style={styles.formField}
             value={name}
             onChangeText={(event) => {setName(event)}}
         />
-        <TextInput 
+        <TextInput
             placeholder='E-mail'
             style={styles.formField}
             value={email}
             onChangeText={(event) => {setEmail(event)}}
         />
-        <TextInput 
+        <TextInput
             placeholder='Password'
             style={styles.formField}
             value={password}
@@ -92,7 +92,7 @@ const styles = StyleSheet.create(
     container: {
       paddingVertical:hp(2.8),
       paddingHorizontal:hp(3)
-      
+
     },
     backArrowBtn:{
       borderRadius:100,
@@ -106,7 +106,7 @@ const styles = StyleSheet.create(
       fontSize:hp(2.8),
       textAlign:'center',
       marginTop:12,
-    }, 
+    },
     createAcctTxt:{
       fontFamily:'Rubik-light',
       fontSize:hp(1.7),
@@ -134,15 +134,15 @@ const styles = StyleSheet.create(
     signUpBtnTxt:{
       color:Colors.white,
       fontWeight:'bold',
-      
-    }, 
+
+    },
     loginTxt:{
       textAlign:'center',
       marginTop:hp(1),
       fontFamily:'Rubik',
       fontSize:hp(1.8)
     }
-   
+
   },
 );
 

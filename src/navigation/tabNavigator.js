@@ -3,7 +3,7 @@ import {
   StyleSheet
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import Account from "../modules/Screens/Account";
+import Profile from "../modules/Screens/Profile";
 import Category from "../modules/Screens/Category";
 import Courses from "../modules/Screens/Courses";
 import MyLearning from "../modules/Screens/MyLearning";
@@ -18,7 +18,7 @@ const Tab = createMaterialBottomTabNavigator();
 const TabNavigator = () => {
 
  return(
-    <NavigationContainer>
+    <NavigationContainer  independent={true}>
       <Tab.Navigator
         initialRouteName="Courses"
         activeColor={Colors.primary}
@@ -26,42 +26,42 @@ const TabNavigator = () => {
         shifting={false}
         barStyle={{ backgroundColor: Colors.white }}
       >
-       
-        <Tab.Screen name="Courses" component={Courses} 
-              name="Courses" 
-              component={Courses}
-              options={{
+
+        <Tab.Screen
+                name="Courses"
+                component={Courses}
+                options={{
                 tabBarLabel: 'Courses',
                 tabBarIcon: ({ color }) => (
                   <MaterialCommunityIcons name="book-variant-multiple" color={color} size={26} />
                 ),
-              }} 
-        
+              }}
+
         />
-       
-         
-         <Tab.Screen 
-        name="Profile" 
-        component={Account}
+
+
+         <Tab.Screen
+        name="Profile"
+        component={Profile}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
-        }}  
+        }}
         />
 
-    <Tab.Screen name="Settings" component={Settings} 
+    <Tab.Screen name="Settings" component={Settings}
               options={{
                 tabBarLabel: 'Settings',
                 tabBarIcon: ({ color }) => (
                   <MaterialCommunityIcons name="cog-outline" color={color} size={26} />
                 ),
-              }} 
-        
-        
+              }}
+
+
         />
-        
+
       </Tab.Navigator>
     </NavigationContainer>
   )

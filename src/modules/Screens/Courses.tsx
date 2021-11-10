@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   View,
   Text,
@@ -13,9 +13,12 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp
 } from 'react-native-responsive-screen';
+import Fonts from '../../Styles/fonts';
+// @ts-ignore
 import NotificationBell from '../../assets/icons/notificationBell.svg';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Category from '../../components/category';
+// @ts-ignore
 import CourseImage from '../../assets/icons/CourseImage.svg'
 
 const Courses = () => {
@@ -28,28 +31,28 @@ const Courses = () => {
               <Text style={styles.name}>Juanita Antonio</Text>
           </View>
           <NotificationBell />
-        </View> 
+        </View>
         <View style={styles.search}>
-          <TextInput 
+          <TextInput
             placeholder="Search course"
             style={styles.searchInput}
           />
           <TouchableOpacity>
           <MaterialCommunityIcons name="book-search-outline" color={Colors.gray} size={26} />
           </TouchableOpacity>
-        </View> 
+        </View>
         <ScrollView contentContainerStyle={styles.category} horizontal={true} showsHorizontalScrollIndicator={false}>
             <Text style={styles.categoryText}>Category</Text>
             <Category title='redux' onPress={() =>console.log("hello")} />
             <Category title='Swift' onPress={() =>console.log("hello")} />
             <Category title='UX' onPress={() =>console.log("hello")} />
             <Category title='UI' onPress={() =>console.log("hello")} />
-        </ScrollView> 
+        </ScrollView>
         <View>
-            <View style={styles.course}>      
+            <View style={styles.course}>
                 <CourseImage />
             </View>
-        </View>  
+        </View>
     </View>
     </SafeAreaView>
   )
@@ -57,24 +60,24 @@ const Courses = () => {
 
 const styles = StyleSheet.create ({
   container:{
-    flex: 1, 
+    flex: 1,
     backgroundColor:Colors.background,
-    
+
   },
   parentView:{
     paddingVertical:hp(2.8),
     paddingHorizontal:hp(3),
   },
   text:{
-    color:'black',
-    fontFamily:'Rubik-Medium'
+    color:Colors.black,
+    fontFamily:Fonts.RubikMedium,
   },
   greet:{
     fontSize:hp(2),
-    fontFamily:'Rubik-light'
+    fontFamily:Fonts.RubikLight
   },
   name:{
-    fontFamily:'Rubik-SemiBold',
+    fontFamily:Fonts.RubikSemiBold,
     fontSize:hp(3.4),
     marginTop:10
   },
@@ -89,7 +92,7 @@ const styles = StyleSheet.create ({
   },
   searchInput:{
     fontSize:hp(1.8),
-    fontFamily:'Rubik-SemiBold',
+    fontFamily:Fonts.RubikSemiBold,
   },
   category:{
     marginTop:15,
@@ -99,7 +102,7 @@ const styles = StyleSheet.create ({
   },
   categoryText:{
     fontSize:hp(1.8),
-    fontFamily:'Rubik',
+    fontFamily:Fonts.RubikLight,
   },
   course:{
 

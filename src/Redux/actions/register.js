@@ -1,7 +1,9 @@
-import * as actionType from '../user/userType';
-import axios from 'axios'
 
-export const register = (username, email, password) => async (dispatch) => {
+import * as actionType from '../user/userType';
+import axios from 'axios';
+
+
+export const register = (username, email, password, navigation) => async (dispatch) => {
   const data = {
     username:username,
     email:email,
@@ -21,9 +23,11 @@ export const register = (username, email, password) => async (dispatch) => {
 
         .then( response => {
           console.log(response)
+          navigation.navigate('SplashScreen')
         })
         .catch(error => {
           console.log(error)
+          navigation.navigate('SplashScreen')
         })
   }
   catch (error){
