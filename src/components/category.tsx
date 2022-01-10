@@ -16,9 +16,9 @@ interface Props {
 const Category: React.FC <Props> = ({title, onPress}) => {
     return(
         <View style={styles.container}>
-                <TouchableOpacity onPress={onPress}>
-                    <Text style={styles.title}>{title}</Text>
-                </TouchableOpacity>
+            <TouchableOpacity onPress={onPress}>
+                <Text style={styles.title}>{title}</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -26,10 +26,10 @@ const Category: React.FC <Props> = ({title, onPress}) => {
 const styles =  StyleSheet.create({
     container:{
         backgroundColor:Colors.secondary,
-        marginLeft:12,
+        marginLeft:14,
         padding:5,
         borderRadius:20,
-        paddingHorizontal:10
+        paddingHorizontal:15
     },
     title:{
         color:Colors.white,

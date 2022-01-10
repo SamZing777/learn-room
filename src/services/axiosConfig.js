@@ -18,4 +18,13 @@ const customRequest = () => {
   });
 }
 
+export const axiosClient = axios.create({
+  baseURL: baseUrl,
+  withCredentials: false,
+  headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+  },
+});
+
 export default customRequest;

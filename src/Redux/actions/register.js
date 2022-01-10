@@ -23,11 +23,11 @@ export const register = (username, email, password, navigation) => async (dispat
 
         .then( response => {
           console.log(response)
-          navigation.navigate('SplashScreen')
+          navigation.navigate('TabNavigator')
         })
         .catch(error => {
           console.log(error)
-          navigation.navigate('SplashScreen')
+          navigation.navigate('TabNavigator')
         })
   }
   catch (error){

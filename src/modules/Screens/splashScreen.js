@@ -15,8 +15,7 @@ import {
 } from 'react-native-responsive-screen'
 
 
-const SplashScreen : React.FC = (props) => {
-    const {navigation} = props
+const SplashScreen = ({navigation}) => {
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const translate = useRef(new Animated.Value(0)).current;
 
@@ -54,7 +53,7 @@ const SplashScreen : React.FC = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('TabNavigator')
+     navigation.replace('OnboardingScreen')
     }, 3000)
   })
 

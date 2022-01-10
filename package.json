@@ -25,6 +25,7 @@
     "react-native-gesture-handler": "^1.10.3",
     "react-native-ionicons": "^4.6.5",
     "react-native-keyboard-aware-scrollview": "^2.1.0",
+    "react-native-onboarding-swiper": "^1.1.4",
     "react-native-paper": "^4.9.2",
     "react-native-reanimated": "^2.3.0-alpha.2",
     "react-native-responsive-screen": "^1.4.2",
@@ -32,6 +33,7 @@
     "react-native-screens": "^3.6.0",
     "react-native-svg": "^12.1.1",
     "react-native-vector-icons": "^8.1.0",
+    "react-navigation": "^4.4.4",
     "react-redux": "^7.2.4",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0"

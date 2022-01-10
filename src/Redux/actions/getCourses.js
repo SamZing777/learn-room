@@ -1,30 +1,15 @@
 import * as actionType from '../course/courseType';
-import axios from 'axios';
+import { axiosClient } from '../../services/axiosConfig';
+import axios from 'axios'
 
-const getCourses = () => async (dispatch) => {
+export const getCourses = () => async (dispatch) => {
   try {
-      await axios.get("http://learnroom.herokuapp.com/course/courses/")
-        .then( response => {
-          console.log("courses api response",response.data.results)
-          dispatch(
-            {
-              type:actionType.GET_COURSE_SUCCESS,
-              payload: response.data.results
-            }
-          )
-        })
-        .catch(error => {
-          console.log("courses api error",error)
-          dispatch(
-            {
-              type:actionType.GET_COURSE_SUCCESS,
-            }
-          )
-        })
+      const response = await axios.get("http://learnroom.herokuapp.com/course/courses/")
+      console.log(response)
+      dispatch({type: actionType.GET_COURSE_SUCCESS, payload: response.data})
   }
   catch (error){
-
+   // console.log("courses api error",error)
+      dispatch({type: actionType.GET_COURSE_FAILURE,payload: error})
   }
-}
-
-export default getCourses;
+};
