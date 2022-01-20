@@ -47,9 +47,12 @@ INSTALLED_APPS = [
     # third party app
     'djmoney',
     'corsheaders',
-    'rest_auth',
-    'rest_auth.registration',
     'rest_framework',
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'rest_auth.registration',
     'rest_framework.authtoken',
     'rest_framework_swagger',
 
@@ -57,11 +60,7 @@ INSTALLED_APPS = [
     'storages'
 ]
 
-"""
-        'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-"""
+    
 
 
 REST_FRAMEWORK = {
@@ -220,11 +219,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 AUTH_USER_MODEL = 'users.User'
 
 
-"""
-ACCOUNT_AUTHENTICATION_METHOD = "email"
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_REQUIRED = False
-"""
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = False
 
 
 AUTHENTICATION_BACKENDS = [
@@ -239,9 +237,10 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 """
 
-LOGIN_REDIRECT_URL = 'courses'
+LOGIN_REDIRECT_URL = 'course/courses'
 LOGOUT_REDIRECT_URL = '/'
 
+"""
 # Email is sent using the SMTP HOST and Port Specified here
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -254,6 +253,7 @@ EMAIL_PORT = 465
 
 #stops Relaying disallowed as webmaster@localhost 
 DEFAULT_FROM_EMAIL = 'admin@learnroom.co'
+"""
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

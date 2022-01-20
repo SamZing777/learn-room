@@ -15,8 +15,9 @@ schema_view = get_swagger_view(title=API_TITLE)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rest/', include('rest_auth.urls')),
     path('auth/', include('rest_framework.urls')),
+    path('rest/', include('rest_auth.urls')),
+    path('rest/reg/', include('rest_auth.registration.urls')),
     path('api/v1/users/', include('users.urls')),
     path('course/', include('courses.urls')),
     path('assessments/', include('assessment.urls')),

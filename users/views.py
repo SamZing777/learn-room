@@ -15,10 +15,11 @@ from .serializers import (
     )
 
 from .models import (
-    User,
     Profile, 
     Instructor
     )
+
+User = get_user_model()
 
 """
 class UserCreationAPIView(generics.CreateAPIView):
@@ -30,7 +31,7 @@ class UserCreationAPIView(generics.CreateAPIView):
 """
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = get_user_model().objects.all()
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 
 """
