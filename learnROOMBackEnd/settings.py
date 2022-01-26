@@ -101,6 +101,12 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000'
 ]
 
+# CORS_ORIGIN_ALLOW_CREDENTIALS = False
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://learnroom.co'
+]
+
 ROOT_URLCONF = 'learnROOMBackEnd.urls'
 
 TEMPLATES = [
