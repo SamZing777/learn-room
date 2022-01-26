@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',    # third party (whitenoise).
     'django.contrib.sites',              # Included
     'django.contrib.staticfiles',
 
@@ -43,21 +44,61 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount'
+    'allauth.socialaccount',
+
+    'corsheaders',
 ]
 
 SITE_ID = 1
+
+"""
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
+    ],
+}
+"""
+"""
+'DEFAULT_PAGINATION_CLASS':
+    'products.pagination.LimitOffsetPaginationWithUpperBound',
+    'PAGE_SIZE': 3,
+
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
+        ),
+
+"""
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',             # Whitenoise (Included).
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',                  # Cors Headers (Included).
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+
+    # Production Purpose
+
+    'http://learnroom.co',
+
+    # Development Purpose
+
+    'http://localhost:8081',
+    'http://localhost:8000',
+    'http://localhost:4200',
+    'http://localhost:3000'
 ]
 
 ROOT_URLCONF = 'learnROOMBackEnd.urls'
@@ -132,6 +173,17 @@ STATIC_URL = '/static/'
 STATIC_ROOT = STATIC_DIR
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+# AWS FILE UPLOAD
+AWS_ACCESS_KEY_ID = 'AKIAXLZOCW5EXO43MNTF'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'course-img'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_REGION_NAME = "us-east-2"
+AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 
 AUTH_USER_MODEL = 'users.User'
