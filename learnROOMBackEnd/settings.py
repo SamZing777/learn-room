@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     # local apps
 
     'users.apps.UsersConfig',
+    'courses.apps.CoursesConfig',
+    'feedback.apps.FeedbackConfig',
+    'assessment.apps.AssessmentConfig',
 
     # third party apps
 
@@ -42,28 +45,27 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'rest_auth.registration',
+    'rest_framework_swagger',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_filters',
 
     'corsheaders',
 ]
 
 SITE_ID = 1
 
-"""
 REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication'
     ],
-}
-"""
-"""
-'DEFAULT_PAGINATION_CLASS':
-    'products.pagination.LimitOffsetPaginationWithUpperBound',
-    'PAGE_SIZE': 3,
+
+    'DEFAULT_PAGINATION_CLASS':
+        'courses.pagination.LimitOffsetPaginationWithUpperBound',
+        'PAGE_SIZE': 20,
 
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
@@ -71,7 +73,22 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         ),
 
-"""
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '5/hour',
+        'user': '10/hour',
+        'courses': '10/hour',
+        'course_category': '10/hour',
+        'course_sub_category': '10/hour'
+    }
+
+}
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
