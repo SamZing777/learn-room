@@ -53,7 +53,7 @@ class SectionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Section
-        fields = '__all__'
+        fields = ['course', 'title']
 
 
 class LessonSerializer(serializers.ModelSerializer):
@@ -64,14 +64,32 @@ class LessonSerializer(serializers.ModelSerializer):
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    requirement = RequirementSerializer()
-    to_learn = WhatToLearnSerializer()
-    sections = SectionSerializer()
-    lessons = LessonSerializer()
+    # requirement = RequirementSerializer()
+    # to_learn = WhatToLearnSerializer()
+    # course_section = SectionSerializer()
+    #course_lessons = LessonSerializer()
+
+    """
+    course_feedback = serializers.StringRelatedField(
+		many=True
+	)
+    course_review = serializers.StringRelatedField(
+        many=True
+    ) 
+    """
 
     class Meta:
         model = Course
         fields = ['title', 'instructor', 'category', 'sub_category', 'status',
                 'thumb_nail', 'short_note', 'description', 'language',
-                'is_self_pace', 'is_live_class', 'self_pace_price', 'live_class_price',
-                'requirement', 'to_learn', 'sections', 'lessons']
+                'is_self_pace', 'is_live_class']
+
+"""
+, 'requirement', 
+                'to_learn', 
+, 'course_lessons', 'course_section'
+
+
+'self_pace_price', 'live_class_price',
+                'self_pace_price_currency', 'live_class_price_currency',
+"""
