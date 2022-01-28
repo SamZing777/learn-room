@@ -6,7 +6,7 @@ import {
     TouchableOpacity,
     StyleSheet
 } from 'react-native';
-import {Colors} from '../Styles/colors'
+import {Colors} from '../theme/colors'
 
 interface Props {
     title : string,

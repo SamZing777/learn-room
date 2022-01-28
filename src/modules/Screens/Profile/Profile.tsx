@@ -12,21 +12,24 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp
 } from "react-native-responsive-screen";
-import Fonts from "../../Styles/fonts";
-import { Colors } from "../../Styles/colors";
+import Fonts from "../../../theme/fonts";
+import { Colors } from "../../../theme/colors";
 // @ts-ignore
-import ProfileImage from "../../assets/icons/profileImg.svg";
-import BackButton from "../../components/backButton";
+import ProfileImage from "../../../assets/icons/profileImg.svg";
+import BackButton from "../../../components/backButton";
 import { connect } from "react-redux";
-import logout from "../../Redux/actions/logout";
+import logout from "../../../Redux/actions/logout";
+import { NavigationProps } from "../../../types/Navigations";
 
-const Profile = (props) => {
-  const { navigation, logout, loading } = props;
+const Profile = (props: any) => {
+  const { navigation }: NavigationProps = props
+  const { logout, loading } = props;
+ // console.log(navigation)
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-          <BackButton />
+          <BackButton navigation={navigation}/>
           <Text style={{ fontSize: hp(2.7), fontFamily: Fonts.RubikBold }}>
             Profile
           </Text>
@@ -40,7 +43,9 @@ const Profile = (props) => {
           </View>
         </View>
         <View>
-          <TouchableOpacity style={styles.profileLinks}>
+          <TouchableOpacity style={styles.profileLinks} onPress={() => {
+          navigation.navigate("yourCourses")
+          }}>
             <Text style={styles.profileLinksTxt}>Your Courses</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.profileLinks}>
@@ -58,9 +63,9 @@ const Profile = (props) => {
           >
             <Text style={styles.logoutBtnTxt}>Logout</Text>
           </TouchableOpacity>
-          {loading &&
+          {/*loading &&
               <ActivityIndicator />
-          }
+          */}
         </View>
 
       </View>
@@ -122,7 +127,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   loading: state.userReducer.loading
 });
 

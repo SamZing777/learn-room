@@ -12,9 +12,9 @@ import {
 import {
     heightPercentageToDP as hp
 } from 'react-native-responsive-screen';
-import OnboardingImg from '../../assets/icons/OnboardingImg.svg';
+import OnboardingImg1 from '../../../assets/icons/OnboardingImg1.svg';
 
-const OnboardingScreen = ({navigation}) => {
+const OnboardingSecondScreen = ({navigation}) => {
     
     return (
         <SafeAreaView style={styles.containerWrapper}>
@@ -24,20 +24,20 @@ const OnboardingScreen = ({navigation}) => {
                 </View>
             </TouchableOpacity>
             <View style={styles.container}>
-                <OnboardingImg/>
+                <OnboardingImg1/>
                 <View style={styles.TextWrapper}>
-                    <Text style={styles.TextBold}>Learn anytime and anywhere</Text>
+                    <Text style={styles.TextBold}>Find a cource for you</Text>
                     <Text style={styles.TextLight}>Quarantine is the perfect time to spend your day learning something
                     new, from anywhere!
                     </Text>
                 </View>
                 <View style={styles.DotsWrapper}>
-                    <View style={styles.ActiveDots}></View>
                     <View style={styles.Dots}></View>
+                    <View style={styles.ActiveDots}></View>
                     <View style={styles.Dots}></View>
                 </View>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate("OnboardingSecondScreen")}>
+            <TouchableOpacity onPress={() => navigation.navigate("OnboardingThirdScreen")}>
             <View style={styles.NextWrapper}>
                 <Text style={styles.Next}>Next</Text>
             </View>
@@ -66,9 +66,10 @@ const styles = StyleSheet.create(
         TextBold: {
             fontFamily:'Rubik-Bold',
             fontSize: hp(4.5),
-            paddingHorizontal: hp(2),
+            paddingHorizontal: hp(4),
             lineHeight: hp(6),
-            marginBottom: hp(2)
+            marginBottom: hp(2),
+            textAlign: 'center'
         },
         TextLight: {
             fontFamily:'Rubik-Light',
@@ -93,15 +94,15 @@ const styles = StyleSheet.create(
             fontSize: hp(3)
         },
         SkipWrapper: {
-            position: "absolute",
-            top: hp(3),
-            right: hp(2),
- 
-         },
-         Skip: {
-             fontFamily:'Rubik-Bold',
-             color: "#78746D",
-         },
+           position: "absolute",
+           top: hp(3),
+           right: hp(2),
+
+        },
+        Skip: {
+            fontFamily:'Rubik-Bold',
+            color: "#78746D",
+        },
         DotsWrapper: {
             display: "flex",
             flexDirection: "row",
@@ -125,4 +126,4 @@ const styles = StyleSheet.create(
     }
 )
 
-export default OnboardingScreen;
+export default OnboardingSecondScreen;

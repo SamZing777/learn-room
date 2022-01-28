@@ -3,7 +3,7 @@ import * as actionType from './courseType'
 const initialState = {
     courses: [],
     error:'',
-    loading: true
+    loading: false
 }
 
 const courseReducer = (state=initialState, action) => {

@@ -3,19 +3,22 @@ import {
   StyleSheet
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import Profile from "../modules/Screens/Profile";
+import Profile from "../modules/Screens/Profile/Profile";
 import Category from "../modules/Screens/Category";
-import Courses from "../modules/Screens/Courses";
+import Courses from "../modules/Screens/Courses/Courses";
 import MyLearning from "../modules/Screens/MyLearning";
 import Settings from "../modules/Screens/Settings";
-import {Colors} from "../Styles/colors";
+import {Colors} from "../theme/colors";
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import SplashScreen from '../modules/Screens/splashScreen';
+//import SplashScreen from '../modules/Screens/Onboarding/splashScreen';
+import { NavigationProps } from "../types/Navigations";
+
 
 const Tab = createMaterialBottomTabNavigator();
 
-const TabNavigator = () => {
+const TabNavigator = ({navigation} : NavigationProps): JSX.Element => {
+  //console.log(navigation);
 
  return(
     <NavigationContainer  independent={true}>
@@ -29,7 +32,7 @@ const TabNavigator = () => {
 
         <Tab.Screen
                 name="Courses"
-                component={Courses}
+                children={() => <Courses navigation={navigation}/>}
                 options={{
                 tabBarLabel: 'Courses',
                 tabBarIcon: ({ color }) => (
@@ -42,7 +45,7 @@ const TabNavigator = () => {
 
          <Tab.Screen
         name="Profile"
-        component={Profile}
+        children={() => <Profile navigation={navigation}/>}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (

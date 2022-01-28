@@ -5,7 +5,7 @@ import {
   SafeAreaView,
   StyleSheet
 } from "react-native";
-import { Colors } from "../../Styles/colors";
+import { Colors } from "../../theme/colors";
 
 const Category = () => {
   return (

@@ -12,9 +12,9 @@ import {
 import {
     heightPercentageToDP as hp
 } from 'react-native-responsive-screen';
-import OnboardingImg1 from '../../assets/icons/OnboardingImg1.svg';
+import OnboardingImg2 from '../../../assets/icons/OnboardingImg2.svg';
 
-const OnboardingSecondScreen = ({navigation}) => {
+const OnboardingThirdScreen = ({navigation}) => {
     
     return (
         <SafeAreaView style={styles.containerWrapper}>
@@ -24,20 +24,20 @@ const OnboardingSecondScreen = ({navigation}) => {
                 </View>
             </TouchableOpacity>
             <View style={styles.container}>
-                <OnboardingImg1/>
+                <OnboardingImg2/>
                 <View style={styles.TextWrapper}>
-                    <Text style={styles.TextBold}>Find a cource for you</Text>
+                    <Text style={styles.TextBold}>Improve your skills</Text>
                     <Text style={styles.TextLight}>Quarantine is the perfect time to spend your day learning something
                     new, from anywhere!
                     </Text>
                 </View>
                 <View style={styles.DotsWrapper}>
                     <View style={styles.Dots}></View>
-                    <View style={styles.ActiveDots}></View>
                     <View style={styles.Dots}></View>
+                    <View style={styles.ActiveDots}></View>
                 </View>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate("OnboardingThirdScreen")}>
+            <TouchableOpacity onPress={() => navigation.navigate("Login")}>
             <View style={styles.NextWrapper}>
                 <Text style={styles.Next}>Next</Text>
             </View>
@@ -66,10 +66,8 @@ const styles = StyleSheet.create(
         TextBold: {
             fontFamily:'Rubik-Bold',
             fontSize: hp(4.5),
-            paddingHorizontal: hp(4),
             lineHeight: hp(6),
-            marginBottom: hp(2),
-            textAlign: 'center'
+            marginBottom: hp(2)
         },
         TextLight: {
             fontFamily:'Rubik-Light',
@@ -78,7 +76,7 @@ const styles = StyleSheet.create(
             lineHeight: hp(4),
         },
         NextWrapper: {
-            marginTop: hp(8),
+            marginTop: hp(14),
             marginHorizontal: hp(5),
             backgroundColor: "#E3562A",
             borderRadius: 16,
@@ -126,4 +124,4 @@ const styles = StyleSheet.create(
     }
 )
 
-export default OnboardingSecondScreen;
+export default OnboardingThirdScreen;

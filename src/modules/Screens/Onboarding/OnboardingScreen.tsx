@@ -12,9 +12,9 @@ import {
 import {
     heightPercentageToDP as hp
 } from 'react-native-responsive-screen';
-import OnboardingImg2 from '../../assets/icons/OnboardingImg2.svg';
+import OnboardingImg from '../../../assets/icons/OnboardingImg.svg';
 
-const OnboardingThirdScreen = ({navigation}) => {
+const OnboardingScreen = ({navigation}) => {
     
     return (
         <SafeAreaView style={styles.containerWrapper}>
@@ -24,20 +24,20 @@ const OnboardingThirdScreen = ({navigation}) => {
                 </View>
             </TouchableOpacity>
             <View style={styles.container}>
-                <OnboardingImg2/>
+                <OnboardingImg/>
                 <View style={styles.TextWrapper}>
-                    <Text style={styles.TextBold}>Improve your skills</Text>
+                    <Text style={styles.TextBold}>Learn anytime and anywhere</Text>
                     <Text style={styles.TextLight}>Quarantine is the perfect time to spend your day learning something
                     new, from anywhere!
                     </Text>
                 </View>
                 <View style={styles.DotsWrapper}>
-                    <View style={styles.Dots}></View>
-                    <View style={styles.Dots}></View>
                     <View style={styles.ActiveDots}></View>
+                    <View style={styles.Dots}></View>
+                    <View style={styles.Dots}></View>
                 </View>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+            <TouchableOpacity onPress={() => navigation.navigate("OnboardingSecondScreen")}>
             <View style={styles.NextWrapper}>
                 <Text style={styles.Next}>Next</Text>
             </View>
@@ -66,6 +66,7 @@ const styles = StyleSheet.create(
         TextBold: {
             fontFamily:'Rubik-Bold',
             fontSize: hp(4.5),
+            paddingHorizontal: hp(2),
             lineHeight: hp(6),
             marginBottom: hp(2)
         },
@@ -76,7 +77,7 @@ const styles = StyleSheet.create(
             lineHeight: hp(4),
         },
         NextWrapper: {
-            marginTop: hp(14),
+            marginTop: hp(8),
             marginHorizontal: hp(5),
             backgroundColor: "#E3562A",
             borderRadius: 16,
@@ -92,15 +93,15 @@ const styles = StyleSheet.create(
             fontSize: hp(3)
         },
         SkipWrapper: {
-           position: "absolute",
-           top: hp(3),
-           right: hp(2),
-
-        },
-        Skip: {
-            fontFamily:'Rubik-Bold',
-            color: "#78746D",
-        },
+            position: "absolute",
+            top: hp(3),
+            right: hp(2),
+ 
+         },
+         Skip: {
+             fontFamily:'Rubik-Bold',
+             color: "#78746D",
+         },
         DotsWrapper: {
             display: "flex",
             flexDirection: "row",
@@ -124,4 +125,4 @@ const styles = StyleSheet.create(
     }
 )
 
-export default OnboardingThirdScreen;
+export default OnboardingScreen;

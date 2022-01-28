@@ -10,14 +10,14 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import { Colors } from '../theme/colors';
+import { NavigationProps } from '../types/Navigations';
 
 
-
-const BackButton = () => {
-    const navigation = useNavigation()
+const BackButton = ({navigation}: NavigationProps): JSX.Element => {
     return(
         <TouchableOpacity style={styles.backArrowBtn} onPress={()=>navigation.goBack()}>
-             <Icon name="arrow-dropleft-circle" color={'black'} size={hp(4)}/>
+             <Icon name="arrow-back" color={'black'} size={hp(4)}/>
         </TouchableOpacity>
     )
 }
@@ -27,11 +27,13 @@ export default BackButton;
 const styles = StyleSheet.create(
     {
         backArrowBtn:{
-            // // borderRadius:100,
-            // padding:2,
-            // width:40,
-            // // borderColor:'grey',
-            // borderWidth:2
-        }
+          backgroundColor: Colors.white,
+          borderRadius: 40,
+          width: 40,
+          height: 40,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        },
     }
 )

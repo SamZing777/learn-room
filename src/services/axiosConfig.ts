@@ -2,7 +2,7 @@ import axios from 'axios';
 const baseUrl  = 'http://learnroom.herokuapp.com/'
 const AUTH_TOKEN =  'token';
 
-const customRequest = () => {
+/*const customRequest = () => {
   const defaultOptions = {
     baseURL: baseUrl,
     headers: {
@@ -16,7 +16,7 @@ const customRequest = () => {
     config.headers.Authorization = AUTH_TOKEN ? `Bearer ${AUTH_TOKEN}` : '';
     return config;
   });
-}
+}*/
 
 export const axiosClient = axios.create({
   baseURL: baseUrl,
@@ -27,4 +27,4 @@ export const axiosClient = axios.create({
   },
 });
 
-export default customRequest;
+export default axiosClient;
