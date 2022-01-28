@@ -8,7 +8,7 @@ import {
   Switch,
   ScrollView
 } from "react-native";
-import { Colors } from "../../Styles/colors";
+import { Colors } from "../../theme/colors";
 import BackButton from '../../components/backButton';
 import {
   heightPercentageToDP as hp,
@@ -20,8 +20,10 @@ import ProfileIcon from '../../assets/icons/profileIcon.svg';
 import MailIcon from '../../assets/icons/mailIcon.svg';
 import LockIcon from '../../assets/icons/lockIcon.svg';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { NavigationProps } from '../../types/Navigations';
 
-const Settings = () => {
+
+const Settings = ({navigation}: NavigationProps): JSX.Element => {
 
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
@@ -32,7 +34,7 @@ const Settings = () => {
       showsVerticalScrollIndicator={false} 
       >
       <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
-        <BackButton />
+        <BackButton navigation={navigation}/>
         <Text style={{fontSize:hp(2.7), fontFamily:'Rubik-Bold'}}>
               Settings
         </Text>

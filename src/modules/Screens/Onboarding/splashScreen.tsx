@@ -8,15 +8,15 @@ import {
     Animated
 } from 'react-native';
 // @ts-ignore
-import Illustration from '../../assets/icons/illustration.svg';
-import {Colors} from '../../Styles/colors';
+import Illustration from '../../../assets/icons/illustration.svg';
+import {Colors} from '../../../theme/colors';
 import {
     heightPercentageToDP as hp
 } from 'react-native-responsive-screen'
+import { NavigationProps } from '../../../types/Navigations';
 
+const SplashScreen = ({navigation}: NavigationProps): JSX.Element => {
 
-const SplashScreen : React.FC = (props) => {
-    const {navigation} = props
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const translate = useRef(new Animated.Value(0)).current;
 
@@ -54,7 +54,7 @@ const SplashScreen : React.FC = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('TabNavigator')
+     navigation.navigate('OnboardingScreen')
     }, 3000)
   })
 

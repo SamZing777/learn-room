@@ -1,9 +1,11 @@
 import userReducer from "./user/userReducer";
+import courseReducer from "./course/courseReducer";
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
   userReducer,
+  courseReducer
 });
 
 

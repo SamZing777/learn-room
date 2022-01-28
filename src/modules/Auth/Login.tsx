@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import {
   Image, SafeAreaView, ScrollView,
   StyleSheet,
-  Text, TextInput,
+  Text, 
   TouchableOpacity,
   View,
   Keyboard,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  ActivityIndicator
 } from "react-native";
-import { Colors } from "../../Styles/colors";
+import { Colors } from "../../theme/colors";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -20,22 +21,45 @@ import Facebook from "../../assets/icons/facebook.svg";
 import Instagram from "../../assets/icons/instagram.svg"
 import Google from "../../assets/icons/google.svg";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview';
+import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
+import { NavigationProps } from "../../types/Navigations";
+import { TextInput } from "../../components/TextInput/index"
 
-const Login = (props) => {
-  const { navigation, login } = props;
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+type FormValues = {
+  name: string;
+  email: string;
+  password: string
+}
 
-  const submitHandler = () => {
-    login(email, password);
+
+const Login = (props: any) => {
+  const { navigation } : NavigationProps = props;
+  const { login } = props;
+  const [loading, setLoading] = useState(false)
+ // const [email, setEmail] = useState("");
+ // const [password, setPassword] = useState("");
+ const {...methods} = useForm<FormValues>() 
+
+  const loginUser: SubmitHandler<FormValues> = (data) => {
+  //  login(email, password);
+    try {
+      setLoading(true)
+      console.log(data)
+      login(data);
+    } catch (error) {
+      
+    } finally {
+      setLoading(false)
+    }
+
   };
 
   return (
     <KeyboardAwareScrollView
     style = {{ flex: 1 }} 
 >
-  <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-<SafeAreaView >
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <SafeAreaView >
       <View style={styles.container}>
         <View>
           <LoginImage height={hp(30)} width={wp(80)}/>
@@ -53,21 +77,33 @@ const Login = (props) => {
                   <Google />
               </TouchableOpacity>
             </View>
-            <TextInput 
-            placeholder='E-mail'
+         <FormProvider {...methods}>
+           <TextInput 
+            name="email"
+            label="Email"
+            placeholder='Enter email'
             style={styles.formField}
-            value={email}
-            onChangeText={(event) => {setEmail(event)}}
-        />
-        <TextInput 
+            keyboardType="email-address"
+            rules={{
+              pattern: {value: /^\S+@\S+$/i, message: 'Invalid email'},
+              required: 'Email is required!'
+            }}
+          />
+          <TextInput 
+            name="password"
+            label="Password"
             placeholder='Password'
             style={styles.formField}
-            value={password}
-            onChangeText={(event) => {setPassword(event)}}
             secureTextEntry
-        />
-        <TouchableOpacity style={styles.signUpBtn} onPress={submitHandler}>
-          <Text style={styles.signUpBtnTxt}>Log in</Text>
+            rules={{
+              required: 'Password is required!'
+            }}
+          />
+          </FormProvider>
+        <TouchableOpacity style={styles.signUpBtn} onPress={methods.handleSubmit(loginUser)}>
+          <Text style={styles.signUpBtnTxt}>
+            {loading ? <ActivityIndicator size="small" color="#ffffff" /> : "Log In"}
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
@@ -78,9 +114,9 @@ const Login = (props) => {
           </View>
         </View>
       </View>
-    </SafeAreaView>
+      </SafeAreaView>
     </TouchableWithoutFeedback>
-    </KeyboardAwareScrollView>
+  </KeyboardAwareScrollView>
 
   );
 };
@@ -113,7 +149,8 @@ const styles = StyleSheet.create(
       flexDirection:'row',
       justifyContent:'center',
       alignItems:'center',
-      marginTop:10
+      marginTop:10,
+      marginBottom: 10
     },
     icon:{
       marginRight:5

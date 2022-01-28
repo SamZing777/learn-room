@@ -13,19 +13,19 @@ import {
   Platform,
   ScrollView
  } from "react-native";
-import { Colors } from "../../Styles/colors";
+import { Colors } from "../../theme/colors";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import { connect } from "react-redux";
-import { register } from "../../Redux/actions/register";
+//import { register } from "../../Redux/user/action";
 import SignUPSVG from '../../assets/icons/illustration-2.svg';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview';
 import BackButton from "../../components/backButton";
 
 
-const SignUp = (props) => {
+const SignUp = (props: any) => {
   const { navigation, register } = props;
   //form state values
   const [name, setName] = useState("");
@@ -33,7 +33,7 @@ const SignUp = (props) => {
   const [password, setPassword] = useState("");
 
   const submitHandler = () => {
-    register(name, email, password, navigation);
+    //register(name, email, password, navigation);
   };
 
   return (
@@ -43,7 +43,7 @@ const SignUp = (props) => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <SafeAreaView>
       <View style={styles.container}>
-        <BackButton />
+        <BackButton  navigation={navigation}/>
         <View style={{marginTop:hp(3), justifyContent:'center', alignItems:'center'}}>
           <SignUPSVG width={hp(40)} height={hp(30)} />
           <Text style={styles.signUpTxt}>Sign up</Text>
@@ -56,14 +56,12 @@ const SignUp = (props) => {
             onChangeText={(event) => {setName(event)}}
         />
         <TextInput
-            placeholder='E-mail'
-            style={styles.formField}
+            placeholder='E-mail'  
             value={email}
             onChangeText={(event) => {setEmail(event)}}
         />
         <TextInput
             placeholder='Password'
-            style={styles.formField}
             value={password}
             onChangeText={(event) => {setPassword(event)}}
             secureTextEntry
@@ -83,9 +81,9 @@ const SignUp = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state: any) => ({});
 
-export default connect(mapStateToProps, { register })(SignUp);
+export default connect(mapStateToProps, { /*register*/ })(SignUp);
 
 const styles = StyleSheet.create(
   {
