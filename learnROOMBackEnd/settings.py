@@ -51,16 +51,12 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_filters',
 
-    'corsheaders',
+    'corsheaders'
 ]
 
 SITE_ID = 1
 
 REST_FRAMEWORK = {
-
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication'
-    ],
 
     'DEFAULT_PAGINATION_CLASS':
         'courses.pagination.LimitOffsetPaginationWithUpperBound',
@@ -89,6 +85,12 @@ REST_FRAMEWORK = {
 
 }
 
+"""
+'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
+    ],
+"""
+
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
@@ -114,7 +116,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8081',
     'http://localhost:8000',
     'http://localhost:4200',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://postman.com'
 ]
 
 # CORS_ORIGIN_ALLOW_CREDENTIALS = False
