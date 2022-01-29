@@ -67,7 +67,7 @@ class CourseSerializer(serializers.ModelSerializer):
     # requirement = RequirementSerializer()
     # to_learn = WhatToLearnSerializer()
     # course_section = SectionSerializer()
-    #course_lessons = LessonSerializer()
+    # course_lessons = LessonSerializer()
 
     """
     course_feedback = serializers.StringRelatedField(

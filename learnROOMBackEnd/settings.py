@@ -59,7 +59,6 @@ SITE_ID = 1
 REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication'
     ],
 
@@ -120,9 +119,11 @@ CORS_ALLOWED_ORIGINS = [
 
 # CORS_ORIGIN_ALLOW_CREDENTIALS = False
 
+"""
 CSRF_TRUSTED_ORIGINS = [
     'http://learnroom.co'
 ]
+"""
 
 ROOT_URLCONF = 'learnROOMBackEnd.urls'
 
