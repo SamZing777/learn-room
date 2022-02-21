@@ -80,9 +80,9 @@ REST_FRAMEWORK = {
     ],
 
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '5/hour',
-        'user': '10/hour',
-        'courses': '10/hour',
+        'anon': '15/hour',
+        'user': '25/hour',
+        'courses': '20/hour',
         'course_category': '10/hour',
         'course_sub_category': '10/hour'
     }
@@ -90,7 +90,7 @@ REST_FRAMEWORK = {
 }
 
 """
-'DEFAULT_AUTHENTICATION_CLASSES': [
+    'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication'
     ],
 """
@@ -123,6 +123,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://postman.com'
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # CORS_ORIGIN_ALLOW_CREDENTIALS = False
 
