@@ -9,4 +9,4 @@ User = get_user_model()
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    authentication_classes = [authentication.TokenAuthentication,]
+    authentication_classes = [authentication.BasicAuthentication,]
