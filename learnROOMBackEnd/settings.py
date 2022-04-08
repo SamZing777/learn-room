@@ -85,15 +85,14 @@ REST_FRAMEWORK = {
         'courses': '20/hour',
         'course_category': '10/hour',
         'course_sub_category': '10/hour'
-    }
+    },
 
-}
 
-"""
+
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication'
     ],
-"""
+}
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
