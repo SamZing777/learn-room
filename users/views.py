@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from rest_framework.response import Response
-from rest_framework import generics, authentication, permissions, status
+from rest_framework import generics, authentication, permissions
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 from .serializers import UserSerializer
@@ -23,7 +23,6 @@ class LoginAPI(KnoxLoginView):
     def post(self, request, format=None):
         
         username = request.data['username']
-        print(username)
         if '@' in username:
             serializer = AuthTokenSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
