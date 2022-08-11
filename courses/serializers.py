@@ -64,6 +64,13 @@ class LessonSerializer(serializers.ModelSerializer):
 
 
 class CourseSerializer(serializers.ModelSerializer):
+    instructor = serializers.StringRelatedField(read_only=True)
+    category = serializers.StringRelatedField(read_only=True)
+    sub_category = serializers.StringRelatedField(read_only=True)
+    self_pace_price = serializers.StringRelatedField(read_only=True)
+    live_class_price = serializers.StringRelatedField(read_only=True)
+    # self_pace_price_currency = serializers.StringRelatedField(read_only=True)
+    # live_class_price_currency = serializers.StringRelatedField(read_only=True)
     # requirement = RequirementSerializer()
     # to_learn = WhatToLearnSerializer()
     # course_section = SectionSerializer()
@@ -82,7 +89,8 @@ class CourseSerializer(serializers.ModelSerializer):
         model = Course
         fields = ['title', 'instructor', 'category', 'sub_category', 'status',
                 'thumb_nail', 'short_note', 'description', 'language',
-                'is_self_pace', 'is_live_class']
+                'is_self_pace', 'is_live_class', 'self_pace_price', 'live_class_price'
+                ]
 
 """
 , 'requirement', 

@@ -88,9 +88,6 @@ REST_FRAMEWORK = {
         'course_sub_category': '10/hour'
     },
 
-
-
-
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         'knox.auth.TokenAuthentication'
