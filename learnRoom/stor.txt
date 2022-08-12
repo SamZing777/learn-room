@@ -1,0 +1,24 @@
+       const loadCategoryData = async () =>{
+        setIsLoading(true);
+        await fetch('http://127.0.0.1:8000/course_category/')
+            .then(response => response.json())
+            .then(data => {
+                setIsLoading(false)
+                setData(data.results)
+            })
+            .catch(() => {
+                Alert.alert("Network error! Check your connection and try again.");
+            })
+    }
+   
+   
+    const categoryData = items.map(item => (
+        <TouchableOpacity key={id}>
+            <View style={styles.feature}>
+                <Text style={styles.featureText}> {category} </Text>
+            </View>
+        </TouchableOpacity>
+      ))
+
+
+
